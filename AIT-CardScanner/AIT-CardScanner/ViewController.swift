@@ -10,155 +10,321 @@ import UIKit
 import AVFoundation
 import Vision
 
-final class ViewController: UIViewController {
-    
-    private let photoOutput = AVCapturePhotoOutput()
-    private var isCapturing = false
-    var captureSession = AVCaptureSession()
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    var qrCodeFrameView: UIView?
-    var scannerMetadataObj : AVMetadataMachineReadableCodeObject?
-    
-    @IBOutlet weak var testImageView: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        captureSession.addOutput(photoOutput)
-        
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
-
-        guard let captureDevice = deviceDiscoverySession.devices.first else {
-            print("Failed to get the camera device")
-            return
-        }
-
-        do {
-
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-
-            captureSession.addInput(input)
-
-            let captureMetadataOutput = AVCaptureMetadataOutput()
-            captureSession.addOutput(captureMetadataOutput)
-            captureSession.addOutput(photoOutput)
-
-            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            captureMetadataOutput.metadataObjectTypes = [.qr, .pdf417, .dataMatrix]
-        } catch {
-            return
-        }
-
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer!)
-
-        qrCodeFrameView = UIView()
-
-        if let qrCodeFrameView = qrCodeFrameView {
-            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-            qrCodeFrameView.layer.borderWidth = 2
-            view.addSubview(qrCodeFrameView)
-            view.bringSubviewToFront(qrCodeFrameView)
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        captureSession.startRunning()
-
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        captureSession.stopRunning()
-        qrCodeFrameView?.frame = CGRect.zero
-    }
-}
-
-extension ViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapturePhotoCaptureDelegate {
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        let photoSettings = AVCapturePhotoSettings()
-        if !isCapturing {
-            isCapturing = true
-            photoOutput.capturePhoto(with: photoSettings, delegate: self)
-        }
-    }
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        isCapturing = false
-        guard let imageData = photo.fileDataRepresentation() else {
-            print("Error while generating image from photo capture data.");
-            return
-        }
-        guard let qrImage = UIImage(data: imageData) else {
-            print("Unable to generate UIImage from image data.");
-            return
-        }
-        testImageView.image = qrImage
-    }
-
-}
-
-//class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-//
-//    @IBOutlet weak var square: UIImageView!
-//    var video = AVCaptureVideoPreviewLayer()
+//final class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+//    var captureSession: AVCaptureSession!
+//    var previewLayer: AVCaptureVideoPreviewLayer!
 //
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
-//        let session = AVCaptureSession()
-//        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
 //
-//        do
-//        {
-//            let input = try AVCaptureDeviceInput(device: captureDevice)
-//            session.addInput(input)
+//        view.backgroundColor = UIColor.black
+//        captureSession = AVCaptureSession()
+//
+//        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+//        let videoInput: AVCaptureDeviceInput
+//
+//        do {
+//            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
+//        } catch {
+//            return
 //        }
-//        catch
-//        {
-//            print ("ERROR")
+//
+//        if (captureSession.canAddInput(videoInput)) {
+//            captureSession.addInput(videoInput)
+//        } else {
+//            failed()
+//            return
+//        }
+////21 8888 1415
+////        16540
+//        let metadataOutput = AVCaptureMetadataOutput()
+//
+//        if (captureSession.canAddOutput(metadataOutput)) {
+//            captureSession.addOutput(metadataOutput)
+//
+//            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+//            metadataOutput.metadataObjectTypes = [.itf14]
+//        } else {
+//            failed()
+//            return
 //        }
 //
-////        let output = AVCaptureMetadataOutput()
-//        let output = AVCaptureVideoDataOutput()
-//        session.addOutput(output)
-//        output.setSampleBufferDelegate(self, queue: .main)
+//        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+//        previewLayer.frame = view.layer.bounds
+//        previewLayer.videoGravity = .resizeAspectFill
+//        view.layer.addSublayer(previewLayer)
 //
-////        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+//        captureSession.startRunning()
+//    }
+//
+//    func failed() {
+//        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "OK", style: .default))
+//        present(ac, animated: true)
+//        captureSession = nil
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        if (captureSession?.isRunning == false) {
+//            captureSession.startRunning()
+//        }
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        if (captureSession?.isRunning == true) {
+//            captureSession.stopRunning()
+//        }
+//    }
+//
+//    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+//        captureSession.stopRunning()
+//
+//        if let metadataObject = metadataObjects.first {
+//            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
+//            guard let stringValue = readableObject.stringValue else { return }
+//            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+//            found(code: stringValue)
+//        }
+//
+//        dismiss(animated: true)
+//    }
+//
+//    func found(code: String) {
+//        print(code)
+//    }
+//
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
+//
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return .portrait
+//    }
+//}
+//// STEP 1
+//final class ViewController: UIViewController {
+//
+//    private let photoOutput = AVCapturePhotoOutput()
+//    private var isCapturing = false
+//    private var captureSession = AVCaptureSession()
+//    private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+//    private var qrCodeFrameView: UIView?
+//    private var scannerMetadataObj : AVMetadataMachineReadableCodeObject?
+//
+//    let cameraOutput = AVCapturePhotoOutput()
+//
+//    func capturePhoto() {
+//
+//        let settings = AVCapturePhotoSettings()
+//        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+//        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+//                             kCVPixelBufferWidthKey as String: 160,
+//                             kCVPixelBufferHeightKey as String: 160]
+//        settings.previewPhotoFormat = previewFormat
+//        captureSession.addOutput(photoOutput)
+//        self.cameraOutput.capturePhoto(with: settings, delegate: self)
+//    }
+//
+//
+//
+//    @IBOutlet weak var testImageView: UIImageView!
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+////        captureSession.addOutput(photoOutput)
+//        capturePhoto()
+////        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera],
+////                                                                      mediaType: AVMediaType.video,
+////                                                                      position: .back)
 ////
-////        output.metadataObjectTypes = [AVMetadataObject.ObjectType.aztec]
+////        guard let captureDevice = deviceDiscoverySession.devices.first else {
+////            print("Failed to get the camera device")
+////            return
+////        }
+////        do {
+////            let input = try AVCaptureDeviceInput(device: captureDevice)
+////            captureSession.addInput(input)
+////            let captureMetadataOutput = AVCaptureMetadataOutput()
+////            captureSession.addOutput(captureMetadataOutput)
+////            captureSession.addOutput(photoOutput)
+////            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+////            captureMetadataOutput.metadataObjectTypes = [.qr, .pdf417, .dataMatrix]
+////        } catch {
+////            return
+////        }
 ////
-//        video = AVCaptureVideoPreviewLayer(session: session)
-//        video.frame = view.layer.bounds
-//        view.layer.addSublayer(video)
-//        self.view.bringSubviewToFront(square)
-//
-//        session.startRunning()
+////        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+////        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+////        videoPreviewLayer?.frame = view.layer.bounds
+////        view.layer.addSublayer(videoPreviewLayer!)
+////        qrCodeFrameView = UIView()
+////        if let qrCodeFrameView = qrCodeFrameView {
+////            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+////            qrCodeFrameView.layer.borderWidth = 2
+////            view.addSubview(qrCodeFrameView)
+////            view.bringSubviewToFront(qrCodeFrameView)
+////        }
 //    }
 //
-//    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+//    override func viewWillAppear(_ animated: Bool) {
+//        captureSession.startRunning()
+//    }
 //
-//        if connection.activeVideoStabilizationMode == .standard {
-//            let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-//            let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
-//            let image : UIImage = self.convert(cmage: ciimage)
-//            let secondVC = TextExtractorVC()
-//            secondVC.scannedImage = image
-//            self.navigationController?.pushViewController(secondVC, animated: false)
+//    override func viewWillDisappear(_ animated: Bool) {
+//        captureSession.stopRunning()
+//        qrCodeFrameView?.frame = CGRect.zero
+//    }
+//}
+//
+//extension ViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapturePhotoCaptureDelegate {
+//    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+//        let photoSettings = AVCapturePhotoSettings()
+//        if !isCapturing {
+//            isCapturing = true
+//            photoOutput.capturePhoto(with: photoSettings, delegate: self)
 //        }
 //    }
+////    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+////        isCapturing = false
+////        guard let imageData = photo.fileDataRepresentation() else {
+////            print("Error while generating image from photo capture data.");
+////            return
+////        }
+////        guard let qrImage = UIImage(data: imageData) else {
+////            print("Unable to generate UIImage from image data.");
+////            return
+////        }
+////        testImageView.image = qrImage
+////    }
 //
-//    func convert(cmage:CIImage) -> UIImage {
-//        let context:CIContext = CIContext.init(options: nil)
-//        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
-//        let image:UIImage = UIImage.init(cgImage: cgImage)
-//        return image
-//    }
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+//    func photoOutput(_ output: AVCapturePhotoOutput,
+//                     didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?,
+//                     previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
+//                     resolvedSettings: AVCaptureResolvedPhotoSettings,
+//                     bracketSettings: AVCaptureBracketedStillImageSettings?,
+//                     error: Error?) {
+//        if let error = error {
+//            print(error.localizedDescription)
+//        }
 //
+//        if let sampleBuffer = photoSampleBuffer,
+//            let previewBuffer = previewPhotoSampleBuffer,
+//            let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer,
+//                                                                             previewPhotoSampleBuffer: previewBuffer) {
+//            print("image:\(String(describing: UIImage(data: dataImage)?.size))")
+//        }
+//    }
 //
 //}
+
+//// STEP 3
+
+final class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+
+    
+    private var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
+    private let textRecognitionWorkQueue = DispatchQueue(label: "MyVisionScannerQueue",
+    qos: .userInitiated, attributes: [],
+    autoreleaseFrequency: .workItem)
+    
+    
+    @IBOutlet weak var square: UIImageView!
+    var video = AVCaptureVideoPreviewLayer()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let session = AVCaptureSession()
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+
+        do
+        {
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            session.addInput(input)
+        }
+        catch
+        {
+            print ("ERROR")
+        }
+
+//        let output = AVCaptureMetadataOutput()
+        let output = AVCaptureVideoDataOutput()
+        session.addOutput(output)
+        output.setSampleBufferDelegate(self, queue: .main)
+
+//        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+//
+//        output.metadataObjectTypes = [AVMetadataObject.ObjectType.aztec]
+//
+        video = AVCaptureVideoPreviewLayer(session: session)
+        video.frame = view.layer.bounds
+        view.layer.addSublayer(video)
+        self.view.bringSubviewToFront(square)
+
+        session.startRunning()
+    }
+
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+
+        if connection.activeVideoStabilizationMode == .standard {
+            let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+            let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
+            let image : UIImage = self.convert(cmage: ciimage)
+            let secondVC = TextExtractorVC()
+            secondVC.scannedImage = image
+            self.navigationController?.pushViewController(secondVC, animated: false)
+        }
+    }
+
+    func convert(cmage:CIImage) -> UIImage {
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    // MARK: - Vision Setup
+    
+    private func setupVision() {
+        textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
+            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+            var detectedText = ""
+            for observation in observations {
+                guard let topCandidate = observation.topCandidates(1).first else { return }
+                detectedText += topCandidate.string
+                detectedText += "\n"
+            }
+            DispatchQueue.main.async {
+//                self.digitsLabel.text = detectedText
+            }
+        }
+        textRecognitionRequest.recognitionLevel = .accurate
+    }
+    
+    private func processImage(_ image: UIImage) {
+        recognizeTextInImage(image)
+    }
+    
+    private func recognizeTextInImage(_ image: UIImage) {
+        guard let cgImage = image.cgImage else { return }
+        textRecognitionWorkQueue.async {
+            let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+            do {
+                try requestHandler.perform([self.textRecognitionRequest])
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+}
 
 ///STate
 

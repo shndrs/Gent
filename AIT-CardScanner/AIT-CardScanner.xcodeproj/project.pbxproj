@@ -78,11 +78,11 @@
 				F494F8C423FAB0A90034DC0B /* SceneDelegate.swift */,
 				F494F8C623FAB0A90034DC0B /* ViewController.swift */,
 				F494F8D623FAB0E30034DC0B /* TextExtractorVC.swift */,
+				F47C771823FBFAA300CA4DF4 /* VideoManager.swift */,
 				F494F8C823FAB0A90034DC0B /* Main.storyboard */,
 				F494F8CB23FAB0AB0034DC0B /* Assets.xcassets */,
 				F494F8CD23FAB0AB0034DC0B /* LaunchScreen.storyboard */,
 				F494F8D023FAB0AB0034DC0B /* Info.plist */,
-				F47C771823FBFAA300CA4DF4 /* VideoManager.swift */,
 			);
 			path = "AIT-CardScanner";
 			sourceTree = "<group>";
@@ -316,15 +316,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRGCDU34JU;
+				DEVELOPMENT_TEAM = PCRT3FWAQP;
 				INFOPLIST_FILE = "AIT-CardScanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.shndrs.AIT-CardScanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.shndrs.AIT-CardScanner--AIT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,15 +336,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRGCDU34JU;
+				DEVELOPMENT_TEAM = PCRT3FWAQP;
 				INFOPLIST_FILE = "AIT-CardScanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.shndrs.AIT-CardScanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.shndrs.AIT-CardScanner--AIT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

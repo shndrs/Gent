@@ -92,7 +92,7 @@ extension TextExtractorVC {
         }
     }
     
-    private func setupVision() {
+    fileprivate func extractedFunc() {
         textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
             var detectedText = ""
@@ -106,6 +106,10 @@ extension TextExtractorVC {
             }
         }
         textRecognitionRequest.recognitionLevel = .accurate
+    }
+    
+    private func setupVision() {
+        extractedFunc()
     }
 
     private func processImage(_ image: UIImage) {

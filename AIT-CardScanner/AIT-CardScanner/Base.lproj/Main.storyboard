@@ -32,7 +32,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="krR-DH-oJn"/>
                     <connections>
-                        <outlet property="testImageView" destination="zTV-SK-PDV" id="ciJ-er-d3g"/>
+                        <outlet property="square" destination="zTV-SK-PDV" id="LUZ-Oh-LGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEw-rp-6qq" sceneMemberID="firstResponder"/>
