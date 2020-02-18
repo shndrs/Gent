@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F47C771723FBFA5A00CA4DF4 /* AVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C771623FBFA5A00CA4DF4 /* AVManager.swift */; };
+		F47C771923FBFAA300CA4DF4 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C771823FBFAA300CA4DF4 /* VideoManager.swift */; };
 		F494F8C323FAB0A90034DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494F8C223FAB0A90034DC0B /* AppDelegate.swift */; };
 		F494F8C523FAB0A90034DC0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494F8C423FAB0A90034DC0B /* SceneDelegate.swift */; };
 		F494F8C723FAB0A90034DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494F8C623FAB0A90034DC0B /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F47C771623FBFA5A00CA4DF4 /* AVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVManager.swift; sourceTree = "<group>"; };
+		F47C771823FBFAA300CA4DF4 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		F494F8BF23FAB0A90034DC0B /* AIT-CardScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIT-CardScanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494F8C223FAB0A90034DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F494F8C423FAB0A90034DC0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F47C771523FBFA3700CA4DF4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F47C771623FBFA5A00CA4DF4 /* AVManager.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		F494F8B623FAB0A90034DC0B = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +72,7 @@
 		F494F8C123FAB0A90034DC0B /* AIT-CardScanner */ = {
 			isa = PBXGroup;
 			children = (
+				F47C771523FBFA3700CA4DF4 /* Protocols */,
 				F494F8D823FAB1440034DC0B /* Extension */,
 				F494F8C223FAB0A90034DC0B /* AppDelegate.swift */,
 				F494F8C423FAB0A90034DC0B /* SceneDelegate.swift */,
@@ -69,6 +82,7 @@
 				F494F8CB23FAB0AB0034DC0B /* Assets.xcassets */,
 				F494F8CD23FAB0AB0034DC0B /* LaunchScreen.storyboard */,
 				F494F8D023FAB0AB0034DC0B /* Info.plist */,
+				F47C771823FBFAA300CA4DF4 /* VideoManager.swift */,
 			);
 			path = "AIT-CardScanner";
 			sourceTree = "<group>";
@@ -152,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47C771723FBFA5A00CA4DF4 /* AVManager.swift in Sources */,
 				F494F8C723FAB0A90034DC0B /* ViewController.swift in Sources */,
 				F494F8C323FAB0A90034DC0B /* AppDelegate.swift in Sources */,
+				F47C771923FBFAA300CA4DF4 /* VideoManager.swift in Sources */,
 				F494F8D723FAB0E30034DC0B /* TextExtractorVC.swift in Sources */,
 				F494F8DA23FAB1500034DC0B /* CGPoint.swift in Sources */,
 				F494F8C523FAB0A90034DC0B /* SceneDelegate.swift in Sources */,

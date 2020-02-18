@@ -14,10 +14,26 @@
                     <view key="view" contentMode="scaleToFill" id="Mk3-My-LcR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-SK-PDV">
+                                <rect key="frame" x="32" y="216" width="350" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="XNY-WD-Fqs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zTV-SK-PDV" firstAttribute="leading" secondItem="J6X-oM-KZI" secondAttribute="leading" constant="32" id="IM9-C2-WM4"/>
+                            <constraint firstItem="zTV-SK-PDV" firstAttribute="top" secondItem="J6X-oM-KZI" secondAttribute="top" constant="128" id="Ue8-JK-302"/>
+                            <constraint firstItem="J6X-oM-KZI" firstAttribute="trailing" secondItem="zTV-SK-PDV" secondAttribute="trailing" constant="32" id="hDI-8l-iMp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J6X-oM-KZI"/>
                     </view>
                     <navigationItem key="navigationItem" id="krR-DH-oJn"/>
+                    <connections>
+                        <outlet property="testImageView" destination="zTV-SK-PDV" id="ciJ-er-d3g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEw-rp-6qq" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,4 +58,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square" width="276" height="276"/>
+    </resources>
 </document>
