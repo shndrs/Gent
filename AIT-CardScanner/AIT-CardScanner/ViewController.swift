@@ -10,6 +10,101 @@ import UIKit
 import AVFoundation
 import Vision
 
+final class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+
+    var video = AVCaptureVideoPreviewLayer()
+    private var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
+    private let textRecognitionWorkQueue = DispatchQueue(label: "MyVisionScannerQueue",
+                                                         qos: .userInitiated, attributes: [],
+                                                         autoreleaseFrequency: .workItem)
+    @IBOutlet weak var square: UIImageView!
+    
+    private func sessionSetup() {
+        let session = AVCaptureSession()
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+        do {
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            session.addInput(input)
+        } catch {
+            print ("ERROR")
+        }
+        let output = AVCaptureVideoDataOutput()
+        session.addOutput(output)
+        output.setSampleBufferDelegate(self, queue: .main)
+        video = AVCaptureVideoPreviewLayer(session: session)
+        video.frame = view.layer.bounds
+        view.layer.addSublayer(video)
+        self.view.bringSubviewToFront(square)
+        session.startRunning()
+    }
+
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+
+        let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+        let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
+        let img = UIImage(named: "melli-old-3")!
+        let image : UIImage = self.convert(cmage: ciimage)
+        processImage(img)
+    }
+
+    func convert(cmage:CIImage) -> UIImage {
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
+    
+    // MARK: - Vision Setup
+    
+    private func setupVision() {
+        textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
+            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+            var detectedText = ""
+            for observation in observations {
+                guard let topCandidate = observation.topCandidates(1).first else { return }
+                detectedText += topCandidate.string
+                detectedText += "\n"
+            }
+            DispatchQueue.main.async { [weak self] in
+                guard self != nil else { return }
+                self?.navigationItem.title = detectedText
+            }
+        }
+        textRecognitionRequest.recognitionLevel = .accurate
+    }
+    
+    private func processImage(_ image: UIImage) {
+        recognizeTextInImage(image)
+    }
+    
+    private func recognizeTextInImage(_ image: UIImage) {
+        guard let cgImage = image.cgImage else { return }
+        textRecognitionWorkQueue.async {
+            let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+            do {
+                try requestHandler.perform([self.textRecognitionRequest])
+            } catch {
+                print(error)
+            }
+        }
+    }
+}
+
+// MARK: - Life Cycle
+
+extension ViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupVision()
+        sessionSetup()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
+/// STATE 1
+
 //final class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 //    var captureSession: AVCaptureSession!
 //    var previewLayer: AVCaptureVideoPreviewLayer!
@@ -221,112 +316,7 @@ import Vision
 //
 //}
 
-//// STEP 3
-
-final class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-
-    
-    private var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
-    private let textRecognitionWorkQueue = DispatchQueue(label: "MyVisionScannerQueue",
-    qos: .userInitiated, attributes: [],
-    autoreleaseFrequency: .workItem)
-    
-    
-    @IBOutlet weak var square: UIImageView!
-    var video = AVCaptureVideoPreviewLayer()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let session = AVCaptureSession()
-        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
-
-        do
-        {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            session.addInput(input)
-        }
-        catch
-        {
-            print ("ERROR")
-        }
-
-//        let output = AVCaptureMetadataOutput()
-        let output = AVCaptureVideoDataOutput()
-        session.addOutput(output)
-        output.setSampleBufferDelegate(self, queue: .main)
-
-//        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//
-//        output.metadataObjectTypes = [AVMetadataObject.ObjectType.aztec]
-//
-        video = AVCaptureVideoPreviewLayer(session: session)
-        video.frame = view.layer.bounds
-        view.layer.addSublayer(video)
-        self.view.bringSubviewToFront(square)
-
-        session.startRunning()
-    }
-
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-
-        if connection.activeVideoStabilizationMode == .standard {
-            let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-            let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
-            let image : UIImage = self.convert(cmage: ciimage)
-            let secondVC = TextExtractorVC()
-            secondVC.scannedImage = image
-            self.navigationController?.pushViewController(secondVC, animated: false)
-        }
-    }
-
-    func convert(cmage:CIImage) -> UIImage {
-        let context:CIContext = CIContext.init(options: nil)
-        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
-        let image:UIImage = UIImage.init(cgImage: cgImage)
-        return image
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-    // MARK: - Vision Setup
-    
-    private func setupVision() {
-        textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
-            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
-            var detectedText = ""
-            for observation in observations {
-                guard let topCandidate = observation.topCandidates(1).first else { return }
-                detectedText += topCandidate.string
-                detectedText += "\n"
-            }
-            DispatchQueue.main.async {
-//                self.digitsLabel.text = detectedText
-            }
-        }
-        textRecognitionRequest.recognitionLevel = .accurate
-    }
-    
-    private func processImage(_ image: UIImage) {
-        recognizeTextInImage(image)
-    }
-    
-    private func recognizeTextInImage(_ image: UIImage) {
-        guard let cgImage = image.cgImage else { return }
-        textRecognitionWorkQueue.async {
-            let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-            do {
-                try requestHandler.perform([self.textRecognitionRequest])
-            } catch {
-                print(error)
-            }
-        }
-    }
-
-}
-
-///STate
+/// State 2
 
 //final class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 //
