@@ -81,8 +81,8 @@ extension TextExtractorVC {
 extension TextExtractorVC {
     
     @objc func doExtraction(sender: UIButton!){
-//
-//        processImage(snapshot(in: imageView, rect: overlay.frame))
+
+        processImage(snapshot(in: imageView, rect: overlay.frame))
     }
 
     private func snapshot(in imageView: UIImageView, rect: CGRect) -> UIImage {
@@ -92,7 +92,7 @@ extension TextExtractorVC {
         }
     }
     
-    fileprivate func extractedFunc() {
+    private func setupVision() {
         textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
             var detectedText = ""
@@ -106,10 +106,6 @@ extension TextExtractorVC {
             }
         }
         textRecognitionRequest.recognitionLevel = .accurate
-    }
-    
-    private func setupVision() {
-        extractedFunc()
     }
 
     private func processImage(_ image: UIImage) {

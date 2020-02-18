@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F467681323FC6EB6007DB4E0 /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681223FC6EB6007DB4E0 /* FrameExtractor.swift */; };
 		F47C771723FBFA5A00CA4DF4 /* AVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C771623FBFA5A00CA4DF4 /* AVManager.swift */; };
 		F47C771923FBFAA300CA4DF4 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C771823FBFAA300CA4DF4 /* VideoManager.swift */; };
 		F494F8C323FAB0A90034DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494F8C223FAB0A90034DC0B /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F467681223FC6EB6007DB4E0 /* FrameExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
 		F47C771623FBFA5A00CA4DF4 /* AVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVManager.swift; sourceTree = "<group>"; };
 		F47C771823FBFAA300CA4DF4 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		F494F8BF23FAB0A90034DC0B /* AIT-CardScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIT-CardScanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				F494F8CB23FAB0AB0034DC0B /* Assets.xcassets */,
 				F494F8CD23FAB0AB0034DC0B /* LaunchScreen.storyboard */,
 				F494F8D023FAB0AB0034DC0B /* Info.plist */,
+				F467681223FC6EB6007DB4E0 /* FrameExtractor.swift */,
 			);
 			path = "AIT-CardScanner";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				F47C771923FBFAA300CA4DF4 /* VideoManager.swift in Sources */,
 				F494F8D723FAB0E30034DC0B /* TextExtractorVC.swift in Sources */,
 				F494F8DA23FAB1500034DC0B /* CGPoint.swift in Sources */,
+				F467681323FC6EB6007DB4E0 /* FrameExtractor.swift in Sources */,
 				F494F8C523FAB0A90034DC0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,20 +11,28 @@ import AVFoundation
 import Vision
 
 final class ViewController: UIViewController {
-
+    
+    private let session = AVCaptureSession()
     private var video = AVCaptureVideoPreviewLayer()
     private var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
     private let textRecognitionWorkQueue = DispatchQueue(label: "MyVisionScannerQueue",
                                                          qos: .userInitiated, attributes: [],
                                                          autoreleaseFrequency: .workItem)
     @IBOutlet private weak var square: UIImageView!
+    @IBOutlet private weak var finalImage: UIImageView! {
+        didSet {
+            finalImage.isHidden = true
+        }
+        
+    }
+    
 }
 
 // MARK: - Methods
 
 extension ViewController {
     private func sessionSetup() {
-        let session = AVCaptureSession()
+        
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
@@ -35,7 +43,8 @@ extension ViewController {
         let output = AVCaptureVideoDataOutput()
         session.addOutput(output)
         output.setSampleBufferDelegate(self, queue: .main)
-        output.outputRectConverted(fromMetadataOutputRect: square.bounds)
+        
+//        output.outputRectConverted(fromMetadataOutputRect: square.bounds)
         video = AVCaptureVideoPreviewLayer(session: session)
         video.frame = view.layer.bounds
         view.layer.addSublayer(video)
@@ -43,10 +52,10 @@ extension ViewController {
         session.startRunning()
     }
 
-    private func convert(cmage:CIImage) -> UIImage {
-        let context:CIContext = CIContext.init(options: nil)
-        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
-        let image:UIImage = UIImage.init(cgImage: cgImage)
+    private func convert(cmage: CIImage) -> UIImage {
+        let context = CIContext(options: nil)
+        let cgImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image = UIImage(cgImage: cgImage)
         return image
     }
     
@@ -84,6 +93,13 @@ extension ViewController {
             }
         }
     }
+    
+    private func snapshot(in imageView: UIImageView, rect: CGRect) -> UIImage {
+        return UIGraphicsImageRenderer(bounds: rect).image { _ in
+//            clearOverlay()
+            imageView.drawHierarchy(in: imageView.bounds, afterScreenUpdates: true)
+        }
+    }
 }
 
 // MARK: - Life Cycle
@@ -103,11 +119,19 @@ extension ViewController {
 
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-
+        if navigationItem.title != nil {
+            session.stopRunning()
+            finalImage.isHidden = false
+            let vc = TextExtractorVC()
+            vc.scannedImage = finalImage.image
+            self.show(vc, sender: nil)
+        }
+        connection.videoOrientation = .portrait
         let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
         let ciimage: CIImage = CIImage(cvPixelBuffer: imageBuffer)
         let img = UIImage(named: "melli-old-3")!
         let image: UIImage = self.convert(cmage: ciimage)
+        finalImage.image = image
         processImage(img)
     }
 }
