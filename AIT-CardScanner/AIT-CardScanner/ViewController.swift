@@ -36,7 +36,7 @@ extension ViewController {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
-            input.device.configureDesiredFrameRate(10)
+//            input.device.configureDesiredFrameRate(1)s
             session.addInput(input)
         } catch {
             print ("ERROR")
@@ -50,9 +50,6 @@ extension ViewController {
         view.layer.addSublayer(video)
         self.view.bringSubviewToFront(square)
         session.startRunning()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-            self.session.stopRunning()
-        }
     }
 
     private func convert(cmage: CIImage) -> UIImage {
@@ -124,54 +121,24 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if (navigationItem.title != nil) && (navigationItem.title?.count == 19) {
-            
+            session.stopRunning()
     //            finalImage.isHidden = false
     //            let vc = TextExtractorVC()
     //            vc.scannedImage = snapshot(in: finalImage, rect: square.frame)
     //            self.show(vc, sender: nil)
         }
                         
-//        autoreleasepool {
-            connection.videoOrientation = .portrait
-            let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-            let ciimage: CIImage = CIImage(cvPixelBuffer: imageBuffer)
+        connection.videoOrientation = .portrait
+        let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+        let ciimage: CIImage = CIImage(cvPixelBuffer: imageBuffer)
 //            let img = UIImage(named: "melli-old-3")!
-            let image: UIImage = self.convert(cmage: ciimage)
-//            self.finalImage.image = image1
-            self.processImage(image)
-//        }
+        var image: UIImage = self.convert(cmage: ciimage)
+        self.finalImage.image = image
+        DispatchQueue.main.async {
+            image = self.snapshot(in: self.finalImage, rect: self.square.frame)
+        }
+        self.processImage(image)
+        imageBuffer.attachments.removeAll()
     }
    
-}
-
-extension AVCaptureDevice {
-
-    /// http://stackoverflow.com/questions/21612191/set-a-custom-avframeraterange-for-an-avcapturesession#27566730
-    func configureDesiredFrameRate(_ desiredFrameRate: Int) {
-
-        var isFPSSupported = false
-
-        do {
-
-            if let videoSupportedFrameRateRanges = activeFormat.videoSupportedFrameRateRanges as? [AVFrameRateRange] {
-                for range in videoSupportedFrameRateRanges {
-                    if (range.maxFrameRate >= Double(desiredFrameRate) && range.minFrameRate <= Double(desiredFrameRate)) {
-                        isFPSSupported = true
-                        break
-                    }
-                }
-            }
-
-            if isFPSSupported {
-                try lockForConfiguration()
-                activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: Int32(desiredFrameRate))
-                activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: Int32(desiredFrameRate))
-                unlockForConfiguration()
-            }
-
-        } catch {
-            print("lockForConfiguration error: \(error.localizedDescription)")
-        }
-    }
-
 }
