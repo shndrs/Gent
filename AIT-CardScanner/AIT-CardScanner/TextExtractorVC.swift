@@ -67,6 +67,7 @@ extension TextExtractorVC {
         setupVision()
         self.view.backgroundColor = .black
         imageView.image = scannedImage
+        imageView.contentMode = .scaleAspectFit
         overlay.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         overlay.isHidden = true
         imageView.addSubview(overlay)
@@ -81,8 +82,8 @@ extension TextExtractorVC {
 extension TextExtractorVC {
     
     @objc func doExtraction(sender: UIButton!){
-
-        processImage(snapshot(in: imageView, rect: overlay.frame))
+        guard let scannedImage = self.scannedImage else { return }
+        processImage(scannedImage)
     }
 
     private func snapshot(in imageView: UIImageView, rect: CGRect) -> UIImage {
