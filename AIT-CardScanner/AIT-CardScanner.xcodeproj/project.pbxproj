@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F467681323FC6EB6007DB4E0 /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681223FC6EB6007DB4E0 /* FrameExtractor.swift */; };
 		F467681523FCF0FC007DB4E0 /* AVCaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681423FCF0FC007DB4E0 /* AVCaptureDevice.swift */; };
+		F467681723FCF856007DB4E0 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681623FCF856007DB4E0 /* ImageProcessor.swift */; };
+		F467681923FCF8AE007DB4E0 /* AVSampleProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681823FCF8AE007DB4E0 /* AVSampleProcessor.swift */; };
+		F467681B23FCF91A007DB4E0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681A23FCF91A007DB4E0 /* UIImage.swift */; };
+		F467681D23FCFA90007DB4E0 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681C23FCFA90007DB4E0 /* CustomOperators.swift */; };
+		F467681F23FCFAE8007DB4E0 /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467681E23FCFAE8007DB4E0 /* CIContext.swift */; };
 		F47C771723FBFA5A00CA4DF4 /* AVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C771623FBFA5A00CA4DF4 /* AVManager.swift */; };
 		F47C771923FBFAA300CA4DF4 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C771823FBFAA300CA4DF4 /* VideoManager.swift */; };
 		F494F8C323FAB0A90034DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494F8C223FAB0A90034DC0B /* AppDelegate.swift */; };
@@ -24,6 +29,11 @@
 /* Begin PBXFileReference section */
 		F467681223FC6EB6007DB4E0 /* FrameExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
 		F467681423FCF0FC007DB4E0 /* AVCaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureDevice.swift; sourceTree = "<group>"; };
+		F467681623FCF856007DB4E0 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		F467681823FCF8AE007DB4E0 /* AVSampleProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVSampleProcessor.swift; sourceTree = "<group>"; };
+		F467681A23FCF91A007DB4E0 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		F467681C23FCFA90007DB4E0 /* CustomOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
+		F467681E23FCFAE8007DB4E0 /* CIContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
 		F47C771623FBFA5A00CA4DF4 /* AVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVManager.swift; sourceTree = "<group>"; };
 		F47C771823FBFAA300CA4DF4 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		F494F8BF23FAB0A90034DC0B /* AIT-CardScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIT-CardScanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				F47C771623FBFA5A00CA4DF4 /* AVManager.swift */,
+				F467681823FCF8AE007DB4E0 /* AVSampleProcessor.swift */,
+				F467681C23FCFA90007DB4E0 /* CustomOperators.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -88,6 +100,7 @@
 				F494F8CD23FAB0AB0034DC0B /* LaunchScreen.storyboard */,
 				F494F8D023FAB0AB0034DC0B /* Info.plist */,
 				F467681223FC6EB6007DB4E0 /* FrameExtractor.swift */,
+				F467681623FCF856007DB4E0 /* ImageProcessor.swift */,
 			);
 			path = "AIT-CardScanner";
 			sourceTree = "<group>";
@@ -96,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				F494F8D923FAB1500034DC0B /* CGPoint.swift */,
+				F467681A23FCF91A007DB4E0 /* UIImage.swift */,
 				F467681423FCF0FC007DB4E0 /* AVCaptureDevice.swift */,
+				F467681E23FCFAE8007DB4E0 /* CIContext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -174,11 +189,16 @@
 			files = (
 				F47C771723FBFA5A00CA4DF4 /* AVManager.swift in Sources */,
 				F494F8C723FAB0A90034DC0B /* ViewController.swift in Sources */,
+				F467681923FCF8AE007DB4E0 /* AVSampleProcessor.swift in Sources */,
+				F467681723FCF856007DB4E0 /* ImageProcessor.swift in Sources */,
 				F494F8C323FAB0A90034DC0B /* AppDelegate.swift in Sources */,
+				F467681D23FCFA90007DB4E0 /* CustomOperators.swift in Sources */,
 				F47C771923FBFAA300CA4DF4 /* VideoManager.swift in Sources */,
 				F494F8D723FAB0E30034DC0B /* TextExtractorVC.swift in Sources */,
 				F494F8DA23FAB1500034DC0B /* CGPoint.swift in Sources */,
+				F467681F23FCFAE8007DB4E0 /* CIContext.swift in Sources */,
 				F467681523FCF0FC007DB4E0 /* AVCaptureDevice.swift in Sources */,
+				F467681B23FCF91A007DB4E0 /* UIImage.swift in Sources */,
 				F467681323FC6EB6007DB4E0 /* FrameExtractor.swift in Sources */,
 				F494F8C523FAB0A90034DC0B /* SceneDelegate.swift in Sources */,
 			);
