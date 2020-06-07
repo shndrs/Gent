@@ -10,13 +10,18 @@ enum Action {
 
 func printAction(action: Action) {
     switch action {
+        
     case .createUser(let age) where age < 21:
+        
         print("Young and wild!")
     case .createUser:
+        
         print("Older and wise!")
     case .createPost:
+        
         print("Creating a post")
     case .logout:
+        
         print("Logout")
     }
 }
@@ -43,4 +48,16 @@ extension Array where Element == Int {
 }
 
 let ages = [20, 26, 40, 60, 84]
-ages.printAverageAge() // Average age is 46
+ages.printAverageAge()
+
+// MARK: - Usage in first and contains
+
+let names = ["Henk", "John", "Jack"]
+let firstJname = names.first(where: { (name) -> Bool in
+    return name.first == "J"
+})
+
+let fruits = ["Banana", "Apple", "Kiwi"]
+let containsBanana = fruits.contains(where: { (fruit) in
+    return fruit == "Banana"
+})
