@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - Usage in a switch
+
 enum Action {
     case createUser(age: Int)
     case createPost
@@ -21,3 +23,13 @@ func printAction(action: Action) {
 
 printAction(action: Action.createUser(age: 18)) // Young and wild
 printAction(action: Action.createUser(age: 25)) // Older and wise
+
+// MARK: - Usage in a for loop
+
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for number in numbers where number % 2 == 0 {
+    print(number) // 0, 2, 4, 6, 8, 10
+}
+
+
