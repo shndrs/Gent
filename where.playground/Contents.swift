@@ -32,4 +32,15 @@ for number in numbers where number % 2 == 0 {
     print(number) // 0, 2, 4, 6, 8, 10
 }
 
+// MARK: - Usage in protocol extensions
 
+extension Array where Element == Int {
+    func printAverageAge() {
+        let total = reduce(0, +)
+        let average = total / count
+        print("Average age is \(average)")
+    }
+}
+
+let ages = [20, 26, 40, 60, 84]
+ages.printAverageAge() // Average age is 46
