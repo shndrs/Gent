@@ -64,40 +64,54 @@ ages.printAverageAge()
 
 /// EX-2
 
-protocol CryptoCurrency {
-    var name: String { get }
-    var price: Double { get }
-    var amount: Decimal { get }
+enum ScaleType {
+    case multiScale
+    case bariton
 }
 
-struct Bitcoin: CryptoCurrency {
-    let name = "Bitcoin"
-    let price: Double
-    let amount: Decimal
-}
-
-struct DogeCoin: CryptoCurrency {
-    let name = "DogeCoin"
-    let price: Double
-    let amount: Decimal
-}
-
-extension Array where Element == CryptoCurrency {
+protocol Guitar: class {
+    var brand: String { get }
+    var price: Double { get set }
+    var scaleType: ScaleType { get set }
     
+    init(price: Double, scaleType: ScaleType)
+}
+
+final class Ibanez: Guitar {
+    var brand: String = "Ibanez"
+    var price: Double
+    var scaleType: ScaleType
+    
+    init(price: Double, scaleType: ScaleType) {
+        self.price = price
+        self.scaleType = scaleType
+    }
+}
+
+final class Skervesen: Guitar {
+    var brand: String = "Skervesen"
+    var price: Double
+    var scaleType: ScaleType
+    
+    init(price: Double, scaleType: ScaleType) {
+        self.price = price
+        self.scaleType = scaleType
+    }
+}
+
+extension Array where Element == Guitar {
     var totalPrice: Double {
         let total = self.map({$0.price}).reduce(0, +)
         return total
     }
 }
 
-let coins: [CryptoCurrency] = [
-    DogeCoin(price: 0.002150, amount: 300),
-    Bitcoin(price: 3661, amount: 1)
+let guitars: [Guitar] = [
+    Ibanez(price: 2799, scaleType: .bariton),
+    Skervesen(price: 4749, scaleType: .multiScale)
 ]
 
-let formatter = NumberFormatter()
-formatter.minimumFractionDigits = 2
-formatter.string(from: NSNumber(value: coins.totalPrice)) // 3661,64
+print(guitars.totalPrice)
 
 // MARK: - Usage in first and contains
 
