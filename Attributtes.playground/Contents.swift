@@ -55,8 +55,41 @@ complexFunction(clo: { "Nothing" })
 // complexFunction(clo: "Nothing") - Will give you an Error because of this error we will use @autoclosure attribute
 
 func complexFunction2(clo: @autoclosure () -> String) {
-    print("Inside Function2")
+    print("Inside Function 2")
     print(clo())
 }
 
 complexFunction2(clo: "Nothing 2")
+
+/// EX-3
+
+func performComplexComputation() -> String {
+    return "Complex"
+}
+
+func complexFunction3(clo: @autoclosure () -> String, condition: Bool = false) {
+    print("Inside Function 3")
+    if (condition) {
+        _ = clo()
+    }
+}
+
+complexFunction3(clo: performComplexComputation(), condition: false)
+
+
+var tempClosure: (() -> String)?
+func complexFunction4(clo: @autoclosure @escaping () -> String) {
+    print("Inside Function 4")
+    tempClosure = clo
+}
+
+complexFunction4(clo: performComplexComputation())
+
+// MARK: - @_exported
+
+@_exported import Dispatch
+
+/// If you want to import an external module for your whole module
+/// you can use the @_exported keyword before your import.
+/// From now the imported module will be available everywhere. Remember PCH files?
+
