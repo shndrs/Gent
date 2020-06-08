@@ -76,7 +76,6 @@ func complexFunction3(clo: @autoclosure () -> String, condition: Bool = false) {
 
 complexFunction3(clo: performComplexComputation(), condition: false)
 
-
 var tempClosure: (() -> String)?
 func complexFunction4(clo: @autoclosure @escaping () -> String) {
     print("Inside Function 4")
@@ -86,10 +85,36 @@ func complexFunction4(clo: @autoclosure @escaping () -> String) {
 complexFunction4(clo: performComplexComputation())
 
 // MARK: - @_exported
-
-@_exported import Dispatch
-
 /// If you want to import an external module for your whole module
 /// you can use the @_exported keyword before your import.
 /// From now the imported module will be available everywhere. Remember PCH files?
+
+@_exported import Dispatch
+
+// MARK: - @_specialize
+
+/// With the @_specialize Swift attribute you can give hints for the
+/// compiler by listing concrete types for the generic signature.
+
+@_specialize(where T == (UITableView, UICollectionView))
+public func `in`<T>(component: T, id: String) {
+    
+    let nib = UINib(nibName: id, bundle: nil)
+    
+    switch component {
+        
+    case is UITableView:
+        
+        guard let cell = component as? UITableView else { return }
+        cell.register(nib, forCellReuseIdentifier: id)
+    
+    case is UICollectionView:
+        
+        guard let cell = component as? UICollectionView else { return }
+        cell.register(nib, forCellWithReuseIdentifier: id)
+    
+    default:
+        break;
+    }
+}
 
