@@ -96,25 +96,39 @@ complexFunction4(clo: performComplexComputation())
 /// With the @_specialize Swift attribute you can give hints for the
 /// compiler by listing concrete types for the generic signature.
 
-@_specialize(where T == (UITableView, UICollectionView))
-public func `in`<T>(component: T, id: String) {
-    
-    let nib = UINib(nibName: id, bundle: nil)
-    
-    switch component {
+
+
+class Register: NSObject {
+
+    @_specialize(where T == (UITableView, UICollectionView))
+    static public func `in`<T>(component: T, id: String) {
         
-    case is UITableView:
+        let nib = UINib(nibName: id, bundle: nil)
         
-        guard let cell = component as? UITableView else { return }
-        cell.register(nib, forCellReuseIdentifier: id)
-    
-    case is UICollectionView:
+        switch component {
+            
+        case is UITableView:
+            
+            guard let cell = component as? UITableView else { return }
+            cell.register(nib, forCellReuseIdentifier: id)
         
-        guard let cell = component as? UICollectionView else { return }
-        cell.register(nib, forCellWithReuseIdentifier: id)
-    
-    default:
-        break;
+        case is UICollectionView:
+            
+            guard let cell = component as? UICollectionView else { return }
+            cell.register(nib, forCellWithReuseIdentifier: id)
+        
+        default:
+            break;
+        }
     }
 }
 
+// MARK: - @nonobjc
+
+/// Use this attribute to supress an implicit objc attribute.
+///  The @nonobjc attribute tells the compiler to make the declaration
+///  unavailable in Objective-C code, even though it’s possible
+///   to represent it in Objective-C.
+
+@nonobjc let string = "test"
+@nonobjc let int = 9
