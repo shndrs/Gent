@@ -1,0 +1,20 @@
+PODS:
+  - EZProgressHUD (1.5.3)
+  - IQKeyboardManager (6.5.5)
+
+DEPENDENCIES:
+  - EZProgressHUD
+  - IQKeyboardManager
+
+SPEC REPOS:
+  trunk:
+    - EZProgressHUD
+    - IQKeyboardManager
+
+SPEC CHECKSUMS:
+  EZProgressHUD: ac65959b7a1f7eb3ccb9e4b176a77e27628e4174
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+
+PODFILE CHECKSUM: 63889520d7536f4532541198053df459cbd5a4d5
+
+COCOAPODS: 1.8.4
