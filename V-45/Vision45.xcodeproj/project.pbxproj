@@ -13,6 +13,7 @@
 		7236322C24AB18BF00BD4375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322A24AB18BF00BD4375 /* Main.storyboard */; };
 		7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7236322D24AB18C100BD4375 /* Assets.xcassets */; };
 		7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */; };
+		72E34C6224D0AAA300066485 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72E34C6424D0AAA300066485 /* Localizable.strings */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
 		A970F2B024AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AD24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf */; };
 		A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AE24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf */; };
@@ -49,6 +50,8 @@
 		7236322D24AB18C100BD4375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7236323024AB18C100BD4375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7236323224AB18C100BD4375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E34C6324D0AAA300066485 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		72E34C6524D0AAD900066485 /* fa-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fa-IR"; path = "fa-IR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
 		A970F2AD24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum_Bold.ttf; sourceTree = "<group>"; };
 		A970F2AE24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum_Light.ttf; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 			children = (
 				A970F2AB24AB1F0200A8FD77 /* Font */,
 				7236322D24AB18C100BD4375 /* Assets.xcassets */,
+				72E34C6424D0AAA300066485 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -270,6 +274,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"fa-IR",
 			);
 			mainGroup = 7236321824AB18BF00BD4375;
 			productRefGroup = 7236322224AB18BF00BD4375 /* Products */;
@@ -289,6 +294,7 @@
 				A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */,
 				A970F2B024AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf in Resources */,
 				7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */,
+				72E34C6224D0AAA300066485 /* Localizable.strings in Resources */,
 				A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */,
 				7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */,
 				7236322C24AB18BF00BD4375 /* Main.storyboard in Resources */,
@@ -387,6 +393,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		72E34C6424D0AAA300066485 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72E34C6324D0AAA300066485 /* en */,
+				72E34C6524D0AAD900066485 /* fa-IR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -394,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -454,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
