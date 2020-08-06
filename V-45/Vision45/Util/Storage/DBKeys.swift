@@ -1,5 +1,5 @@
 //
-//  DefaultsKeys.swift
+//  DBKeys.swift
 //  Vision45
 //
 //  Created by Sahand Raeisi on 8/6/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DefaultsKeys: String {
+enum DBKeys: String {
     
     case language
     

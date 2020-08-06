@@ -17,51 +17,68 @@ enum Ids: String {
 
 enum Strings: String {
     
-    case expand = "Expand"
-    case collapse = "Collapse"
-    case wait = "Please Wait"
-    case yes = "Yes"
-    case no = "No"
-    case areYouSure = "Are you sure about this?"
-    case done = "Done"
-    case ok = "Okay"
-    case error = "Error"
+    // MARK: - Common
     
-    // MARK: - Category
+    case done
     
-    case category = "Category"
-    case byMe = "by shndrs"
+    // MARK: - Components
     
-    // MARK: - Settings Items
+    case submit
+    case wait
     
-    case settings = "Settings"
-    case favorites = "Favorites"
-    case cart = "Your Cart"
-    case logout = "Logout"
-    case archive = "Transactions Archive"
+    // MARK: - LoginRegister
     
-    // MARK: - CAKeyframeAnimation
+    case languagesName
     
-    case transformScale = "transform.scale"
-    case cubic
+    func getLang() -> Language {
+        let database = Database()
+        let langString = database[DBKeys.language.rawValue]
+        return Language.getLang(with: langString ?? "")
+    }
     
-    // MARK: - Buttons
+}
+
+// MARK: - Methods
+
+extension Strings {
     
-    case submit = "Submit"
+    func value() -> String {
+        let database = Database()
+        let langString = database[DBKeys.language.rawValue]
+        let lang = Language.getLang(with: langString ?? "")
+        
+        switch lang {
+        case .english:
+            return english()
+        case .persian:
+            return persian()
+        }
+    }
     
-    // MARK: - Login
+    private func english() -> String {
+        switch self {
+        case .languagesName:
+            return "English"
+        case .done:
+            return "Done"
+        case .submit:
+            return "Submit"
+        case .wait:
+            return "Please Wait..."
+        }
+    }
     
-    case login = "Login"
-    case inCorrectPassUser = "Username or Password is Incorrect"
+    private func persian() -> String {
+        switch self {
+        case .languagesName:
+            return "فارسی"
+        case .done:
+            return "باشه"
+        case .submit:
+            return "ارسال"
+        case .wait:
+            return "لطفا صبر کنید..."
+        }
+    }
     
-    // MARK: - Register
-    
-    case register = "Register"
-    case usernameIsEmpty = "Username is empty!"
-    case passIsEmpty = "Password is empty!"
-    case repeatPassIsEmpty = "Repeat password is empty!"
-    case repeatPassIsNotEqual = "Repeat password is not equal to password!"
-    case emailIsEmpty = "Email is empty!"
-    case emailIsInvalid = "Email is invalid"
-    case successfulRegistration = "User registered successfully!!! :)"
 }

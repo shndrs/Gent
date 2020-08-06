@@ -1,5 +1,5 @@
 //
-//  Defaults.swift
+//  Database.swift
 //  Vision45
 //
 //  Created by Sahand Raeisi on 8/6/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Defaults {
+final class Database {
 
     private let defaults: UserDefaults
 

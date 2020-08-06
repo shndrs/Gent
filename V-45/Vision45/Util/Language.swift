@@ -14,3 +14,20 @@ enum Language: String {
     case persian = "Persian"
     
 }
+
+// MARK: - Methods
+
+extension Language {
+    
+    static func getLang(with string: String) -> Language {
+        switch string {
+        case Language.english.rawValue:
+            return Language.english
+        case Language.persian.rawValue:
+            return Language.persian
+        default:
+            return Language.persian
+        }
+    }
+    
+}
