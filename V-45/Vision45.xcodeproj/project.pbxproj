@@ -18,6 +18,8 @@
 		72AA571224DBE4590025C5EB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571124DBE4590025C5EB /* Language.swift */; };
 		72AA571524DBE5A60025C5EB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571424DBE5A60025C5EB /* Database.swift */; };
 		72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571624DBE5E10025C5EB /* DBKeys.swift */; };
+		72AA571924DBFE040025C5EB /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571824DBFE040025C5EB /* UIViewController.swift */; };
+		72AA571B24DBFE7E0025C5EB /* StoryboardId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
 		A970F2B024AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AD24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf */; };
 		A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AE24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf */; };
@@ -59,6 +61,8 @@
 		72AA571124DBE4590025C5EB /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		72AA571424DBE5A60025C5EB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		72AA571624DBE5E10025C5EB /* DBKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBKeys.swift; sourceTree = "<group>"; };
+		72AA571824DBFE040025C5EB /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardId.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
 		A970F2AD24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum_Bold.ttf; sourceTree = "<group>"; };
 		A970F2AE24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum_Light.ttf; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				A970F2D624AB217800A8FD77 /* Strings.swift */,
 				A970F2D424AB216100A8FD77 /* Colors.swift */,
 				72AA571124DBE4590025C5EB /* Language.swift */,
+				72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -238,12 +243,12 @@
 		A970F2B524AB201D00A8FD77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A970F2B824AB201D00A8FD77 /* Buttons */,
+				A970F2BE24AB201D00A8FD77 /* Labels */,
 				A970F2B624AB201D00A8FD77 /* KeyboardManager.swift */,
 				A970F2B724AB201D00A8FD77 /* EmptyView.swift */,
-				A970F2B824AB201D00A8FD77 /* Buttons */,
 				A970F2BC24AB201D00A8FD77 /* CustomHUD.swift */,
 				A970F2BD24AB201D00A8FD77 /* TransBackgroundView.swift */,
-				A970F2BE24AB201D00A8FD77 /* Labels */,
 				A970F2C424AB201E00A8FD77 /* BackView.swift */,
 				A970F2C524AB201E00A8FD77 /* CurvedImages.swift */,
 			);
@@ -276,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				A970F2D924AB21C300A8FD77 /* UIView.swift */,
+				72AA571824DBFE040025C5EB /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 			files = (
 				A970F2C924AB201E00A8FD77 /* RegisterButton.swift in Sources */,
 				A970F2CF24AB201E00A8FD77 /* BaseLabel.swift in Sources */,
+				72AA571924DBFE040025C5EB /* UIViewController.swift in Sources */,
 				A970F2D724AB217800A8FD77 /* Strings.swift in Sources */,
 				72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */,
 				72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */,
@@ -434,6 +441,7 @@
 				72AA571224DBE4590025C5EB /* Language.swift in Sources */,
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
+				72AA571B24DBFE7E0025C5EB /* StoryboardId.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
