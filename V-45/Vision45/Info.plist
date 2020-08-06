@@ -41,6 +41,12 @@
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+    <key>UIAppFonts</key>
+    <array>
+        <string>IRANSansMonoSpacedNum_Light.ttf</string>
+        <string>IRANSansMonoSpacedNum_Bold.ttf</string>
+        <string>IRANSansMonoSpacedNum.ttf</string>
+    </array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

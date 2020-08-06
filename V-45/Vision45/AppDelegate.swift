@@ -13,6 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         KeyboardManager.applyConfig()
+        
+        for font in UIFont.familyNames {
+            print("=====> \(font)")
+            for f in UIFont.fontNames(forFamilyName: font) {
+                print("--> \(f)")
+            }
+        }
+        
         return true
     }
 
