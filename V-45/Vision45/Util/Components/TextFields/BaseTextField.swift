@@ -9,13 +9,29 @@
 import UIKit
 
 class BaseTextField: UITextField {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
-    */
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
 
+// MARK: - Methods
+
+extension BaseTextField {
+    
+    @objc func setup() {
+        self.font = Font.regular.return(size: 13)
+        self.textColor = Colors.label
+    }
+    
 }

@@ -39,4 +39,13 @@ extension String {
         return false
     }
     
+    func keepOnlyDigits(isHexadecimal: Bool) -> String {
+        let ucString = self.uppercased().englishNumbers
+        let validCharacters = isHexadecimal ? "0123456789ABCDEF" : "0123456789"
+        let characterSet: CharacterSet = CharacterSet(charactersIn: validCharacters)
+        let stringArray = ucString.components(separatedBy: characterSet.inverted)
+        let allNumbers = stringArray.joined(separator: "")
+        return allNumbers
+    }
+    
 }

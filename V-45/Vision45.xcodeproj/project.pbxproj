@@ -13,6 +13,9 @@
 		7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7236322D24AB18C100BD4375 /* Assets.xcassets */; };
 		7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */; };
 		72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */; };
+		72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1D24DC657300F2A045 /* PhoneTextField.swift */; };
+		72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1F24DC658F00F2A045 /* BaseTextField.swift */; };
+		72728C2224DC69CD00F2A045 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C2124DC69CD00F2A045 /* String.swift */; };
 		7287933324DC441A0064230A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7287933224DC441A0064230A /* Main.storyboard */; };
 		72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA570C24DBE31A0025C5EB /* LanguageSelectionVC.swift */; };
 		72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA570F24DBE3680025C5EB /* BaseViewController.swift */; };
@@ -60,6 +63,9 @@
 		7236323024AB18C100BD4375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7236323224AB18C100BD4375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterVC.swift; sourceTree = "<group>"; };
+		72728C1D24DC657300F2A045 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
+		72728C1F24DC658F00F2A045 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		72728C2124DC69CD00F2A045 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7287933224DC441A0064230A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		72AA570C24DBE31A0025C5EB /* LanguageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionVC.swift; sourceTree = "<group>"; };
 		72AA570F24DBE3680025C5EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +180,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		72728C1C24DC654300F2A045 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				72728C1F24DC658F00F2A045 /* BaseTextField.swift */,
+				72728C1D24DC657300F2A045 /* PhoneTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		72AA570824DBE2CD0025C5EB /* LanguageSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +277,7 @@
 		A970F2B524AB201D00A8FD77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				72728C1C24DC654300F2A045 /* TextFields */,
 				A970F2B824AB201D00A8FD77 /* Buttons */,
 				A970F2BE24AB201D00A8FD77 /* Labels */,
 				A970F2B624AB201D00A8FD77 /* KeyboardManager.swift */,
@@ -302,6 +318,7 @@
 			children = (
 				A970F2D924AB21C300A8FD77 /* UIView.swift */,
 				72AA571824DBFE040025C5EB /* UIViewController.swift */,
+				72728C2124DC69CD00F2A045 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -443,6 +460,7 @@
 				7236322924AB18BF00BD4375 /* ViewController.swift in Sources */,
 				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
 				72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */,
+				72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */,
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
@@ -460,9 +478,11 @@
 				7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */,
 				A970F2D324AB201E00A8FD77 /* CurvedImages.swift in Sources */,
 				A970F2D124AB201E00A8FD77 /* LabelMedium.swift in Sources */,
+				72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */,
 				72AA571224DBE4590025C5EB /* Language.swift in Sources */,
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
+				72728C2224DC69CD00F2A045 /* String.swift in Sources */,
 				72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */,
 				72AA571B24DBFE7E0025C5EB /* StoryboardId.swift in Sources */,
 			);
