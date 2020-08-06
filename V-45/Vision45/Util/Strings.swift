@@ -19,6 +19,7 @@ enum Strings: String {
     
     // MARK: - Common
     
+    case appName
     case done
     
     // MARK: - Components
@@ -29,12 +30,7 @@ enum Strings: String {
     // MARK: - LoginRegister
     
     case languagesName
-    
-    func getLang() -> Language {
-        let database = Database()
-        let langString = database[DBKeys.language.rawValue]
-        return Language.getLang(with: langString ?? "")
-    }
+    case languageSelection
     
 }
 
@@ -65,6 +61,10 @@ extension Strings {
             return "Submit"
         case .wait:
             return "Please Wait..."
+        case .languageSelection:
+            return "Language Selection"
+        case .appName:
+            return "Vision 45"
         }
     }
     
@@ -78,6 +78,10 @@ extension Strings {
             return "ارسال"
         case .wait:
             return "لطفا صبر کنید..."
+        case .languageSelection:
+            return "انتخاب زبان"
+        case .appName:
+            return "Vision 45"
         }
     }
     
