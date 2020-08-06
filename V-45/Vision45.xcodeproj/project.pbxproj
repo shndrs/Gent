@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		722661C824DC44CA00198A8A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AA571C24DBFFB50025C5EB /* Login.storyboard */; };
 		7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322424AB18BF00BD4375 /* AppDelegate.swift */; };
 		7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322624AB18BF00BD4375 /* SceneDelegate.swift */; };
 		7236322924AB18BF00BD4375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322824AB18BF00BD4375 /* ViewController.swift */; };
@@ -67,7 +66,6 @@
 		72AA571624DBE5E10025C5EB /* DBKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBKeys.swift; sourceTree = "<group>"; };
 		72AA571824DBFE040025C5EB /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardId.swift; sourceTree = "<group>"; };
-		72AA571C24DBFFB50025C5EB /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		72AA572024DC076D0025C5EB /* FirstInitialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInitialButton.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				72AA570824DBE2CD0025C5EB /* LanguageSelection */,
-				72AA571C24DBFFB50025C5EB /* Login.storyboard */,
 				7287933224DC441A0064230A /* Main.storyboard */,
 			);
 			path = LoginRegister;
@@ -162,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				72AA570B24DBE2FF0025C5EB /* Presenter */,
-				72AA570A24DBE2F80025C5EB /* Model */,
 				72AA570924DBE2ED0025C5EB /* View */,
 			);
 			path = LanguageSelection;
@@ -174,13 +170,6 @@
 				72AA570C24DBE31A0025C5EB /* LanguageSelectionVC.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		72AA570A24DBE2F80025C5EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		72AA570B24DBE2FF0025C5EB /* Presenter */ = {
@@ -369,7 +358,6 @@
 			files = (
 				7287933324DC441A0064230A /* Main.storyboard in Resources */,
 				A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */,
-				722661C824DC44CA00198A8A /* Login.storyboard in Resources */,
 				A970F2B024AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf in Resources */,
 				7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */,
 				A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */,
