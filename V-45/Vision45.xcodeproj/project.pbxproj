@@ -12,6 +12,7 @@
 		7236322924AB18BF00BD4375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322824AB18BF00BD4375 /* ViewController.swift */; };
 		7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7236322D24AB18C100BD4375 /* Assets.xcassets */; };
 		7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */; };
+		72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */; };
 		7287933324DC441A0064230A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7287933224DC441A0064230A /* Main.storyboard */; };
 		72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA570C24DBE31A0025C5EB /* LanguageSelectionVC.swift */; };
 		72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA570F24DBE3680025C5EB /* BaseViewController.swift */; };
@@ -58,6 +59,7 @@
 		7236322D24AB18C100BD4375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7236323024AB18C100BD4375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7236323224AB18C100BD4375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterVC.swift; sourceTree = "<group>"; };
 		7287933224DC441A0064230A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		72AA570C24DBE31A0025C5EB /* LanguageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionVC.swift; sourceTree = "<group>"; };
 		72AA570F24DBE3680025C5EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -149,10 +151,27 @@
 		7263A5BD24C0861800FCFD21 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
+				72728C1824DC630B00F2A045 /* PhoneRegister */,
 				72AA570824DBE2CD0025C5EB /* LanguageSelection */,
 				7287933224DC441A0064230A /* Main.storyboard */,
 			);
 			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		72728C1824DC630B00F2A045 /* PhoneRegister */ = {
+			isa = PBXGroup;
+			children = (
+				72728C1924DC633600F2A045 /* View */,
+			);
+			path = PhoneRegister;
+			sourceTree = "<group>";
+		};
+		72728C1924DC633600F2A045 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		72AA570824DBE2CD0025C5EB /* LanguageSelection */ = {
@@ -422,6 +441,7 @@
 				72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */,
 				A970F2B424AB1F9500A8FD77 /* Font.swift in Sources */,
 				7236322924AB18BF00BD4375 /* ViewController.swift in Sources */,
+				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
 				72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */,
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,

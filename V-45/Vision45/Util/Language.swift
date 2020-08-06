@@ -26,7 +26,7 @@ extension Language {
         case Language.persian.rawValue:
             return Language.persian
         default:
-            return Language.persian
+            return Language.english
         }
     }
     
