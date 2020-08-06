@@ -13,6 +13,7 @@ class BaseCurvedImage: UIImageView {
     override func awakeFromNib() {
         self.clipsToBounds = true
     }
+    
 }
 
 // MARK: - Light Curved Image
@@ -23,4 +24,5 @@ final class LightCurvedImage: BaseCurvedImage {
         super.awakeFromNib()
         self.layer.cornerRadius = 4.0
     }
+    
 }
