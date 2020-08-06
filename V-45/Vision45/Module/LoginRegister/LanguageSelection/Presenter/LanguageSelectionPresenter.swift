@@ -9,8 +9,7 @@
 import Foundation
 
 protocol LanguageSelectionView: AnyObject {
-    func goEnglish()
-    func goPersian()
+    func goToRegisterPhone()
 }
 
 final class LanguageSelectionPresenter: NSObject {
@@ -32,12 +31,12 @@ extension LanguageSelectionPresenter {
     
     public func setEnglish() {
         database[DBKeys.language.rawValue] = Language.english.rawValue
-        view?.goEnglish()
+        view?.goToRegisterPhone()
     }
     
     public func setPersian() {
         database[DBKeys.language.rawValue] = Language.persian.rawValue
-        view?.goPersian()
+        view?.goToRegisterPhone()
     }
     
 }

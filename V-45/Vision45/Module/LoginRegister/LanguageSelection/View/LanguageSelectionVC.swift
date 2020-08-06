@@ -48,12 +48,9 @@ extension LanguageSelectionVC {
 
 extension LanguageSelectionVC: LanguageSelectionView {
     
-    func goEnglish() {
-        
-    }
-    
-    func goPersian() {
-        
+    func goToRegisterPhone() {
+        let viewController = PhoneRegisterVC.instantiate(storyboard: .main)
+        self.show(viewController, sender: nil)
     }
     
 }

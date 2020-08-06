@@ -23,8 +23,9 @@ fileprivate extension SubmitButton {
     
     func setup() {
         self.setTitle(Strings.submit.rawValue, for: .normal)
+        self.setTitleColor(Colors.label, for: .normal)
         self.titleLabel?.font = Font.medium.return(size: 15)
-        self.backgroundColor = Colors.submitGreen
+        self.backgroundColor = Colors.tertiaryBack
         self.clipsToBounds = true
         self.layer.cornerRadius = 5.0
     }

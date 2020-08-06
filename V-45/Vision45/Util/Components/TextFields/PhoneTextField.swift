@@ -12,8 +12,8 @@ class PhoneTextField: BaseTextField {
     
     typealias ShouldChangeCharactersBlock = (PhoneTextField, String) -> ()
     
-    @IBInspectable var maximumChar: Int = 255
-    var shouldChangeCharactersBlock : ShouldChangeCharactersBlock?
+    @IBInspectable var maximumChar: Int = 11
+    var shouldChangeCharactersBlock: ShouldChangeCharactersBlock?
     
     override var text: String? {
         get {
@@ -33,6 +33,8 @@ extension PhoneTextField {
         super.setup()
         self.keyboardType = .numberPad
         self.textAlignment = .center
+        self.placeholder = "09*********"
+        self.backgroundColor = Colors.secondaryBack
         self.delegate = self
     }
     
