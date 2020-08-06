@@ -14,6 +14,7 @@ final class SubmitButton: UIButton {
         super.awakeFromNib()
         setup()
     }
+    
 }
 
 // MARK: - Methods
@@ -27,4 +28,5 @@ fileprivate extension SubmitButton {
         self.clipsToBounds = true
         self.layer.cornerRadius = 5.0
     }
+    
 }

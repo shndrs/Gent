@@ -39,4 +39,5 @@ extension HUD {
     public mutating func dismiss() {
         hud.dismiss(completion: nil)
     }
+    
 }

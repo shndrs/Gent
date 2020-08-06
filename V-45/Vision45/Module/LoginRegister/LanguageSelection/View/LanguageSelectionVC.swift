@@ -10,17 +10,20 @@ import UIKit
 
 final class LanguageSelectionVC: BaseViewController {
 
+    @IBOutlet private weak var persianButton: FirstInitialButton!
+    @IBOutlet private weak var englishButton: FirstInitialButton!
+    
 }
 
 // MARK: - Methods
 
 fileprivate extension LanguageSelectionVC {
     
-    @IBAction func persianButtonPressed(_ sender: Any) {
+    @IBAction func persianButtonPressed(_ sender: FirstInitialButton) {
         
     }
     
-    @IBAction func englishButtonPressed(_ sender: Any) {
+    @IBAction func englishButtonPressed(_ sender: FirstInitialButton) {
         
     }
     
@@ -33,6 +36,7 @@ extension LanguageSelectionVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Strings.languageSelection.value()
     }
     
 }

@@ -25,5 +25,9 @@ struct Colors {
                                             blue: 84/255,
                                             alpha: 1.0)
     public static let clear = UIColor.clear
+    public static let label = UIColor.label
+    public static let primaryBack = UIColor.systemBackground
+    public static let secondaryBack = UIColor.secondarySystemBackground
+    public static let tertiaryBack = UIColor.tertiarySystemBackground
       
 }

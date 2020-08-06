@@ -18,9 +18,11 @@ class BaseButton: UIButton {
 // MARK: - Methods
 
 extension BaseButton {
-    func setup() {
+    
+    @objc func setup() {
         self.titleLabel?.font = Font.regular.return(size: 15)
         self.backgroundColor = Colors.clear
         self.clipsToBounds = true
     }
+    
 }

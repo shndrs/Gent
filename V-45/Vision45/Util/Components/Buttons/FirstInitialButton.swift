@@ -23,10 +23,10 @@ extension FirstInitialButton {
     
     override func setup() {
         self.backgroundColor = Colors.secondaryBack
-        self.titleLabel?.textColor = Colors.label
         self.clipsToBounds = true
         self.addCornerRadius(radius: 5)
-        self.addBorder(color: Colors.tertiaryBack, thickness: 1)
+        self.addBorder(color: Colors.label, thickness: 0.6)
+        self.setTitleColor(Colors.label, for: .normal)
     }
     
 }
