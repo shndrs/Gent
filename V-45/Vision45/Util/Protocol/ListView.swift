@@ -11,4 +11,5 @@ import Foundation
 protocol ListView: BaseView {
     associatedtype Model
     func set(with array: [Model])
+    init()
 }

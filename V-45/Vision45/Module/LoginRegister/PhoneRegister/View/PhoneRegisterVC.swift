@@ -40,6 +40,7 @@ extension PhoneRegisterVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Strings.simNumber.value()
     }
     
 }

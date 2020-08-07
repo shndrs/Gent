@@ -35,6 +35,7 @@ enum Strings: String {
     case phoneNumberIsEmpty
     case phoneNumberIsInvalid
     case phoneRegisterDesc
+    case simNumber
     
 }
 
@@ -77,6 +78,8 @@ extension Strings {
             return "Error!"
         case .phoneRegisterDesc:
             return "Please enter the SIM card number inside VISION 45"
+        case .simNumber:
+            return "SIM Card Number"
         }
     }
     
@@ -102,6 +105,8 @@ extension Strings {
             return "خطا"
         case .phoneRegisterDesc:
             return "لطفا شماره سیم کارت داخل VISION 45 را وارد نمایید."
+        case .simNumber:
+            return "شماره سیم کارت"
         }
     }
     

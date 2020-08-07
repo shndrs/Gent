@@ -41,6 +41,7 @@
 		72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ACC55D24DDEFA700A36932 /* MenuTVC.xib */; };
 		72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56024DDEFE500A36932 /* ReusableView.swift */; };
 		72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56224DDF21C00A36932 /* ReuseIds.swift */; };
+		72ACC56524DDF3EB00A36932 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -107,6 +108,7 @@
 		72ACC55D24DDEFA700A36932 /* MenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVC.xib; sourceTree = "<group>"; };
 		72ACC56024DDEFE500A36932 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		72ACC56224DDF21C00A36932 /* ReuseIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIds.swift; sourceTree = "<group>"; };
+		72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		72ACC54424DDDB4300A36932 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */,
 				A970F2B424AB1F9500A8FD77 /* Font.swift in Sources */,
 				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
+				72ACC56524DDF3EB00A36932 /* MenuPresenter.swift in Sources */,
 				72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */,
 				72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */,
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
