@@ -11,7 +11,7 @@ import UIKit
 final class PhoneRegisterVC: BaseViewController {
     
     @IBOutlet private weak var descriptionLabel: LabelMedium!
-    @IBOutlet private weak var phoneNumberTextField: UITextField!
+    @IBOutlet private weak var phoneNumberTextField: PhoneTextField!
     @IBOutlet private weak var submitButton: SubmitButton!
     
 }

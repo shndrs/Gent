@@ -29,5 +29,5 @@ struct Colors {
     public static let primaryBack = UIColor.systemBackground
     public static let secondaryBack = UIColor.secondarySystemBackground
     public static let tertiaryBack = UIColor.tertiarySystemBackground
-      
+    
 }

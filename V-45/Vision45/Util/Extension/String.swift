@@ -48,4 +48,14 @@ extension String {
         return allNumbers
     }
     
+    func validate(phoneNumber: String) -> String? {
+        let mobileRegex = "^(\\+989|09|9|00989)[0-9]{2}\\d{7}\\Z"
+        guard phoneNumber.isEmpty == false else {
+            return Strings.phoneNumberIsEmpty.value()
+        }
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", mobileRegex)
+        let result =  phoneTest.evaluate(with: phoneNumber)
+        return (result == true) ? nil : Strings.phoneNumberIsInvalid.value()
+    }
+    
 }

@@ -31,6 +31,8 @@ enum Strings: String {
     
     case languagesName
     case languageSelection
+    case phoneNumberIsEmpty
+    case phoneNumberIsInvalid
     
 }
 
@@ -65,6 +67,10 @@ extension Strings {
             return "Language Selection"
         case .appName:
             return "Vision 45"
+        case .phoneNumberIsEmpty:
+            return "Phone number is empty."
+        case .phoneNumberIsInvalid:
+            return "Phone number is invalid."
         }
     }
     
@@ -82,6 +88,10 @@ extension Strings {
             return "انتخاب زبان"
         case .appName:
             return "Vision 45"
+        case .phoneNumberIsEmpty:
+            return "فیلد شماره موبایل خالی می باشد."
+        case .phoneNumberIsInvalid:
+            return "فیلد شماره موبایل معتبر نمی باشد."
         }
     }
     

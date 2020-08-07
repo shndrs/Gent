@@ -25,6 +25,8 @@
 		72AA571924DBFE040025C5EB /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571824DBFE040025C5EB /* UIViewController.swift */; };
 		72AA571B24DBFE7E0025C5EB /* StoryboardId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */; };
 		72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA572024DC076D0025C5EB /* FirstInitialButton.swift */; };
+		72ACC53B24DDB92400A36932 /* PhoneRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53A24DDB92400A36932 /* PhoneRegisterPresenter.swift */; };
+		72ACC53E24DDBB8F00A36932 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53D24DDBB8F00A36932 /* ErrorView.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -75,6 +77,8 @@
 		72AA571824DBFE040025C5EB /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardId.swift; sourceTree = "<group>"; };
 		72AA572024DC076D0025C5EB /* FirstInitialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInitialButton.swift; sourceTree = "<group>"; };
+		72ACC53A24DDB92400A36932 /* PhoneRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterPresenter.swift; sourceTree = "<group>"; };
+		72ACC53D24DDBB8F00A36932 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		72728C1824DC630B00F2A045 /* PhoneRegister */ = {
 			isa = PBXGroup;
 			children = (
+				72ACC53924DDB90800A36932 /* Presenter */,
 				72728C1924DC633600F2A045 /* View */,
 			);
 			path = PhoneRegister;
@@ -232,6 +237,22 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		72ACC53924DDB90800A36932 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				72ACC53A24DDB92400A36932 /* PhoneRegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72ACC53C24DDBB7300A36932 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				72ACC53D24DDBB8F00A36932 /* ErrorView.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		8A28F174F61E517B822EAF04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +283,7 @@
 		A970F2B224AB1F8100A8FD77 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				72ACC53C24DDBB7300A36932 /* Protocol */,
 				72AA571324DBE5860025C5EB /* Storage */,
 				A970F2D824AB218C00A8FD77 /* Extension */,
 				A970F2B524AB201D00A8FD77 /* Components */,
@@ -452,6 +474,7 @@
 			files = (
 				A970F2C924AB201E00A8FD77 /* RegisterButton.swift in Sources */,
 				A970F2CF24AB201E00A8FD77 /* BaseLabel.swift in Sources */,
+				72ACC53E24DDBB8F00A36932 /* ErrorView.swift in Sources */,
 				72AA571924DBFE040025C5EB /* UIViewController.swift in Sources */,
 				A970F2D724AB217800A8FD77 /* Strings.swift in Sources */,
 				72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */,
@@ -484,6 +507,7 @@
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
 				72728C2224DC69CD00F2A045 /* String.swift in Sources */,
 				72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */,
+				72ACC53B24DDB92400A36932 /* PhoneRegisterPresenter.swift in Sources */,
 				72AA571B24DBFE7E0025C5EB /* StoryboardId.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
