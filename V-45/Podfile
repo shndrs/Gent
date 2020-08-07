@@ -7,5 +7,6 @@ target 'Vision45' do
 
   pod 'IQKeyboardManager'
   pod 'EZProgressHUD'
+  pod 'Toast-Swift', '~> 5.0.1'
 
 end

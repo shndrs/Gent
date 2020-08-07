@@ -21,6 +21,7 @@ enum Strings: String {
     
     case appName
     case done
+    case error
     
     // MARK: - Components
     
@@ -71,6 +72,8 @@ extension Strings {
             return "Phone number is empty."
         case .phoneNumberIsInvalid:
             return "Phone number is invalid."
+        case .error:
+            return "Error!"
         }
     }
     
@@ -92,6 +95,8 @@ extension Strings {
             return "فیلد شماره موبایل خالی می باشد."
         case .phoneNumberIsInvalid:
             return "فیلد شماره موبایل معتبر نمی باشد."
+        case .error:
+            return "خطا"
         }
     }
     

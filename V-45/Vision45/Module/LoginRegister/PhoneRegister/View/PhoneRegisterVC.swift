@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PhoneRegisterVC: BaseViewController {
+final class PhoneRegisterVC: ErrorViewController {
     
     private lazy var presenter: PhoneRegisterPresenter = {
         return PhoneRegisterPresenter(view: self)
@@ -45,10 +45,6 @@ extension PhoneRegisterVC {
 extension PhoneRegisterVC: PhoneRegisterView {
     
     func goToMenu() {
-        
-    }
-    
-    func showError(message: String) {
         
     }
     

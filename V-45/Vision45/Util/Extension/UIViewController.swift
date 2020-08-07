@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - Storyboard Instantiate
+
 extension UIViewController {
     
     public class func instantiate(from storyboard: UIStoryboard? = nil) -> Self {
@@ -30,3 +32,17 @@ extension UIViewController {
     
 }
 
+import Toast_Swift
+
+// MARK: - Toast View
+
+extension UIViewController {
+    
+    func show(error message: String) {
+        var style = ToastStyle()
+        style.backgroundColor = Colors.error
+        style.messageColor = Colors.label
+        self.view.makeToast(message, duration: 3.0, position: .bottom, style: style)
+    }
+    
+}

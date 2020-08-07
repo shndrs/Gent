@@ -27,6 +27,7 @@
 		72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA572024DC076D0025C5EB /* FirstInitialButton.swift */; };
 		72ACC53B24DDB92400A36932 /* PhoneRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53A24DDB92400A36932 /* PhoneRegisterPresenter.swift */; };
 		72ACC53E24DDBB8F00A36932 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53D24DDBB8F00A36932 /* ErrorView.swift */; };
+		72ACC54024DDC16400A36932 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53F24DDC16400A36932 /* ErrorViewController.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -79,6 +80,7 @@
 		72AA572024DC076D0025C5EB /* FirstInitialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInitialButton.swift; sourceTree = "<group>"; };
 		72ACC53A24DDB92400A36932 /* PhoneRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterPresenter.swift; sourceTree = "<group>"; };
 		72ACC53D24DDBB8F00A36932 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		72ACC53F24DDC16400A36932 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				72AA570F24DBE3680025C5EB /* BaseViewController.swift */,
+				72ACC53F24DDC16400A36932 /* ErrorViewController.swift */,
 				72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */,
 			);
 			path = Base;
@@ -473,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A970F2C924AB201E00A8FD77 /* RegisterButton.swift in Sources */,
+				72ACC54024DDC16400A36932 /* ErrorViewController.swift in Sources */,
 				A970F2CF24AB201E00A8FD77 /* BaseLabel.swift in Sources */,
 				72ACC53E24DDBB8F00A36932 /* ErrorView.swift in Sources */,
 				72AA571924DBFE040025C5EB /* UIViewController.swift in Sources */,

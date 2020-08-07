@@ -28,7 +28,7 @@ extension PhoneRegisterPresenter {
     
     public func validate(phoneNumber: String) {
         let error = phoneNumber.validate(phoneNumber: phoneNumber)
-        error == nil ? view?.showError(message: error ?? "") : view?.goToMenu()
+        error != nil ? view?.showError(message: error ?? "") : view?.goToMenu()
     }
     
 }

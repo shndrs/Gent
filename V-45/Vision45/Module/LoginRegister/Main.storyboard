@@ -95,7 +95,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="b95-ju-aVV">
                                 <rect key="frame" x="32" y="359" width="350" height="178.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umN-VI-6cZ" customClass="LabelRegular" customModule="Vision45" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umN-VI-6cZ" customClass="LabelMedium" customModule="Vision45" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -120,6 +120,9 @@
                                             <constraint firstAttribute="height" constant="50" id="cBr-px-ddh"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="7Gg-Vc-KkF" eventType="touchUpInside" id="fml-dY-OVD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -132,6 +135,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2X3-OO-Te7"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="umN-VI-6cZ" id="oQP-sz-BTg"/>
+                        <outlet property="phoneNumberTextField" destination="PcG-xK-HgS" id="qNo-FN-9sm"/>
+                        <outlet property="submitButton" destination="wS4-JA-XnL" id="4U5-DH-ztJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcL-w9-uy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
