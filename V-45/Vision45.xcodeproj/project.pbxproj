@@ -29,6 +29,8 @@
 		72ACC53E24DDBB8F00A36932 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53D24DDBB8F00A36932 /* ErrorView.swift */; };
 		72ACC54024DDC16400A36932 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC53F24DDC16400A36932 /* ErrorViewController.swift */; };
 		72ACC54224DDD9EB00A36932 /* CustomToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54124DDD9EB00A36932 /* CustomToast.swift */; };
+		72ACC54824DDDB6E00A36932 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54724DDDB6E00A36932 /* Menu.swift */; };
+		72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54924DDDB9B00A36932 /* Typealias.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -83,6 +85,8 @@
 		72ACC53D24DDBB8F00A36932 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		72ACC53F24DDC16400A36932 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		72ACC54124DDD9EB00A36932 /* CustomToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToast.swift; sourceTree = "<group>"; };
+		72ACC54724DDDB6E00A36932 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		72ACC54924DDDB9B00A36932 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -258,6 +262,38 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		72ACC54324DDDB3600A36932 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				72ACC54624DDDB5700A36932 /* Model */,
+				72ACC54524DDDB4E00A36932 /* View */,
+				72ACC54424DDDB4300A36932 /* Presenter */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		72ACC54424DDDB4300A36932 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72ACC54524DDDB4E00A36932 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72ACC54624DDDB5700A36932 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72ACC54724DDDB6E00A36932 /* Menu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8A28F174F61E517B822EAF04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +334,7 @@
 				72AA571124DBE4590025C5EB /* Language.swift */,
 				72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */,
 				72ACC54124DDD9EB00A36932 /* CustomToast.swift */,
+				72ACC54924DDDB9B00A36932 /* Typealias.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -354,8 +391,9 @@
 		A970F2DB24AB229E00A8FD77 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				72AA570E24DBE3550025C5EB /* Base */,
+				72ACC54324DDDB3600A36932 /* Menu */,
 				7263A5BD24C0861800FCFD21 /* LoginRegister */,
+				72AA570E24DBE3550025C5EB /* Base */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -501,6 +539,7 @@
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
 				72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */,
 				A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */,
+				72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */,
 				A970F2D224AB201E00A8FD77 /* BackView.swift in Sources */,
 				A970F2CE24AB201E00A8FD77 /* LabelLight.swift in Sources */,
 				A970F2C824AB201E00A8FD77 /* SubmitButton.swift in Sources */,
@@ -512,6 +551,7 @@
 				72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */,
 				72AA571224DBE4590025C5EB /* Language.swift in Sources */,
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,
+				72ACC54824DDDB6E00A36932 /* Menu.swift in Sources */,
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
 				72728C2224DC69CD00F2A045 /* String.swift in Sources */,
 				72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */,
