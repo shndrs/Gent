@@ -22,9 +22,10 @@ final class SubmitButton: UIButton {
 fileprivate extension SubmitButton {
     
     func setup() {
-        self.setTitle(Strings.submit.rawValue, for: .normal)
+        self.setTitle(Strings.submit.value(), for: .normal)
         self.setTitleColor(Colors.label, for: .normal)
         self.titleLabel?.font = Font.medium.return(size: 15)
+        self.addBorder(color: Colors.label, thickness: 0.6)
         self.backgroundColor = Colors.tertiaryBack
         self.clipsToBounds = true
         self.layer.cornerRadius = 5.0

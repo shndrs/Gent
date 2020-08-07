@@ -14,7 +14,11 @@ final class PhoneRegisterVC: ErrorViewController {
         return PhoneRegisterPresenter(view: self)
     }()
     
-    @IBOutlet private weak var descriptionLabel: LabelMedium!
+    @IBOutlet private weak var descriptionLabel: LabelMedium! {
+        didSet {
+            descriptionLabel.text = Strings.phoneRegisterDesc.value()
+        }
+    }
     @IBOutlet private weak var phoneNumberTextField: PhoneTextField!
     @IBOutlet private weak var submitButton: SubmitButton!
     

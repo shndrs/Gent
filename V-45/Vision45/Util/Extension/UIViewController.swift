@@ -39,10 +39,8 @@ import Toast_Swift
 extension UIViewController {
     
     func show(error message: String) {
-        var style = ToastStyle()
-        style.backgroundColor = Colors.error
-        style.messageColor = Colors.label
-        self.view.makeToast(message, duration: 3.0, position: .bottom, style: style)
+        let toast = CustomToast(view: self.view)
+        toast.show(error: message)
     }
     
 }
