@@ -10,6 +10,10 @@ import UIKit
 
 final class PhoneRegisterVC: BaseViewController {
     
+    private lazy var presenter: PhoneRegisterPresenter = {
+        return PhoneRegisterPresenter(view: self)
+    }()
+    
     @IBOutlet private weak var descriptionLabel: LabelMedium!
     @IBOutlet private weak var phoneNumberTextField: PhoneTextField!
     @IBOutlet private weak var submitButton: SubmitButton!
@@ -21,7 +25,7 @@ final class PhoneRegisterVC: BaseViewController {
 fileprivate extension PhoneRegisterVC {
     
     @IBAction func submitButtonPressed(_ sender: SubmitButton) {
-        
+        presenter.validate(phoneNumber: phoneNumberTextField.text ?? "")
     }
     
 }
@@ -32,6 +36,20 @@ extension PhoneRegisterVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+}
+
+// MARK: - View Implementation
+
+extension PhoneRegisterVC: PhoneRegisterView {
+    
+    func goToMenu() {
+        
+    }
+    
+    func showError(message: String) {
+        
     }
     
 }
