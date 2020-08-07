@@ -34,6 +34,8 @@
 		72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54F24DDDF6A00A36932 /* TableBaseViewController.swift */; };
 		72ACC55224DDDF9600A36932 /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55124DDDF9600A36932 /* UITableViewController.swift */; };
 		72ACC55424DDDFE800A36932 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55324DDDFE800A36932 /* Register.swift */; };
+		72ACC55624DDE1F500A36932 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55524DDE1F500A36932 /* BaseView.swift */; };
+		72ACC55824DDE27300A36932 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55724DDE27300A36932 /* ListView.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -93,6 +95,8 @@
 		72ACC54F24DDDF6A00A36932 /* TableBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBaseViewController.swift; sourceTree = "<group>"; };
 		72ACC55124DDDF9600A36932 /* UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewController.swift; sourceTree = "<group>"; };
 		72ACC55324DDDFE800A36932 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		72ACC55524DDE1F500A36932 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		72ACC55724DDE27300A36932 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				72ACC53D24DDBB8F00A36932 /* ErrorView.swift */,
+				72ACC55524DDE1F500A36932 /* BaseView.swift */,
+				72ACC55724DDE27300A36932 /* ListView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
 				72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */,
+				72ACC55824DDE27300A36932 /* ListView.swift in Sources */,
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,
@@ -557,6 +564,7 @@
 				A970F2D524AB216100A8FD77 /* Colors.swift in Sources */,
 				A970F2C724AB201E00A8FD77 /* EmptyView.swift in Sources */,
 				7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */,
+				72ACC55624DDE1F500A36932 /* BaseView.swift in Sources */,
 				A970F2D324AB201E00A8FD77 /* CurvedImages.swift in Sources */,
 				A970F2D124AB201E00A8FD77 /* LabelMedium.swift in Sources */,
 				72ACC55424DDDFE800A36932 /* Register.swift in Sources */,

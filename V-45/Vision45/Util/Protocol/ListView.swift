@@ -1,5 +1,5 @@
 //
-//  ErrorView.swift
+//  ListView.swift
 //  Vision45
 //
 //  Created by Sahand Raeisi on 8/7/20.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-protocol ErrorView: BaseView {
-    
-    func showError(message: String)
-    
+protocol ListView: BaseView {
+    associatedtype Model
+    func set(with array: [Model])
 }
