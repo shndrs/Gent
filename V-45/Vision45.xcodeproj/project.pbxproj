@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322424AB18BF00BD4375 /* AppDelegate.swift */; };
 		7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322624AB18BF00BD4375 /* SceneDelegate.swift */; };
-		7236322924AB18BF00BD4375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322824AB18BF00BD4375 /* ViewController.swift */; };
 		7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7236322D24AB18C100BD4375 /* Assets.xcassets */; };
 		7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */; };
 		72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */; };
@@ -32,6 +31,9 @@
 		72ACC54824DDDB6E00A36932 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54724DDDB6E00A36932 /* Menu.swift */; };
 		72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54924DDDB9B00A36932 /* Typealias.swift */; };
 		72ACC54E24DDDDF800A36932 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72ACC54D24DDDDF800A36932 /* Menu.storyboard */; };
+		72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC54F24DDDF6A00A36932 /* TableBaseViewController.swift */; };
+		72ACC55224DDDF9600A36932 /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55124DDDF9600A36932 /* UITableViewController.swift */; };
+		72ACC55424DDDFE800A36932 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55324DDDFE800A36932 /* Register.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -65,7 +67,6 @@
 		7236322124AB18BF00BD4375 /* Vision45.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision45.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7236322424AB18BF00BD4375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7236322624AB18BF00BD4375 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7236322824AB18BF00BD4375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7236322D24AB18C100BD4375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7236323024AB18C100BD4375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7236323224AB18C100BD4375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +90,9 @@
 		72ACC54724DDDB6E00A36932 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		72ACC54924DDDB9B00A36932 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		72ACC54D24DDDDF800A36932 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		72ACC54F24DDDF6A00A36932 /* TableBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBaseViewController.swift; sourceTree = "<group>"; };
+		72ACC55124DDDF9600A36932 /* UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewController.swift; sourceTree = "<group>"; };
+		72ACC55324DDDFE800A36932 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -161,7 +165,6 @@
 				A970F2DB24AB229E00A8FD77 /* Module */,
 				7236322424AB18BF00BD4375 /* AppDelegate.swift */,
 				7236322624AB18BF00BD4375 /* SceneDelegate.swift */,
-				7236322824AB18BF00BD4375 /* ViewController.swift */,
 				7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */,
 				7236323224AB18C100BD4375 /* Info.plist */,
 			);
@@ -235,6 +238,7 @@
 				72AA570F24DBE3680025C5EB /* BaseViewController.swift */,
 				72ACC53F24DDC16400A36932 /* ErrorViewController.swift */,
 				72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */,
+				72ACC54F24DDDF6A00A36932 /* TableBaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -338,6 +342,7 @@
 				72AA571A24DBFE7E0025C5EB /* StoryboardId.swift */,
 				72ACC54124DDD9EB00A36932 /* CustomToast.swift */,
 				72ACC54924DDDB9B00A36932 /* Typealias.swift */,
+				72ACC55324DDDFE800A36932 /* Register.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				A970F2D924AB21C300A8FD77 /* UIView.swift */,
 				72AA571824DBFE040025C5EB /* UIViewController.swift */,
 				72728C2124DC69CD00F2A045 /* String.swift */,
+				72ACC55124DDDF9600A36932 /* UITableViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				72ACC54224DDD9EB00A36932 /* CustomToast.swift in Sources */,
 				A970F2C924AB201E00A8FD77 /* RegisterButton.swift in Sources */,
 				72ACC54024DDC16400A36932 /* ErrorViewController.swift in Sources */,
+				72ACC55224DDDF9600A36932 /* UITableViewController.swift in Sources */,
 				A970F2CF24AB201E00A8FD77 /* BaseLabel.swift in Sources */,
 				72ACC53E24DDBB8F00A36932 /* ErrorView.swift in Sources */,
 				72AA571924DBFE040025C5EB /* UIViewController.swift in Sources */,
@@ -530,12 +537,12 @@
 				72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */,
 				72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */,
 				A970F2B424AB1F9500A8FD77 /* Font.swift in Sources */,
-				7236322924AB18BF00BD4375 /* ViewController.swift in Sources */,
 				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
 				72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */,
 				72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */,
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
+				72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */,
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,
@@ -552,6 +559,7 @@
 				7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */,
 				A970F2D324AB201E00A8FD77 /* CurvedImages.swift in Sources */,
 				A970F2D124AB201E00A8FD77 /* LabelMedium.swift in Sources */,
+				72ACC55424DDDFE800A36932 /* Register.swift in Sources */,
 				72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */,
 				72AA571224DBE4590025C5EB /* Language.swift in Sources */,
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,

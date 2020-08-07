@@ -11,6 +11,6 @@ import Foundation
 public enum StoryboardId: String {
     
     case main = "Main"
-    case login = "Login"
+    case menu = "Menu"
     
 }
