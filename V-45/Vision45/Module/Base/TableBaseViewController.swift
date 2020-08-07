@@ -8,7 +8,9 @@
 
 import UIKit
 
-class TableBaseViewController: UIViewController {
+class TableBaseViewController<T>: UIViewController {
+    
+    private(set) var items: [T]?
     
     var largeTitle: Bool = false {
         willSet(newVal) {
@@ -22,11 +24,9 @@ class TableBaseViewController: UIViewController {
         }
     }
     
-}
-
-// MARK: - Methods
-
-extension TableBaseViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     @objc func tableSetup() {
         tableView.cleanFooterView()
@@ -40,13 +40,15 @@ extension TableBaseViewController {
     
 }
 
-// MARK: - Life Cycle
+// MARK: - View Implementation
 
-extension TableBaseViewController {
+extension TableBaseViewController: ListView {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    typealias Model = T
+    
+    func set(with array: [T]) {
+        items = array
+        tableView.asyncReload()
     }
     
 }
-

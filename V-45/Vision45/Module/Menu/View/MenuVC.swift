@@ -8,23 +8,43 @@
 
 import UIKit
 
-class MenuVC: UIViewController {
+final class MenuVC: TableBaseViewController<Menu> {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func tableSetup() {
+        super.tableSetup()
+        tableView.delegate = self
+        tableView.dataSource = self
+        register(reuseIds: ReuseIds.menu)
     }
     
+}
 
-    /*
-    // MARK: - Navigation
+// MARK: - Life Cycle
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MenuVC {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
+    
+}
 
+// MARK: - TableView Implementation
+
+extension MenuVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVC.reuseIdentifier) as! MenuTVC
+        cell.fill(cell: items?[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        items?[indexPath.row].action()
+    }
+    
 }

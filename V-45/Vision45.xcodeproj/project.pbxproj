@@ -36,6 +36,11 @@
 		72ACC55424DDDFE800A36932 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55324DDDFE800A36932 /* Register.swift */; };
 		72ACC55624DDE1F500A36932 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55524DDE1F500A36932 /* BaseView.swift */; };
 		72ACC55824DDE27300A36932 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55724DDE27300A36932 /* ListView.swift */; };
+		72ACC55A24DDE9C000A36932 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55924DDE9C000A36932 /* MenuVC.swift */; };
+		72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55C24DDEFA700A36932 /* MenuTVC.swift */; };
+		72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ACC55D24DDEFA700A36932 /* MenuTVC.xib */; };
+		72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56024DDEFE500A36932 /* ReusableView.swift */; };
+		72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56224DDF21C00A36932 /* ReuseIds.swift */; };
 		72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */; };
 		72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */; };
 		A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */; };
@@ -97,6 +102,11 @@
 		72ACC55324DDDFE800A36932 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		72ACC55524DDE1F500A36932 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		72ACC55724DDE27300A36932 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		72ACC55924DDE9C000A36932 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		72ACC55C24DDEFA700A36932 /* MenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
+		72ACC55D24DDEFA700A36932 /* MenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVC.xib; sourceTree = "<group>"; };
+		72ACC56024DDEFE500A36932 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		72ACC56224DDF21C00A36932 /* ReuseIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIds.swift; sourceTree = "<group>"; };
 		72D1F24B24DC48B5001BC78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		72D1F24D24DC4C22001BC78D /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
 		A970F2AC24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMonoSpacedNum.ttf; sourceTree = "<group>"; };
@@ -267,9 +277,10 @@
 		72ACC53C24DDBB7300A36932 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				72ACC53D24DDBB8F00A36932 /* ErrorView.swift */,
 				72ACC55524DDE1F500A36932 /* BaseView.swift */,
+				72ACC53D24DDBB8F00A36932 /* ErrorView.swift */,
 				72ACC55724DDE27300A36932 /* ListView.swift */,
+				72ACC56024DDEFE500A36932 /* ReusableView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -294,7 +305,9 @@
 		72ACC54524DDDB4E00A36932 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72ACC55B24DDEF8B00A36932 /* Cell */,
 				72ACC54D24DDDDF800A36932 /* Menu.storyboard */,
+				72ACC55924DDE9C000A36932 /* MenuVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +318,15 @@
 				72ACC54724DDDB6E00A36932 /* Menu.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		72ACC55B24DDEF8B00A36932 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				72ACC55C24DDEFA700A36932 /* MenuTVC.swift */,
+				72ACC55D24DDEFA700A36932 /* MenuTVC.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8A28F174F61E517B822EAF04 /* Frameworks */ = {
@@ -349,6 +371,7 @@
 				72ACC54124DDD9EB00A36932 /* CustomToast.swift */,
 				72ACC54924DDDB9B00A36932 /* Typealias.swift */,
 				72ACC55324DDDFE800A36932 /* Register.swift */,
+				72ACC56224DDF21C00A36932 /* ReuseIds.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -479,6 +502,7 @@
 				72ACC54E24DDDDF800A36932 /* Menu.storyboard in Resources */,
 				7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */,
 				A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */,
+				72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */,
 				7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +566,7 @@
 				A970F2D724AB217800A8FD77 /* Strings.swift in Sources */,
 				72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */,
 				72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */,
+				72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */,
 				A970F2B424AB1F9500A8FD77 /* Font.swift in Sources */,
 				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
 				72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */,
@@ -554,10 +579,12 @@
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,
 				7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */,
+				72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */,
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
 				72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */,
 				A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */,
 				72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */,
+				72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */,
 				A970F2D224AB201E00A8FD77 /* BackView.swift in Sources */,
 				A970F2CE24AB201E00A8FD77 /* LabelLight.swift in Sources */,
 				A970F2C824AB201E00A8FD77 /* SubmitButton.swift in Sources */,
@@ -569,6 +596,7 @@
 				A970F2D124AB201E00A8FD77 /* LabelMedium.swift in Sources */,
 				72ACC55424DDDFE800A36932 /* Register.swift in Sources */,
 				72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */,
+				72ACC55A24DDE9C000A36932 /* MenuVC.swift in Sources */,
 				72AA571224DBE4590025C5EB /* Language.swift in Sources */,
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,
 				72ACC54824DDDB6E00A36932 /* Menu.swift in Sources */,

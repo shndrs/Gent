@@ -19,9 +19,10 @@ final class MenuTVC: UITableViewCell, ReusableView {
 
 extension MenuTVC {
     
-    public func fill(cell with: Menu) {
-        iconImage.image = with.icon
-        titleLabel.text = with.title
+    public func fill(cell with: Menu?) {
+        guard let object = with else { return }
+        iconImage.image = object.icon
+        titleLabel.text = object.title
     }
     
 }
