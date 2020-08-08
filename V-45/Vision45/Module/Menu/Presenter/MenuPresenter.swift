@@ -9,14 +9,14 @@
 import Foundation
 
 protocol MenuView: ListView {
-    func get()
+    func setTableView(with array: [Menu])
 }
 
-final class MenuPresenter<T: MenuView>: NSObject {
+final class MenuPresenter: NSObject {
     
-    private weak var view: T?
+    private weak var view: MenuView?
     
-    init(view: T?) {
+    init(view: MenuView?) {
         self.view = view
     }
     
@@ -27,8 +27,8 @@ final class MenuPresenter<T: MenuView>: NSObject {
 extension MenuPresenter {
     
     public func getItems() {
-        let items = [T.Model]()
-        self.view?.set(with: items)
+        
+        
     }
     
 }

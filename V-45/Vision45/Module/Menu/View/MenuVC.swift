@@ -8,7 +8,12 @@
 
 import UIKit
 
-final class MenuVC: TableBaseViewController<Menu> {
+final class MenuVC: TableBaseViewController {
+    
+    private var items = [Menu]()
+    private lazy var presenter: MenuPresenter = {
+        return MenuPresenter(view: self)
+    }()
 
     override func tableSetup() {
         super.tableSetup()
@@ -25,6 +30,18 @@ extension MenuVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.getItems()
+    }
+    
+}
+
+// MARK: - View Implementation
+
+extension MenuVC: MenuView {
+    
+    func setTableView(with array: [Menu]) {
+        items = array
+        tableView.asyncReload()
     }
     
 }
@@ -34,17 +51,17 @@ extension MenuVC {
 extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items?.count ?? 0
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVC.reuseIdentifier) as! MenuTVC
-        cell.fill(cell: items?[indexPath.row])
+        cell.fill(cell: items[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        items?[indexPath.row].action()
+        items[indexPath.row].action()
     }
     
 }

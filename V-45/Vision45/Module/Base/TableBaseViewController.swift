@@ -8,9 +8,7 @@
 
 import UIKit
 
-class TableBaseViewController<T>: UIViewController {
-    
-    private(set) var items: [T]?
+class TableBaseViewController: UIViewController {
     
     var largeTitle: Bool = false {
         willSet(newVal) {
@@ -42,13 +40,4 @@ class TableBaseViewController<T>: UIViewController {
 
 // MARK: - View Implementation
 
-extension TableBaseViewController: ListView {
-    
-    typealias Model = T
-    
-    func set(with array: [T]) {
-        items = array
-        tableView.asyncReload()
-    }
-    
-}
+extension TableBaseViewController: ListView {}
