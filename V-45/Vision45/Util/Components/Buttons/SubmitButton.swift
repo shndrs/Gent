@@ -10,8 +10,8 @@ import UIKit
 
 final class SubmitButton: UIButton {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setup()
     }
     

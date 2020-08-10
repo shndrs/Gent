@@ -10,9 +10,11 @@ import UIKit
 
 class BaseButton: UIButton {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
     }
+    
 }
 
 // MARK: - Methods

@@ -10,17 +10,18 @@ import UIKit
 
 final class RegisterButton: UIButton {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        config()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
     }
+    
 }
 
 // MARK: - Methods
 
 fileprivate extension RegisterButton {
     
-    func config() {
+    func setup() {
         self.titleLabel?.font = Font.bold.return(size: 15)
         self.backgroundColor = Colors.clear
     }
