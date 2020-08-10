@@ -48,8 +48,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISION 45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-EE-0O2">
-                                <rect key="frame" x="136" y="120" width="142" height="238"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="32"/>
+                                <rect key="frame" x="128" y="120" width="158.5" height="238"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,6 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ccd-Xt-7Db"/>
                     <connections>
+                        <outlet property="appNameLabel" destination="MH2-EE-0O2" id="srO-7O-oDC"/>
                         <outlet property="englishButton" destination="m4V-2k-TRU" id="U8q-ra-hzU"/>
                         <outlet property="persianButton" destination="X38-40-n46" id="iAu-fN-KAk"/>
                     </connections>

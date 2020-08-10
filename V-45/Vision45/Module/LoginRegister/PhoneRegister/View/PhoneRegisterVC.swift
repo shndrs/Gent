@@ -41,6 +41,9 @@ extension PhoneRegisterVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Strings.simNumber.value()
+        descriptionLabel.fade(duration: 0.4, delay: 0.6)
+        phoneNumberTextField.fade(duration: 0.4, delay: 0.0)
+        submitButton.fade(duration: 0.4, delay: 0.3)
     }
     
 }

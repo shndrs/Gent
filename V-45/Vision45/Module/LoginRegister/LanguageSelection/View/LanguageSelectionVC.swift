@@ -13,7 +13,7 @@ final class LanguageSelectionVC: BaseViewController {
     private lazy var presenter: LanguageSelectionPresenter = {
         return LanguageSelectionPresenter(view: self)
     }()
-
+    @IBOutlet private weak var appNameLabel: UILabel!
     @IBOutlet private weak var persianButton: FirstInitialButton!
     @IBOutlet private weak var englishButton: FirstInitialButton!
     
@@ -40,6 +40,9 @@ extension LanguageSelectionVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = Strings.languageSelection.value()
+        appNameLabel.fade(duration: 0.4, delay: 0.8)
+        englishButton.fade(duration: 0.4, delay: 0.2)
+        persianButton.fade(duration: 0.4, delay: 0.5)
     }
     
 }

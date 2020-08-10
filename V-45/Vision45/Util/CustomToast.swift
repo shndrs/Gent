@@ -31,6 +31,7 @@ extension CustomToast {
         style.titleAlignment = .center
         style.messageAlignment = .center
         style.messageColor = Colors.label
+        style.titleColor = Colors.label
         self.view.makeToast(message, duration: 3.0, position: .top,
                             title: Strings.error.value(), style: style)
     }
