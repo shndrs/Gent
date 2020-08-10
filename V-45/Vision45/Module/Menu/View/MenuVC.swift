@@ -44,6 +44,34 @@ extension MenuVC: MenuView {
         tableView.asyncReload()
     }
     
+    func lockTapped() {
+        
+    }
+    
+    func unlockTapped() {
+        
+    }
+    
+    func connectDisconnect1Tapped() {
+        
+    }
+    
+    func connectDisconnect2Tapped() {
+        
+    }
+    
+    func instantOutput1Tapped() {
+        
+    }
+    
+    func instantOutput2Tapped() {
+        
+    }
+    
+    func timerTapped() {
+        
+    }
+    
 }
 
 // MARK: - TableView Implementation

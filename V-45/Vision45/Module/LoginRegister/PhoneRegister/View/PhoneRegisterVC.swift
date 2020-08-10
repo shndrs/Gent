@@ -50,7 +50,8 @@ extension PhoneRegisterVC {
 extension PhoneRegisterVC: PhoneRegisterView {
     
     func goToMenu() {
-        
+        let viewController = MenuVC.instantiate(storyboard: .menu)
+        self.show(viewController, sender: nil)
     }
     
 }

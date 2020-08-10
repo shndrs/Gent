@@ -14,8 +14,8 @@ final class BaseNavigationController: UINavigationController {}
 
 extension BaseNavigationController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.setup(for: self.navigationBar)
     }
     

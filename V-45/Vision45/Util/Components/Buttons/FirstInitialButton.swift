@@ -15,7 +15,6 @@ final class FirstInitialButton: BaseButton {}
 extension FirstInitialButton {
     
     override func setup() {
-        super.setup()
         self.backgroundColor = Colors.secondaryBack
         self.clipsToBounds = true
         self.addCornerRadius(radius: 5)

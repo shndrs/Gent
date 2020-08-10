@@ -47,11 +47,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISION 45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-EE-0O2">
+                                <rect key="frame" x="136" y="120" width="142" height="238"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="MH2-EE-0O2" firstAttribute="centerX" secondItem="twX-cA-YIe" secondAttribute="centerX" id="1c3-IU-2ER"/>
+                            <constraint firstItem="76M-M4-neC" firstAttribute="top" secondItem="MH2-EE-0O2" secondAttribute="bottom" constant="32" id="1h2-fe-G1c"/>
                             <constraint firstItem="76M-M4-neC" firstAttribute="leading" secondItem="Tww-Jq-0Q6" secondAttribute="leading" constant="32" id="kC7-Va-1Kt"/>
                             <constraint firstItem="Tww-Jq-0Q6" firstAttribute="trailing" secondItem="76M-M4-neC" secondAttribute="trailing" constant="32" id="mCq-vz-P8b"/>
+                            <constraint firstItem="MH2-EE-0O2" firstAttribute="top" secondItem="Tww-Jq-0Q6" secondAttribute="top" constant="32" id="qP2-rI-uka"/>
                             <constraint firstItem="76M-M4-neC" firstAttribute="centerY" secondItem="twX-cA-YIe" secondAttribute="centerY" id="u9G-sl-5dl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tww-Jq-0Q6"/>
