@@ -30,4 +30,9 @@ extension Language {
         }
     }
     
+    static func current() -> Language {
+        let database = Database()
+        return getLang(with: database[DBKeys.language.rawValue] ?? "")
+    }
+    
 }

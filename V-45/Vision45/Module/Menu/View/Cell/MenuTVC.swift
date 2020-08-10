@@ -22,7 +22,7 @@ extension MenuTVC {
     public func fill(cell with: Menu?) {
         guard let object = with else { return }
         iconImage.image = object.icon
-        titleLabel.text = object.title
+//        titleLabel.text = object.title
     }
     
 }

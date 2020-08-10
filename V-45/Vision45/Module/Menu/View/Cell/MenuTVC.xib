@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3d-At-3q1">
                         <rect key="frame" x="16" y="16" width="288" height="94"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.and.outline" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IlA-PR-fQI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.and.outline" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IlA-PR-fQI">
                                 <rect key="frame" x="105" y="7" width="78" height="78.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IlA-PR-fQI" secondAttribute="height" multiplier="1:1" id="vOL-dR-8gD"/>
@@ -42,6 +42,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="iconImage" destination="IlA-PR-fQI" id="I4J-Ml-y6o"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="180.80357142857142"/>
         </tableViewCell>
     </objects>

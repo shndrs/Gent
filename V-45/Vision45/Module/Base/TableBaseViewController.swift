@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableBaseViewController: UIViewController {
+class TableBaseViewController: BaseViewController {
     
     var largeTitle: Bool = false {
         willSet(newVal) {

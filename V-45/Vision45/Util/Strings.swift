@@ -46,6 +46,7 @@ enum Strings: String {
     case instantOutput1
     case instantOutput2
     case timer
+    case menu
     
 }
 
@@ -104,6 +105,8 @@ extension Strings {
             return "Instant Output 1"
         case .instantOutput2:
             return "Instant Output 2"
+        case .menu:
+            return "Menu"
         }
     }
     
@@ -145,6 +148,8 @@ extension Strings {
             return "خروجی لحظه ای ۱"
         case .instantOutput2:
             return "خروجی لحظه ای ۲"
+        case .menu:
+            return "منو"
         }
     }
     
