@@ -8,10 +8,7 @@
 
 import UIKit
 
-final class FirstInitialButton: BaseButton {
-    
-    
-}
+final class FirstInitialButton: BaseButton {}
 
 // MARK: - Methods
 

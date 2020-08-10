@@ -37,6 +37,16 @@ enum Strings: String {
     case phoneRegisterDesc
     case simNumber
     
+    // MARK: - Menu
+    
+    case lock
+    case unlock
+    case connectDisconnect1
+    case connectDisconnect2
+    case instantOutput1
+    case instantOutput2
+    case timer
+    
 }
 
 // MARK: - Methods
@@ -80,6 +90,20 @@ extension Strings {
             return "Please enter the SIM card number inside VISION 45"
         case .simNumber:
             return "SIM Card Number"
+        case .lock:
+            return "Lock"
+        case .unlock:
+            return "Unlock"
+        case .connectDisconnect1:
+            return "Connect Disconnect 1"
+        case .connectDisconnect2:
+            return "Connect Disconnect 2"
+        case .timer:
+            return "Timer"
+        case .instantOutput1:
+            return "Instant Output 1"
+        case .instantOutput2:
+            return "Instant Output 2"
         }
     }
     
@@ -107,6 +131,20 @@ extension Strings {
             return "لطفا شماره سیم کارت داخل VISION 45 را وارد نمایید."
         case .simNumber:
             return "شماره سیم کارت"
+        case .lock:
+            return "قفل کردن"
+        case .unlock:
+            return "باز کردن قفل"
+        case .connectDisconnect1:
+            return "قطع و وصل ۱"
+        case .connectDisconnect2:
+            return "قطع و وصل ۲"
+        case .timer:
+            return "تایمر"
+        case .instantOutput1:
+            return "خروجی لحظه ای ۱"
+        case .instantOutput2:
+            return "خروجی لحظه ای ۲"
         }
     }
     
