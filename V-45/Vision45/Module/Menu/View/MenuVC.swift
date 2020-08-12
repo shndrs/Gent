@@ -85,9 +85,17 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVC.reuseIdentifier) as! MenuTVC
-        cell.fill(cell: items[indexPath.row])
-        return cell
+        
+        switch Language.current() {   
+        case .english:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVCLeft.reuseIdentifier) as! MenuTVCLeft
+            cell.fill(cell: items[indexPath.row])
+            return cell
+        case .persian:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVCRight.reuseIdentifier) as! MenuTVCRight
+            cell.fill(cell: items[indexPath.row])
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

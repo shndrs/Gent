@@ -10,6 +10,9 @@ import Foundation
 
 struct ReuseIds {
     
-    static let menu = [MenuTVC.reuseIdentifier]
+    public static let menu = [
+        MenuTVCRight.reuseIdentifier,
+        MenuTVCLeft.reuseIdentifier
+    ]
     
 }
