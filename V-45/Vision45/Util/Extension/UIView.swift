@@ -82,8 +82,9 @@ extension UIView {
     func fade(duration: TimeInterval, delay: TimeInterval, isIn: Bool = true) {
         self.alpha = isIn ? 0 : 1
         UIView.animate(withDuration: duration, delay: delay,
-                       options: .curveEaseInOut, animations: {
-            self.alpha = isIn ? 1 : 0
+                       options: .curveEaseInOut, animations: { [weak self] in
+            guard self != nil else { return }
+            self?.alpha = isIn ? 1 : 0
         })
     }
     
