@@ -14,6 +14,13 @@ final class MenuVC: TableBaseViewController {
     private lazy var presenter: MenuPresenter = {
         return MenuPresenter(view: self)
     }()
+    
+    private lazy var settingButton: UIBarButtonItem = {
+        return UIBarButtonItem(image: Images.setting,
+                               style: .plain,
+                               target: self,
+                               action: #selector(settingButtonAction))
+    }()
 
     override func tableSetup() {
         super.tableSetup()
@@ -26,6 +33,16 @@ final class MenuVC: TableBaseViewController {
     
 }
 
+// MARK: - Class Methods
+
+fileprivate extension MenuVC {
+    
+    @objc func settingButtonAction() {
+        
+    }
+    
+}
+
 // MARK: - Life Cycle
 
 extension MenuVC {
@@ -33,6 +50,7 @@ extension MenuVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Strings.menu.value()
+        self.navigationItem.setRightBarButton(settingButton, animated: true)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationItem.setHidesBackButton(true, animated: self.isBeingPresented)
         presenter.getItems()
