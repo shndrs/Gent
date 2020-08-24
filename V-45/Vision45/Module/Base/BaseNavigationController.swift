@@ -14,8 +14,8 @@ final class BaseNavigationController: UINavigationController {}
 
 extension BaseNavigationController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         self.setup(for: self.navigationBar)
     }
     
@@ -26,7 +26,7 @@ extension BaseNavigationController {
 fileprivate extension BaseNavigationController {
     
     func setup(for navigationBar: UINavigationBar) {
-        
+        navigationBar.tintColor = Colors.label
         navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Font.regular.return(size: 16),
                                              NSAttributedString.Key.foregroundColor: Colors.label]
         UIBarButtonItem.appearance()
