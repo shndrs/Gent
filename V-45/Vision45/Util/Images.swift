@@ -12,5 +12,7 @@ struct Images {
     
     static let lock = UIImage(named: "lock-4")!
     static let unlock = UIImage(named: "unlock-3")!
-    
+    static let connectDisconnect = UIImage(named: "connect-1")!
+    static let instantOutput = UIImage(named: "exit-1")!
+    static let timer = UIImage(named: "timer-1")!
 }

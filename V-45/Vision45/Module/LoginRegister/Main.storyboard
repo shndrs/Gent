@@ -145,6 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2X3-OO-Te7"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="umN-VI-6cZ" id="oQP-sz-BTg"/>
                         <outlet property="phoneNumberTextField" destination="PcG-xK-HgS" id="qNo-FN-9sm"/>

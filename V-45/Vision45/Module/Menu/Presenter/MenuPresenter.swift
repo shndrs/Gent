@@ -45,19 +45,19 @@ extension MenuPresenter {
         let unlock = Menu(icon: Images.unlock, title: Strings.unlock.value()) {
             self.view?.unlockTapped()
         }
-        let connectDisconnect1 = Menu(icon: UIImage(named: "img_forest")!, title: Strings.connectDisconnect1.value()) {
+        let connectDisconnect1 = Menu(icon: Images.connectDisconnect, title: Strings.connectDisconnect1.value()) {
             self.view?.connectDisconnect1Tapped()
         }
-        let connectDisconnect2 = Menu(icon: UIImage(named: "forest")!, title: Strings.connectDisconnect2.value()) {
+        let connectDisconnect2 = Menu(icon: Images.connectDisconnect, title: Strings.connectDisconnect2.value()) {
             self.view?.connectDisconnect2Tapped()
         }
-        let instantOutput1 = Menu(icon: UIImage(named: "img_forest")!, title: Strings.instantOutput1.value()) {
+        let instantOutput1 = Menu(icon: Images.instantOutput, title: Strings.instantOutput1.value()) {
             self.view?.instantOutput1Tapped()
         }
-        let instantOutput2 = Menu(icon: UIImage(named: "forest")!, title: Strings.instantOutput2.value()) {
+        let instantOutput2 = Menu(icon: Images.instantOutput, title: Strings.instantOutput2.value()) {
             self.view?.instantOutput2Tapped()
         }
-        let timer = Menu(icon: UIImage(named: "img_forest")!, title: Strings.timer.value()) {
+        let timer = Menu(icon: Images.timer, title: Strings.timer.value()) {
             self.view?.timerTapped()
         }
         return [lock, unlock, connectDisconnect1, connectDisconnect2,
