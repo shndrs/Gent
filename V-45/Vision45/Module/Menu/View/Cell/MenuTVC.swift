@@ -15,7 +15,12 @@ class MenuTVC: UITableViewCell {
             iconImage.addCornerRadius(radius: iconImage.bounds.width/2)
         }
     }
-    @IBOutlet private weak var titleLabel: LabelMedium!
+    @IBOutlet private weak var titleLabel: LabelBold!
+    @IBOutlet private weak var descriptionLabel: LabelLight! {
+        didSet {
+//            descriptionLabel.textColor = Colors
+        }
+    }
 
 }
 
@@ -26,7 +31,8 @@ extension MenuTVC {
     public func fill(cell with: Menu?) {
         guard let object = with else { return }
         iconImage.image = object.icon
-//        titleLabel.text = object.title
+        titleLabel.text = object.title
+        descriptionLabel.text = object.desc
     }
     
 }
