@@ -12,6 +12,7 @@ final class Menu: NSObject {
     
     private(set) var icon: UIImage!
     private(set) var title: String!
+    private(set) var desc: String = "GitHub, Inc. is an American multinational corporation that provides hosting for software development and version control using Git."
     private(set) var action: Action!
     
     init(icon: UIImage, title: String, action: @escaping Action) {

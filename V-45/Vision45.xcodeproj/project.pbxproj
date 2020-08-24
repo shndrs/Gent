@@ -38,7 +38,6 @@
 		72ACC55824DDE27300A36932 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55724DDE27300A36932 /* ListView.swift */; };
 		72ACC55A24DDE9C000A36932 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55924DDE9C000A36932 /* MenuVC.swift */; };
 		72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55C24DDEFA700A36932 /* MenuTVC.swift */; };
-		72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ACC55D24DDEFA700A36932 /* MenuTVC.xib */; };
 		72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56024DDEFE500A36932 /* ReusableView.swift */; };
 		72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56224DDF21C00A36932 /* ReuseIds.swift */; };
 		72ACC56524DDF3EB00A36932 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */; };
@@ -70,6 +69,7 @@
 		F42074D824E3C07D00425093 /* MenuTVCRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074D624E3C07D00425093 /* MenuTVCRight.xib */; };
 		F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */; };
 		F42074DC24E3C0CA00425093 /* MenuTVCLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */; };
+		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,7 +109,6 @@
 		72ACC55724DDE27300A36932 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72ACC55924DDE9C000A36932 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		72ACC55C24DDEFA700A36932 /* MenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
-		72ACC55D24DDEFA700A36932 /* MenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVC.xib; sourceTree = "<group>"; };
 		72ACC56024DDEFE500A36932 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		72ACC56224DDF21C00A36932 /* ReuseIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIds.swift; sourceTree = "<group>"; };
 		72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		F42074D624E3C07D00425093 /* MenuTVCRight.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCRight.xib; sourceTree = "<group>"; };
 		F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCLeft.swift; sourceTree = "<group>"; };
 		F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCLeft.xib; sourceTree = "<group>"; };
+		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				72ACC55C24DDEFA700A36932 /* MenuTVC.swift */,
-				72ACC55D24DDEFA700A36932 /* MenuTVC.xib */,
 				F42074D524E3C07D00425093 /* MenuTVCRight.swift */,
 				F42074D624E3C07D00425093 /* MenuTVCRight.xib */,
 				F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */,
@@ -387,6 +386,7 @@
 				72ACC54924DDDB9B00A36932 /* Typealias.swift */,
 				72ACC55324DDDFE800A36932 /* Register.swift */,
 				72ACC56224DDF21C00A36932 /* ReuseIds.swift */,
+				F495B98B24F3BF1500610DEA /* Images.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -519,7 +519,6 @@
 				72ACC54E24DDDDF800A36932 /* Menu.storyboard in Resources */,
 				7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */,
 				A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */,
-				72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */,
 				7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +598,7 @@
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,
 				7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */,
 				72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */,
+				F495B98C24F3BF1500610DEA /* Images.swift in Sources */,
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
 				72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */,
 				A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */,

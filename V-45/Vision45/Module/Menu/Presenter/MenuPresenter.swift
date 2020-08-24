@@ -39,10 +39,10 @@ extension MenuPresenter {
     
     private func setItems() -> [Menu] {
         
-        let lock = Menu(icon: UIImage(named: "img_forest")!, title: Strings.lock.value()) {
+        let lock = Menu(icon: Images.lock, title: Strings.lock.value()) {
             self.view?.lockTapped()
         }
-        let unlock = Menu(icon: UIImage(named: "forest")!, title: Strings.unlock.value()) {
+        let unlock = Menu(icon: Images.unlock, title: Strings.unlock.value()) {
             self.view?.unlockTapped()
         }
         let connectDisconnect1 = Menu(icon: UIImage(named: "img_forest")!, title: Strings.connectDisconnect1.value()) {

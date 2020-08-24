@@ -19,7 +19,8 @@ final class MenuVC: TableBaseViewController {
         super.tableSetup()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 126.0
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 55
         register(reuseIds: ReuseIds.menu)
     }
     
@@ -31,8 +32,8 @@ extension MenuVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Strings.menu.value()
         presenter.getItems()
-        largeTitle = (Language.current() == .english) ? true : false
     }
     
 }
