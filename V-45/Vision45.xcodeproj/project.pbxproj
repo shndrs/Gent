@@ -70,6 +70,7 @@
 		F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */; };
 		F42074DC24E3C0CA00425093 /* MenuTVCLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */; };
 		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
+		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCLeft.swift; sourceTree = "<group>"; };
 		F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCLeft.xib; sourceTree = "<group>"; };
 		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 				72ACC53D24DDBB8F00A36932 /* ErrorView.swift */,
 				72ACC55724DDE27300A36932 /* ListView.swift */,
 				72ACC56024DDEFE500A36932 /* ReusableView.swift */,
+				F495B98D24F3DEFE00610DEA /* LoadView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,
 				72ACC54824DDDB6E00A36932 /* Menu.swift in Sources */,
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
+				F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */,
 				F42074D724E3C07D00425093 /* MenuTVCRight.swift in Sources */,
 				72728C2224DC69CD00F2A045 /* String.swift in Sources */,
 				72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */,

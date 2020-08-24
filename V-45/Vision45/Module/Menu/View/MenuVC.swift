@@ -33,6 +33,8 @@ extension MenuVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Strings.menu.value()
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationItem.setHidesBackButton(true, animated: self.isBeingPresented)
         presenter.getItems()
     }
     

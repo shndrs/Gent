@@ -53,6 +53,14 @@ extension PhoneRegisterVC {
 
 extension PhoneRegisterVC: PhoneRegisterView {
     
+    func startLoading() {
+        HUD.default.show()
+    }
+    
+    func stopLoading() {
+        HUD.default.dismiss()
+    }
+    
     func goToMenu() {
         let viewController = MenuVC.instantiate(storyboard: .menu)
         self.show(viewController, sender: nil)
