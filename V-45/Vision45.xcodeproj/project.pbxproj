@@ -69,6 +69,7 @@
 		F42074D824E3C07D00425093 /* MenuTVCRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074D624E3C07D00425093 /* MenuTVCRight.xib */; };
 		F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */; };
 		F42074DC24E3C0CA00425093 /* MenuTVCLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */; };
+		F425B57C24F4C5AA000D47C0 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */; };
 		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
 		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		F42074D624E3C07D00425093 /* MenuTVCRight.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCRight.xib; sourceTree = "<group>"; };
 		F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCLeft.swift; sourceTree = "<group>"; };
 		F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCLeft.xib; sourceTree = "<group>"; };
+		F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -376,6 +378,7 @@
 		A970F2B224AB1F8100A8FD77 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F425B57A24F4C598000D47C0 /* Animation */,
 				72ACC53C24DDBB7300A36932 /* Protocol */,
 				72AA571324DBE5860025C5EB /* Storage */,
 				A970F2D824AB218C00A8FD77 /* Extension */,
@@ -452,6 +455,14 @@
 				72AA570E24DBE3550025C5EB /* Base */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		F425B57A24F4C598000D47C0 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,6 +588,7 @@
 			files = (
 				72ACC54224DDD9EB00A36932 /* CustomToast.swift in Sources */,
 				A970F2C924AB201E00A8FD77 /* RegisterButton.swift in Sources */,
+				F425B57C24F4C5AA000D47C0 /* CellAnimator.swift in Sources */,
 				72ACC54024DDC16400A36932 /* ErrorViewController.swift in Sources */,
 				72ACC55224DDDF9600A36932 /* UITableViewController.swift in Sources */,
 				A970F2CF24AB201E00A8FD77 /* BaseLabel.swift in Sources */,
