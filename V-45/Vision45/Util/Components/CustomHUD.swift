@@ -16,13 +16,13 @@ struct HUD {
     private lazy var hud: EZProgress = {
         let options = EZProgressOptions()
         options.radius = 120
-        options.secondLayerStrokeColor = Colors.darkGray
-        options.strokeWidth = 12
-        options.thirdLayerStrokeColor = Colors.darkGray
-        options.firstLayerStrokeColor = .orange
+        options.secondLayerStrokeColor = Colors.yellow
+        options.strokeWidth = 13
+        options.thirdLayerStrokeColor = Colors.yellow
+        options.firstLayerStrokeColor = .black
+        options.animationOption = .lineLayer
         options.title = Strings.wait.value()
-        options.font = Font.regular.return(size: 14)
-        options.animationOption = EZAnimationOptions.antColony
+        options.font = Font.regular.return(size: 17)
         let hud = EZProgressHUD.setProgress(with: options)
         return hud
     }()

@@ -64,7 +64,7 @@ extension MenuVC: MenuView {
     
     func setTableView(with array: [Menu]) {
         items = array
-        tableView.asyncReload()
+        tableView.reloadData()
     }
     
     func lockTapped() {
@@ -106,7 +106,6 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch Language.current() {   
         case .english:
             let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVCLeft.reuseIdentifier) as! MenuTVCLeft
@@ -121,6 +120,13 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         items[indexPath.row].action()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if !items[indexPath.row].animatedOnce {
+            items[indexPath.row].animatedOnce = true
+            CellAnimator(cell: cell).sweepIn()
+        }
     }
     
 }

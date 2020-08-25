@@ -16,6 +16,12 @@ final class CellAnimator: NSObject {
         self.cell = cell
     }
     
+}
+
+// MARK: - Methods
+
+extension CellAnimator {
+    
     public func fadeAnimation() {
         
         cell?.alpha = 0
@@ -35,10 +41,11 @@ final class CellAnimator: NSObject {
     }
     
     public func sweepIn() {
-        cell?.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
+        cell?.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0)
         UIView.animate(withDuration: 0.9, delay: 0,
                        options: .curveEaseInOut, animations: { [weak self] in
             self?.cell?.transform = .identity
         })
     }
+    
 }

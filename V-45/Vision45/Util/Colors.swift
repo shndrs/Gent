@@ -32,4 +32,8 @@ struct Colors {
     public static let secondaryBack = UIColor.secondarySystemBackground
     public static let tertiaryBack = UIColor.tertiarySystemBackground
     public static let error = #colorLiteral(red: 1, green: 0.03600227677, blue: 0.2423752917, alpha: 1).withAlphaComponent(0.9)
+    public static let yellow = UIColor(red: 255/255,
+                                       green: 190/255,
+                                       blue: 0/255,
+                                       alpha: 1)
 }
