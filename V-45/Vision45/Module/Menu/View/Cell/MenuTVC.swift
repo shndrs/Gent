@@ -12,7 +12,7 @@ class MenuTVC: UITableViewCell {
     
     @IBOutlet private weak var iconImage: UIImageView! {
         didSet {
-            iconImage.addCornerRadius(radius: iconImage.bounds.width/2)
+//            iconImage.addCornerRadius(radius: iconImage.bounds.width/2)
         }
     }
     @IBOutlet private weak var titleLabel: LabelBold!
