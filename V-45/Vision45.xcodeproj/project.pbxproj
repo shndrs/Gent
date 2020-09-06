@@ -65,6 +65,7 @@
 		A970F2D724AB217800A8FD77 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F2D624AB217800A8FD77 /* Strings.swift */; };
 		A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F2D924AB21C300A8FD77 /* UIView.swift */; };
 		AC0DDF6F9ABD319E771FCF32 /* Pods_Vision45.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459DADE08F0BE21E6EDA16D5 /* Pods_Vision45.framework */; };
+		F416CAB62504A68500FAF05E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F416CAB52504A68500FAF05E /* Timer.storyboard */; };
 		F42074D724E3C07D00425093 /* MenuTVCRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D524E3C07D00425093 /* MenuTVCRight.swift */; };
 		F42074D824E3C07D00425093 /* MenuTVCRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074D624E3C07D00425093 /* MenuTVCRight.xib */; };
 		F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */; };
@@ -137,6 +138,7 @@
 		A970F2D424AB216100A8FD77 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A970F2D624AB217800A8FD77 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A970F2D924AB21C300A8FD77 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F416CAB52504A68500FAF05E /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		F42074D524E3C07D00425093 /* MenuTVCRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCRight.swift; sourceTree = "<group>"; };
 		F42074D624E3C07D00425093 /* MenuTVCRight.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCRight.xib; sourceTree = "<group>"; };
 		F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCLeft.swift; sourceTree = "<group>"; };
@@ -450,11 +452,36 @@
 		A970F2DB24AB229E00A8FD77 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				F416CAB22504A54400FAF05E /* Timer */,
 				72ACC54324DDDB3600A36932 /* Menu */,
 				7263A5BD24C0861800FCFD21 /* LoginRegister */,
 				72AA570E24DBE3550025C5EB /* Base */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		F416CAB22504A54400FAF05E /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				F416CAB42504A56800FAF05E /* Presenter */,
+				F416CAB32504A56000FAF05E /* View */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		F416CAB32504A56000FAF05E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F416CAB52504A68500FAF05E /* Timer.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F416CAB42504A56800FAF05E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F425B57A24F4C598000D47C0 /* Animation */ = {
@@ -525,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F416CAB62504A68500FAF05E /* Timer.storyboard in Resources */,
 				7287933324DC441A0064230A /* Main.storyboard in Resources */,
 				A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */,
 				F42074D824E3C07D00425093 /* MenuTVCRight.xib in Resources */,
