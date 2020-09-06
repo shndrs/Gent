@@ -6,11 +6,9 @@
 //  Copyright © 2020 Sahand Raeisi. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
-class PickerViewTextFiled: BaseTextField {
+final class PickerViewTextFiled: BaseTextField {
     
     public typealias TextFiledItemHandler = (_ item: String,_ index: Int) -> Void
     var itemSelectionHandler: TextFiledItemHandler?
