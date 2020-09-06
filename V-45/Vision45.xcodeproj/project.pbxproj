@@ -73,6 +73,8 @@
 		F425B57C24F4C5AA000D47C0 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */; };
 		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
 		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
+		F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */; };
+		F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDADC2504BE5400336721 /* BasePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +148,8 @@
 		F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextFiled.swift; sourceTree = "<group>"; };
+		F49FDADC2504BE5400336721 /* BasePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 			children = (
 				72728C1F24DC658F00F2A045 /* BaseTextField.swift */,
 				72728C1D24DC657300F2A045 /* PhoneTextField.swift */,
+				F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 		A970F2B524AB201D00A8FD77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F49FDADB2504BE4300336721 /* PickerView */,
 				72728C1C24DC654300F2A045 /* TextFields */,
 				A970F2B824AB201D00A8FD77 /* Buttons */,
 				A970F2BE24AB201D00A8FD77 /* Labels */,
@@ -490,6 +496,14 @@
 				F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		F49FDADB2504BE4300336721 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				F49FDADC2504BE5400336721 /* BasePickerView.swift */,
+			);
+			path = PickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,6 +640,7 @@
 				72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */,
 				72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */,
 				72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */,
+				F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */,
 				A970F2B424AB1F9500A8FD77 /* Font.swift in Sources */,
 				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
 				F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */,
@@ -636,6 +651,7 @@
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
 				72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */,
 				72ACC55824DDE27300A36932 /* ListView.swift in Sources */,
+				F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */,
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,

@@ -10,3 +10,4 @@ import Foundation
 
 typealias Action = (() -> Void)
 typealias Actioanl = (() -> Void)?
+typealias ListSelectionBlock = (String, Int) -> ()
