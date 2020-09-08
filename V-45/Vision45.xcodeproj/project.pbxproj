@@ -71,6 +71,9 @@
 		F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */; };
 		F42074DC24E3C0CA00425093 /* MenuTVCLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */; };
 		F425B57C24F4C5AA000D47C0 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */; };
+		F43ACE8125074E4A007702B8 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8025074E4A007702B8 /* TimerVC.swift */; };
+		F43ACE8425074F71007702B8 /* BaseDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8325074F71007702B8 /* BaseDatePicker.swift */; };
+		F43ACE8725075019007702B8 /* BaseSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8625075019007702B8 /* BaseSwitch.swift */; };
 		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
 		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
 		F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */; };
@@ -146,6 +149,9 @@
 		F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCLeft.swift; sourceTree = "<group>"; };
 		F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCLeft.xib; sourceTree = "<group>"; };
 		F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
+		F43ACE8025074E4A007702B8 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		F43ACE8325074F71007702B8 /* BaseDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDatePicker.swift; sourceTree = "<group>"; };
+		F43ACE8625075019007702B8 /* BaseSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwitch.swift; sourceTree = "<group>"; };
 		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextFiled.swift; sourceTree = "<group>"; };
@@ -407,6 +413,8 @@
 		A970F2B524AB201D00A8FD77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F43ACE8525075007007702B8 /* Switch */,
+				F43ACE8225074F4E007702B8 /* DatePicker */,
 				F49FDADB2504BE4300336721 /* PickerView */,
 				72728C1C24DC654300F2A045 /* TextFields */,
 				A970F2B824AB201D00A8FD77 /* Buttons */,
@@ -479,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				F416CAB52504A68500FAF05E /* Timer.storyboard */,
+				F43ACE8025074E4A007702B8 /* TimerVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -496,6 +505,22 @@
 				F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		F43ACE8225074F4E007702B8 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F43ACE8325074F71007702B8 /* BaseDatePicker.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		F43ACE8525075007007702B8 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				F43ACE8625075019007702B8 /* BaseSwitch.swift */,
+			);
+			path = Switch;
 			sourceTree = "<group>";
 		};
 		F49FDADB2504BE4300336721 /* PickerView */ = {
@@ -650,7 +675,9 @@
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
 				72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */,
+				F43ACE8125074E4A007702B8 /* TimerVC.swift in Sources */,
 				72ACC55824DDE27300A36932 /* ListView.swift in Sources */,
+				F43ACE8725075019007702B8 /* BaseSwitch.swift in Sources */,
 				F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */,
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
@@ -667,6 +694,7 @@
 				A970F2CE24AB201E00A8FD77 /* LabelLight.swift in Sources */,
 				A970F2C824AB201E00A8FD77 /* SubmitButton.swift in Sources */,
 				A970F2D524AB216100A8FD77 /* Colors.swift in Sources */,
+				F43ACE8425074F71007702B8 /* BaseDatePicker.swift in Sources */,
 				A970F2C724AB201E00A8FD77 /* EmptyView.swift in Sources */,
 				7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */,
 				72ACC55624DDE1F500A36932 /* BaseView.swift in Sources */,

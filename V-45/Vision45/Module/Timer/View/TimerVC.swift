@@ -8,23 +8,26 @@
 
 import UIKit
 
-class TimerVC: UIViewController {
+final class TimerVC: BaseViewController {
+    
+    @IBOutlet private weak var exitWithTimerLabel: LabelBold!
+    @IBOutlet private weak var inputTypeTextField: PickerViewTextFiled!
+    @IBOutlet private weak var connectionTimeLabel: LabelBold!
+    @IBOutlet private weak var connectionTimePicker: BaseDatePicker!
+    @IBOutlet private weak var disconnectTimeLabel: LabelBold!
+    @IBOutlet private weak var disconnectTimePicker: BaseDatePicker!
+    @IBOutlet private weak var repeatEverydayLabel: LabelBold!
+    @IBOutlet private weak var repeatEverydaySwitch: BaseSwitch!
+    
+}
 
+// MARK: - Life Cycle
+
+extension TimerVC {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -92,7 +92,8 @@ extension MenuVC: MenuView {
     }
     
     func timerTapped() {
-        
+        let viewController = TimerVC.instantiate(storyboard: .timer)
+        self.show(viewController, sender: nil)
     }
     
 }
