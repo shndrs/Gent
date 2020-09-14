@@ -36,4 +36,6 @@ struct Colors {
                                        green: 190/255,
                                        blue: 0/255,
                                        alpha: 1)
+    public static let set = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    public static let cancel = #colorLiteral(red: 0.8076819463, green: 0.03014058013, blue: 0.2003446742, alpha: 1)
 }

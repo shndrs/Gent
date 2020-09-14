@@ -18,8 +18,8 @@ final class TimerVC: BaseViewController {
     @IBOutlet private weak var disconnectTimePicker: BaseDatePicker!
     @IBOutlet private weak var repeatEverydayLabel: LabelBold!
     @IBOutlet private weak var repeatEverydaySwitch: BaseSwitch!
-    @IBOutlet private weak var setButton: BaseButton!
-    @IBOutlet private weak var cancelButton: BaseButton!
+    @IBOutlet private weak var setButton: SetButton!
+    @IBOutlet private weak var cancelButton: CancelButton!
     
 }
 

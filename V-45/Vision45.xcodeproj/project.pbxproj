@@ -77,6 +77,8 @@
 		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
 		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
 		F4976065250F6A3A00AAA0C6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */; };
+		F4976067250F6C1B00AAA0C6 /* SetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976066250F6C1B00AAA0C6 /* SetButton.swift */; };
+		F4976069250F6C2600AAA0C6 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976068250F6C2600AAA0C6 /* CancelButton.swift */; };
 		F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */; };
 		F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDADC2504BE5400336721 /* BasePickerView.swift */; };
 /* End PBXBuildFile section */
@@ -156,6 +158,8 @@
 		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		F4976066250F6C1B00AAA0C6 /* SetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetButton.swift; sourceTree = "<group>"; };
+		F4976068250F6C2600AAA0C6 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextFiled.swift; sourceTree = "<group>"; };
 		F49FDADC2504BE5400336721 /* BasePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,6 +443,8 @@
 				A970F2BA24AB201D00A8FD77 /* RegisterButton.swift */,
 				A970F2BB24AB201D00A8FD77 /* BaseButton.swift */,
 				72AA572024DC076D0025C5EB /* FirstInitialButton.swift */,
+				F4976066250F6C1B00AAA0C6 /* SetButton.swift */,
+				F4976068250F6C2600AAA0C6 /* CancelButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -685,9 +691,11 @@
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,
+				F4976069250F6C2600AAA0C6 /* CancelButton.swift in Sources */,
 				7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */,
 				72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */,
 				F495B98C24F3BF1500610DEA /* Images.swift in Sources */,
+				F4976067250F6C1B00AAA0C6 /* SetButton.swift in Sources */,
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
 				72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */,
 				F4976065250F6A3A00AAA0C6 /* NotificationManager.swift in Sources */,

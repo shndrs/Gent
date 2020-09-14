@@ -31,8 +31,7 @@ extension NotificationManager {
         center.delegate = self
     }
     
-    internal func sendLocalPush(in dateTime: Date, title:String, body: String, onCompelete:(()->Void)?) {
-        
+    internal func sendLocalPush(in dateTime: Date, title: String, body: String, onCompelete: (() -> Void)?) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
@@ -48,7 +47,6 @@ extension NotificationManager {
             print(errorValue)
         }
         onCompelete?()
-        
     }
     
     internal func deleteLocalNotification(with identifier: String, onCompelete:(()->Void)?) {

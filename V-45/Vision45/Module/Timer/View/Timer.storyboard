@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qLe-2T-Y3V">
-    <device id="retina4_0" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,17 @@
             <objects>
                 <viewController storyboardIdentifier="TimerVC" id="qLe-2T-Y3V" customClass="TimerVC" customModule="Vision45" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oq5-GZ-r91">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-lE-iYb">
-                                <rect key="frame" x="0.0" y="44" width="320" height="482.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="761.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Faj-WZ-U5c">
-                                        <rect key="frame" x="32" y="16" width="256" height="586"/>
+                                        <rect key="frame" x="32" y="16" width="350" height="586"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IK-KV-sXo" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="109.5" y="0.0" width="37.5" height="25"/>
+                                                <rect key="frame" x="156.5" y="0.0" width="37.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="zvO-hS-EEZ"/>
                                                 </constraints>
@@ -31,13 +31,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-al-igw" customClass="PickerViewTextFiled" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="41" width="256" height="34"/>
+                                                <rect key="frame" x="0.0" y="41" width="350" height="34"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVQ-EY-JxI" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="109.5" y="91" width="37.5" height="25"/>
+                                                <rect key="frame" x="156.5" y="91" width="37.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="NdJ-2R-MmB"/>
                                                 </constraints>
@@ -46,13 +46,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-zo-etd" customClass="BaseDatePicker" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="132" width="256" height="130"/>
+                                                <rect key="frame" x="15" y="132" width="320" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="CaX-2i-gdv"/>
                                                 </constraints>
                                             </datePicker>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGw-hA-okA" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="109.5" y="278" width="37.5" height="25"/>
+                                                <rect key="frame" x="156.5" y="278" width="37.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="ViY-6v-0IF"/>
                                                 </constraints>
@@ -61,13 +61,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3H4-Nf-ifS" customClass="BaseDatePicker" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="319" width="256" height="130"/>
+                                                <rect key="frame" x="15" y="319" width="320" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="zYT-1w-vSh"/>
                                                 </constraints>
                                             </datePicker>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRj-OQ-Ids">
-                                                <rect key="frame" x="68.5" y="465" width="119" height="31"/>
+                                                <rect key="frame" x="115.5" y="465" width="119" height="31"/>
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-hD-eTu" customClass="BaseSwitch" customModule="Vision45" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -81,21 +81,21 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFT-AO-dZH">
-                                                <rect key="frame" x="8" y="512" width="240" height="28"/>
+                                                <rect key="frame" x="55" y="512" width="240" height="28"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="wWw-G2-ZFB"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Jo-Mo-jkn">
-                                                <rect key="frame" x="74" y="556" width="108" height="30"/>
+                                                <rect key="frame" x="0.0" y="556" width="350" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jik-QY-vzu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jik-QY-vzu" customClass="SetButton" customModule="Vision45" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gna-4k-7iW">
-                                                        <rect key="frame" x="62" y="0.0" width="46" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gna-4k-7iW" customClass="CancelButton" customModule="Vision45" customModuleProvider="target">
+                                                        <rect key="frame" x="183" y="0.0" width="167" height="30"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                 </subviews>
@@ -103,7 +103,9 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="FV6-al-igw" secondAttribute="trailing" id="Jry-rs-dEc"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Jo-Mo-jkn" secondAttribute="trailing" id="LGQ-uH-uXN"/>
                                             <constraint firstItem="FV6-al-igw" firstAttribute="leading" secondItem="Faj-WZ-U5c" secondAttribute="leading" id="YDb-4X-Boa"/>
+                                            <constraint firstItem="1Jo-Mo-jkn" firstAttribute="leading" secondItem="Faj-WZ-U5c" secondAttribute="leading" id="j6d-Bq-oGF"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -130,6 +132,7 @@
                     <tabBarItem key="tabBarItem" title="" id="XA3-ai-1Vg"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="cancelButton" destination="Gna-4k-7iW" id="XLq-3U-I95"/>
                         <outlet property="connectionTimeLabel" destination="MVQ-EY-JxI" id="2AC-9G-K8R"/>
                         <outlet property="connectionTimePicker" destination="kUA-zo-etd" id="etP-qe-G8w"/>
                         <outlet property="disconnectTimeLabel" destination="cGw-hA-okA" id="0EM-Ax-eUg"/>
@@ -137,6 +140,7 @@
                         <outlet property="inputTypeTextField" destination="FV6-al-igw" id="lac-8s-i8a"/>
                         <outlet property="repeatEverydayLabel" destination="Gtf-Pc-fb9" id="GUF-CO-LFE"/>
                         <outlet property="repeatEverydaySwitch" destination="g7T-hD-eTu" id="tvb-89-Gzj"/>
+                        <outlet property="setButton" destination="jik-QY-vzu" id="S32-Sx-3Te"/>
                         <outlet property="timedExitLabel" destination="4IK-KV-sXo" id="M9j-a7-xox"/>
                     </connections>
                 </viewController>
