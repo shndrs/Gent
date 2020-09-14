@@ -76,6 +76,7 @@
 		F43ACE8725075019007702B8 /* BaseSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8625075019007702B8 /* BaseSwitch.swift */; };
 		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
 		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
+		F4976065250F6A3A00AAA0C6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */; };
 		F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */; };
 		F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDADC2504BE5400336721 /* BasePickerView.swift */; };
 /* End PBXBuildFile section */
@@ -154,6 +155,7 @@
 		F43ACE8625075019007702B8 /* BaseSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwitch.swift; sourceTree = "<group>"; };
 		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextFiled.swift; sourceTree = "<group>"; };
 		F49FDADC2504BE5400336721 /* BasePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -406,6 +408,7 @@
 				72ACC55324DDDFE800A36932 /* Register.swift */,
 				72ACC56224DDF21C00A36932 /* ReuseIds.swift */,
 				F495B98B24F3BF1500610DEA /* Images.swift */,
+				F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				F495B98C24F3BF1500610DEA /* Images.swift in Sources */,
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
 				72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */,
+				F4976065250F6A3A00AAA0C6 /* NotificationManager.swift in Sources */,
 				A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */,
 				72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */,
 				72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */,
