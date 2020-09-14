@@ -36,6 +36,14 @@ fileprivate extension TimerVC {
         repeatEverydayLabel.text = Strings.repeatEveryday.value()
     }
     
+    @IBAction func cancelButtonPressed(_ sender: CancelButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func setButtonPressed(_ sender: SetButton) {
+        
+    }
+    
 }
 
 // MARK: - Life Cycle

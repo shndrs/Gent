@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qLe-2T-Y3V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qLe-2T-Y3V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,10 +93,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jik-QY-vzu" customClass="SetButton" customModule="Vision45" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="setButtonPressed:" destination="qLe-2T-Y3V" eventType="touchUpInside" id="cxU-ON-DzY"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gna-4k-7iW" customClass="CancelButton" customModule="Vision45" customModuleProvider="target">
                                                         <rect key="frame" x="183" y="0.0" width="167" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="cancelButtonPressed:" destination="qLe-2T-Y3V" eventType="touchUpInside" id="zDI-de-33S"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
