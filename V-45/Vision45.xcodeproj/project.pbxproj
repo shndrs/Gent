@@ -81,6 +81,7 @@
 		F4976069250F6C2600AAA0C6 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976068250F6C2600AAA0C6 /* CancelButton.swift */; };
 		F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */; };
 		F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDADC2504BE5400336721 /* BasePickerView.swift */; };
+		F4ADC545250F81D800399769 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ADC544250F81D800399769 /* TimerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +163,7 @@
 		F4976068250F6C2600AAA0C6 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextFiled.swift; sourceTree = "<group>"; };
 		F49FDADC2504BE5400336721 /* BasePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerView.swift; sourceTree = "<group>"; };
+		F4ADC544250F81D800399769 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +506,7 @@
 		F416CAB42504A56800FAF05E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F4ADC544250F81D800399769 /* TimerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */,
 				72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */,
 				72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */,
+				F4ADC545250F81D800399769 /* TimerPresenter.swift in Sources */,
 				A970F2D224AB201E00A8FD77 /* BackView.swift in Sources */,
 				A970F2CE24AB201E00A8FD77 /* LabelLight.swift in Sources */,
 				A970F2C824AB201E00A8FD77 /* SubmitButton.swift in Sources */,
