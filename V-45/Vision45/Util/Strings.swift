@@ -187,7 +187,7 @@ extension Strings {
         case .set:
             return "تنظیم"
         case .select:
-            return "Select"
+            return "انتخاب"
         }
     }
     

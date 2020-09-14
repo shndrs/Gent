@@ -10,6 +10,10 @@ import UIKit
 
 final class TimerVC: BaseViewController {
     
+    private lazy var presenter: TimerPresenter = {
+        return TimerPresenter(view: self)
+    }()
+    
     @IBOutlet private weak var timedExitLabel: LabelBold!
     @IBOutlet private weak var inputTypeTextField: PickerViewTextFiled!
     @IBOutlet private weak var connectionTimeLabel: LabelBold!
@@ -53,6 +57,17 @@ extension TimerVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        presenter.pickerViewItems()
+    }
+    
+}
+
+// MARK: - View Implementation
+
+extension TimerVC: TimerView {
+    
+    func setPickerView(with array: [String]) {
+        inputTypeTextField.items = array
     }
     
 }

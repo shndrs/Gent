@@ -37,11 +37,10 @@ final class PickerViewTextFiled: BaseTextField {
         self.inputView = self.pickerView
         self.delegate = self
         self.undoManager?.removeAllActions()
-        pickerView.selectionChanged = {
-            value,idx in
+        pickerView.selectionChanged = { value, idx in
             self.text = value
             if self.itemSelectionHandler != nil {
-                self.itemSelectionHandler!(value,idx)
+                self.itemSelectionHandler!(value, idx)
             }
         }
     }
