@@ -10,7 +10,7 @@ import UIKit
 
 final class TimerVC: BaseViewController {
     
-    @IBOutlet private weak var exitWithTimerLabel: LabelBold!
+    @IBOutlet private weak var timedExitLabel: LabelBold!
     @IBOutlet private weak var inputTypeTextField: PickerViewTextFiled!
     @IBOutlet private weak var connectionTimeLabel: LabelBold!
     @IBOutlet private weak var connectionTimePicker: BaseDatePicker!
@@ -20,6 +20,8 @@ final class TimerVC: BaseViewController {
     @IBOutlet private weak var repeatEverydaySwitch: BaseSwitch!
     
 }
+
+// MARK: - Life
 
 // MARK: - Life Cycle
 
