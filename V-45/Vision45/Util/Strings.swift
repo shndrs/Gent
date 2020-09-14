@@ -54,6 +54,9 @@ enum Strings: String {
     case connectionTime
     case disconnectTime
     case repeatEveryday
+    case cancel
+    case set
+    case select
     
 }
 
@@ -122,6 +125,12 @@ extension Strings {
             return "Disconnect Time"
         case .repeatEveryday:
             return "Repeat Everyday"
+        case .cancel:
+            return "Cancel"
+        case .set:
+            return "Set"
+        case .select:
+            return "Select"
         }
     }
     
@@ -173,6 +182,12 @@ extension Strings {
             return "زمان قطع"
         case .repeatEveryday:
             return "تکرار برای هر روز"
+        case .cancel:
+            return "لغو"
+        case .set:
+            return "تنظیم"
+        case .select:
+            return "Select"
         }
     }
     

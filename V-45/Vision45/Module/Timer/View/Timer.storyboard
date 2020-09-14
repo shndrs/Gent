@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qLe-2T-Y3V">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -33,72 +33,77 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-lE-iYb">
                                 <rect key="frame" x="0.0" y="44" width="320" height="482.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Faj-WZ-U5c">
-                                        <rect key="frame" x="32" y="16" width="256" height="465"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Faj-WZ-U5c">
+                                        <rect key="frame" x="32" y="16" width="256" height="521"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IK-KV-sXo" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="18"/>
+                                                <rect key="frame" x="109.5" y="0.0" width="37.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-al-igw" customClass="PickerViewTextFiled" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="26" width="256" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-al-igw" customClass="PickerViewTextFiled" customModule="Vision45" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="34" width="256" height="34"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVQ-EY-JxI" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="68" width="256" height="18"/>
+                                                <rect key="frame" x="109.5" y="84" width="37.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-zo-etd" customClass="BaseDatePicker" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="94" width="256" height="130"/>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-zo-etd" customClass="BaseDatePicker" customModule="Vision45" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="118" width="256" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="CaX-2i-gdv"/>
                                                 </constraints>
                                             </datePicker>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGw-hA-okA" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="232" width="256" height="18"/>
+                                                <rect key="frame" x="109.5" y="264" width="37.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3H4-Nf-ifS" customClass="BaseDatePicker" customModule="Vision45" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="258" width="256" height="130"/>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3H4-Nf-ifS" customClass="BaseDatePicker" customModule="Vision45" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="298" width="256" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="zYT-1w-vSh"/>
                                                 </constraints>
                                             </datePicker>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRj-OQ-Ids">
-                                                <rect key="frame" x="0.0" y="396" width="256" height="31"/>
+                                                <rect key="frame" x="68.5" y="444" width="119" height="31"/>
                                                 <subviews>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-hD-eTu" customClass="BaseSwitch" customModule="Vision45" customModuleProvider="target">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-hD-eTu" customClass="BaseSwitch" customModule="Vision45" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                     </switch>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtf-Pc-fb9" customClass="LabelBold" customModule="Vision45" customModuleProvider="target">
-                                                        <rect key="frame" x="77" y="0.0" width="179" height="31"/>
+                                                        <rect key="frame" x="77" y="0.0" width="42" height="31"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="1Jo-Mo-jkn">
-                                                <rect key="frame" x="0.0" y="435" width="256" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Jo-Mo-jkn">
+                                                <rect key="frame" x="74" y="491" width="108" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jik-QY-vzu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gna-4k-7iW">
-                                                        <rect key="frame" x="150" y="0.0" width="106" height="30"/>
+                                                        <rect key="frame" x="62" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FV6-al-igw" secondAttribute="trailing" id="Jry-rs-dEc"/>
+                                            <constraint firstItem="FV6-al-igw" firstAttribute="leading" secondItem="Faj-WZ-U5c" secondAttribute="leading" id="YDb-4X-Boa"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

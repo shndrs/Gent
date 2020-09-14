@@ -50,7 +50,7 @@ final class PickerViewTextFiled: BaseTextField {
 
 // MARK: - UITextField Delegate
 
-extension PickerViewTextFiled : UITextFieldDelegate {
+extension PickerViewTextFiled: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         let currentIndex = self.pickerView.selectedRow(inComponent: 0)
