@@ -29,6 +29,7 @@ final class PhoneRegisterVC: ErrorViewController {
 fileprivate extension PhoneRegisterVC {
     
     @IBAction func submitButtonPressed(_ sender: SubmitButton) {
+        self.view.endEditing(true)
         presenter.validate(phoneNumber: phoneNumberTextField.text ?? "")
     }
     
@@ -40,7 +41,7 @@ extension PhoneRegisterVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        phoneNumberTextField.text = "09360909897"
+        phoneNumberTextField.text = "09360909897"
         title = Strings.simNumber.value()
         descriptionLabel.fade(duration: 0.4, delay: 0.6)
         phoneNumberTextField.fade(duration: 0.4, delay: 0.0)
