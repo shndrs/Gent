@@ -11,5 +11,6 @@ import Foundation
 enum DBKeys: String {
     
     case language
+    case user
     
 }
