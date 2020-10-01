@@ -29,6 +29,7 @@ final class PhoneRegisterVC: ErrorViewController {
 fileprivate extension PhoneRegisterVC {
     
     @IBAction func submitButtonPressed(_ sender: SubmitButton) {
+        self.view.endEditing(true)
         presenter.validate(phoneNumber: phoneNumberTextField.text ?? "")
     }
     
@@ -40,6 +41,7 @@ extension PhoneRegisterVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        phoneNumberTextField.text = "09360909897"
         title = Strings.simNumber.value()
         descriptionLabel.fade(duration: 0.4, delay: 0.6)
         phoneNumberTextField.fade(duration: 0.4, delay: 0.0)
@@ -51,6 +53,14 @@ extension PhoneRegisterVC {
 // MARK: - View Implementation
 
 extension PhoneRegisterVC: PhoneRegisterView {
+    
+    func startLoading() {
+        HUD.default.show()
+    }
+    
+    func stopLoading() {
+        HUD.default.dismiss()
+    }
     
     func goToMenu() {
         let viewController = MenuVC.instantiate(storyboard: .menu)

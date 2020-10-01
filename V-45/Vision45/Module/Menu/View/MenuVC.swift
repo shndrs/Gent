@@ -14,13 +14,31 @@ final class MenuVC: TableBaseViewController {
     private lazy var presenter: MenuPresenter = {
         return MenuPresenter(view: self)
     }()
+    
+    private lazy var settingButton: UIBarButtonItem = {
+        return UIBarButtonItem(image: Images.setting,
+                               style: .plain,
+                               target: self,
+                               action: #selector(settingButtonAction))
+    }()
 
     override func tableSetup() {
         super.tableSetup()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 126.0
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 55
         register(reuseIds: ReuseIds.menu)
+    }
+    
+}
+
+// MARK: - Class Methods
+
+fileprivate extension MenuVC {
+    
+    @objc func settingButtonAction() {
+        
     }
     
 }
@@ -31,8 +49,11 @@ extension MenuVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Strings.menu.value()
+        self.navigationItem.setRightBarButton(settingButton, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationItem.setHidesBackButton(true, animated: self.isBeingPresented)
         presenter.getItems()
-        largeTitle = (Language.current() == .english) ? true : false
     }
     
 }
@@ -43,7 +64,7 @@ extension MenuVC: MenuView {
     
     func setTableView(with array: [Menu]) {
         items = array
-        tableView.asyncReload()
+        tableView.reloadData()
     }
     
     func lockTapped() {
@@ -71,7 +92,8 @@ extension MenuVC: MenuView {
     }
     
     func timerTapped() {
-        
+        let viewController = TimerVC.instantiate(storyboard: .timer)
+        self.show(viewController, sender: self)
     }
     
 }
@@ -85,7 +107,6 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch Language.current() {   
         case .english:
             let cell = tableView.dequeueReusableCell(withIdentifier: MenuTVCLeft.reuseIdentifier) as! MenuTVCLeft
@@ -100,6 +121,13 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         items[indexPath.row].action()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if !items[indexPath.row].animatedOnce {
+            items[indexPath.row].animatedOnce = true
+            CellAnimator(cell: cell).sweepIn()
+        }
     }
     
 }

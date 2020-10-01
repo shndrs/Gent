@@ -48,6 +48,16 @@ enum Strings: String {
     case timer
     case menu
     
+    // MARK: - Timer
+    
+    case timedExit
+    case connectionTime
+    case disconnectTime
+    case repeatEveryday
+    case cancel
+    case set
+    case select
+    
 }
 
 // MARK: - Methods
@@ -107,6 +117,20 @@ extension Strings {
             return "Instant Output 2"
         case .menu:
             return "Menu"
+        case .timedExit:
+            return "Timed Exit"
+        case .connectionTime:
+            return "Connection Time"
+        case .disconnectTime:
+            return "Disconnect Time"
+        case .repeatEveryday:
+            return "Repeat Everyday"
+        case .cancel:
+            return "Cancel"
+        case .set:
+            return "Set"
+        case .select:
+            return "Select"
         }
     }
     
@@ -150,6 +174,20 @@ extension Strings {
             return "خروجی لحظه ای ۲"
         case .menu:
             return "منو"
+        case .timedExit:
+            return "خروجی زماندار"
+        case .connectionTime:
+            return "زمان وصل"
+        case .disconnectTime:
+            return "زمان قطع"
+        case .repeatEveryday:
+            return "تکرار برای هر روز"
+        case .cancel:
+            return "لغو"
+        case .set:
+            return "تنظیم"
+        case .select:
+            return "انتخاب"
         }
     }
     

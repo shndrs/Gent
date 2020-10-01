@@ -38,7 +38,6 @@
 		72ACC55824DDE27300A36932 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55724DDE27300A36932 /* ListView.swift */; };
 		72ACC55A24DDE9C000A36932 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55924DDE9C000A36932 /* MenuVC.swift */; };
 		72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC55C24DDEFA700A36932 /* MenuTVC.swift */; };
-		72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ACC55D24DDEFA700A36932 /* MenuTVC.xib */; };
 		72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56024DDEFE500A36932 /* ReusableView.swift */; };
 		72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56224DDF21C00A36932 /* ReuseIds.swift */; };
 		72ACC56524DDF3EB00A36932 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */; };
@@ -68,10 +67,23 @@
 		A970F2D724AB217800A8FD77 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F2D624AB217800A8FD77 /* Strings.swift */; };
 		A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F2D924AB21C300A8FD77 /* UIView.swift */; };
 		AC0DDF6F9ABD319E771FCF32 /* Pods_Vision45.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459DADE08F0BE21E6EDA16D5 /* Pods_Vision45.framework */; };
+		F416CAB62504A68500FAF05E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F416CAB52504A68500FAF05E /* Timer.storyboard */; };
 		F42074D724E3C07D00425093 /* MenuTVCRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D524E3C07D00425093 /* MenuTVCRight.swift */; };
 		F42074D824E3C07D00425093 /* MenuTVCRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074D624E3C07D00425093 /* MenuTVCRight.xib */; };
 		F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */; };
 		F42074DC24E3C0CA00425093 /* MenuTVCLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */; };
+		F425B57C24F4C5AA000D47C0 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */; };
+		F43ACE8125074E4A007702B8 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8025074E4A007702B8 /* TimerVC.swift */; };
+		F43ACE8425074F71007702B8 /* BaseDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8325074F71007702B8 /* BaseDatePicker.swift */; };
+		F43ACE8725075019007702B8 /* BaseSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ACE8625075019007702B8 /* BaseSwitch.swift */; };
+		F495B98C24F3BF1500610DEA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98B24F3BF1500610DEA /* Images.swift */; };
+		F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495B98D24F3DEFE00610DEA /* LoadView.swift */; };
+		F4976065250F6A3A00AAA0C6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */; };
+		F4976067250F6C1B00AAA0C6 /* SetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976066250F6C1B00AAA0C6 /* SetButton.swift */; };
+		F4976069250F6C2600AAA0C6 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4976068250F6C2600AAA0C6 /* CancelButton.swift */; };
+		F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */; };
+		F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDADC2504BE5400336721 /* BasePickerView.swift */; };
+		F4ADC545250F81D800399769 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ADC544250F81D800399769 /* TimerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,7 +123,6 @@
 		72ACC55724DDE27300A36932 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72ACC55924DDE9C000A36932 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		72ACC55C24DDEFA700A36932 /* MenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
-		72ACC55D24DDEFA700A36932 /* MenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVC.xib; sourceTree = "<group>"; };
 		72ACC56024DDEFE500A36932 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		72ACC56224DDF21C00A36932 /* ReuseIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIds.swift; sourceTree = "<group>"; };
 		72ACC56424DDF3EB00A36932 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
@@ -140,10 +151,23 @@
 		A970F2D424AB216100A8FD77 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A970F2D624AB217800A8FD77 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A970F2D924AB21C300A8FD77 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F416CAB52504A68500FAF05E /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		F42074D524E3C07D00425093 /* MenuTVCRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCRight.swift; sourceTree = "<group>"; };
 		F42074D624E3C07D00425093 /* MenuTVCRight.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCRight.xib; sourceTree = "<group>"; };
 		F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCLeft.swift; sourceTree = "<group>"; };
 		F42074DA24E3C0CA00425093 /* MenuTVCLeft.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCLeft.xib; sourceTree = "<group>"; };
+		F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
+		F43ACE8025074E4A007702B8 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		F43ACE8325074F71007702B8 /* BaseDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDatePicker.swift; sourceTree = "<group>"; };
+		F43ACE8625075019007702B8 /* BaseSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwitch.swift; sourceTree = "<group>"; };
+		F495B98B24F3BF1500610DEA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		F495B98D24F3DEFE00610DEA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		F4976066250F6C1B00AAA0C6 /* SetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetButton.swift; sourceTree = "<group>"; };
+		F4976068250F6C2600AAA0C6 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTextFiled.swift; sourceTree = "<group>"; };
+		F49FDADC2504BE5400336721 /* BasePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerView.swift; sourceTree = "<group>"; };
+		F4ADC544250F81D800399769 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +255,7 @@
 			children = (
 				72728C1F24DC658F00F2A045 /* BaseTextField.swift */,
 				72728C1D24DC657300F2A045 /* PhoneTextField.swift */,
+				F49FDAD92504BDE900336721 /* PickerViewTextFiled.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -295,6 +320,7 @@
 				72ACC53D24DDBB8F00A36932 /* ErrorView.swift */,
 				72ACC55724DDE27300A36932 /* ListView.swift */,
 				72ACC56024DDEFE500A36932 /* ReusableView.swift */,
+				F495B98D24F3DEFE00610DEA /* LoadView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -339,7 +365,6 @@
 			isa = PBXGroup;
 			children = (
 				72ACC55C24DDEFA700A36932 /* MenuTVC.swift */,
-				72ACC55D24DDEFA700A36932 /* MenuTVC.xib */,
 				F42074D524E3C07D00425093 /* MenuTVCRight.swift */,
 				F42074D624E3C07D00425093 /* MenuTVCRight.xib */,
 				F42074D924E3C0CA00425093 /* MenuTVCLeft.swift */,
@@ -395,6 +420,7 @@
 		A970F2B224AB1F8100A8FD77 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F425B57A24F4C598000D47C0 /* Animation */,
 				72ACC53C24DDBB7300A36932 /* Protocol */,
 				72AA571324DBE5860025C5EB /* Storage */,
 				A970F2D824AB218C00A8FD77 /* Extension */,
@@ -408,6 +434,8 @@
 				72ACC54924DDDB9B00A36932 /* Typealias.swift */,
 				72ACC55324DDDFE800A36932 /* Register.swift */,
 				72ACC56224DDF21C00A36932 /* ReuseIds.swift */,
+				F495B98B24F3BF1500610DEA /* Images.swift */,
+				F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -415,6 +443,9 @@
 		A970F2B524AB201D00A8FD77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F43ACE8525075007007702B8 /* Switch */,
+				F43ACE8225074F4E007702B8 /* DatePicker */,
+				F49FDADB2504BE4300336721 /* PickerView */,
 				72728C1C24DC654300F2A045 /* TextFields */,
 				A970F2B824AB201D00A8FD77 /* Buttons */,
 				A970F2BE24AB201D00A8FD77 /* Labels */,
@@ -435,6 +466,8 @@
 				A970F2BA24AB201D00A8FD77 /* RegisterButton.swift */,
 				A970F2BB24AB201D00A8FD77 /* BaseButton.swift */,
 				72AA572024DC076D0025C5EB /* FirstInitialButton.swift */,
+				F4976066250F6C1B00AAA0C6 /* SetButton.swift */,
+				F4976068250F6C2600AAA0C6 /* CancelButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -466,11 +499,70 @@
 			isa = PBXGroup;
 			children = (
 				72B4CECE252631F60010C0AC /* Home */,
+				F416CAB22504A54400FAF05E /* Timer */,
 				72ACC54324DDDB3600A36932 /* Menu */,
 				7263A5BD24C0861800FCFD21 /* LoginRegister */,
 				72AA570E24DBE3550025C5EB /* Base */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		F416CAB22504A54400FAF05E /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				F416CAB42504A56800FAF05E /* Presenter */,
+				F416CAB32504A56000FAF05E /* View */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		F416CAB32504A56000FAF05E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F416CAB52504A68500FAF05E /* Timer.storyboard */,
+				F43ACE8025074E4A007702B8 /* TimerVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F416CAB42504A56800FAF05E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADC544250F81D800399769 /* TimerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F425B57A24F4C598000D47C0 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F425B57B24F4C5AA000D47C0 /* CellAnimator.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		F43ACE8225074F4E007702B8 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F43ACE8325074F71007702B8 /* BaseDatePicker.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		F43ACE8525075007007702B8 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				F43ACE8625075019007702B8 /* BaseSwitch.swift */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
+		F49FDADB2504BE4300336721 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				F49FDADC2504BE5400336721 /* BasePickerView.swift */,
+			);
+			path = PickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F416CAB62504A68500FAF05E /* Timer.storyboard in Resources */,
 				7287933324DC441A0064230A /* Main.storyboard in Resources */,
 				72B4CED4252632F80010C0AC /* Home.storyboard in Resources */,
 				A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */,
@@ -542,7 +635,6 @@
 				72ACC54E24DDDDF800A36932 /* Menu.storyboard in Resources */,
 				7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */,
 				A970F2AF24AB1F3F00A8FD77 /* IRANSansMonoSpacedNum.ttf in Resources */,
-				72ACC55F24DDEFA700A36932 /* MenuTVC.xib in Resources */,
 				7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +690,7 @@
 			files = (
 				72ACC54224DDD9EB00A36932 /* CustomToast.swift in Sources */,
 				A970F2C924AB201E00A8FD77 /* RegisterButton.swift in Sources */,
+				F425B57C24F4C5AA000D47C0 /* CellAnimator.swift in Sources */,
 				72ACC54024DDC16400A36932 /* ErrorViewController.swift in Sources */,
 				72B4CED0252632220010C0AC /* HomeTBC.swift in Sources */,
 				72ACC55224DDDF9600A36932 /* UITableViewController.swift in Sources */,
@@ -608,6 +701,7 @@
 				72AA571024DBE3680025C5EB /* BaseViewController.swift in Sources */,
 				72AA570D24DBE31A0025C5EB /* LanguageSelectionVC.swift in Sources */,
 				72ACC55E24DDEFA700A36932 /* MenuTVC.swift in Sources */,
+				F49FDADD2504BE5400336721 /* BasePickerView.swift in Sources */,
 				A970F2B424AB1F9500A8FD77 /* Font.swift in Sources */,
 				72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */,
 				F42074DB24E3C0CA00425093 /* MenuTVCLeft.swift in Sources */,
@@ -617,21 +711,30 @@
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
 				72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */,
+				F43ACE8125074E4A007702B8 /* TimerVC.swift in Sources */,
 				72ACC55824DDE27300A36932 /* ListView.swift in Sources */,
+				F43ACE8725075019007702B8 /* BaseSwitch.swift in Sources */,
+				F49FDADA2504BDE900336721 /* PickerViewTextFiled.swift in Sources */,
 				A970F2CB24AB201E00A8FD77 /* CustomHUD.swift in Sources */,
 				A970F2CA24AB201E00A8FD77 /* BaseButton.swift in Sources */,
 				A970F2D024AB201E00A8FD77 /* LabelRegular.swift in Sources */,
+				F4976069250F6C2600AAA0C6 /* CancelButton.swift in Sources */,
 				7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */,
 				72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */,
+				F495B98C24F3BF1500610DEA /* Images.swift in Sources */,
+				F4976067250F6C1B00AAA0C6 /* SetButton.swift in Sources */,
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
 				72AA572124DC076D0025C5EB /* FirstInitialButton.swift in Sources */,
+				F4976065250F6A3A00AAA0C6 /* NotificationManager.swift in Sources */,
 				A970F2DA24AB21C300A8FD77 /* UIView.swift in Sources */,
 				72ACC54A24DDDB9B00A36932 /* Typealias.swift in Sources */,
 				72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */,
+				F4ADC545250F81D800399769 /* TimerPresenter.swift in Sources */,
 				A970F2D224AB201E00A8FD77 /* BackView.swift in Sources */,
 				A970F2CE24AB201E00A8FD77 /* LabelLight.swift in Sources */,
 				A970F2C824AB201E00A8FD77 /* SubmitButton.swift in Sources */,
 				A970F2D524AB216100A8FD77 /* Colors.swift in Sources */,
+				F43ACE8425074F71007702B8 /* BaseDatePicker.swift in Sources */,
 				A970F2C724AB201E00A8FD77 /* EmptyView.swift in Sources */,
 				7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */,
 				72ACC55624DDE1F500A36932 /* BaseView.swift in Sources */,
@@ -644,6 +747,7 @@
 				A970F2CC24AB201E00A8FD77 /* TransBackgroundView.swift in Sources */,
 				72ACC54824DDDB6E00A36932 /* Menu.swift in Sources */,
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
+				F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */,
 				F42074D724E3C07D00425093 /* MenuTVCRight.swift in Sources */,
 				72728C2224DC69CD00F2A045 /* String.swift in Sources */,
 				72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */,
@@ -788,6 +892,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = Vision45/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -807,6 +912,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = Vision45/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

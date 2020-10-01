@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PhoneRegisterView: ErrorView {
+protocol PhoneRegisterView: ErrorView, LoadView {
     func goToMenu()
 }
 
@@ -28,7 +28,14 @@ extension PhoneRegisterPresenter {
     
     public func validate(phoneNumber: String) {
         let error = phoneNumber.validate(phoneNumber: phoneNumber)
-        error != nil ? view?.showError(message: error ?? "") : view?.goToMenu()
+        error != nil ? view?.showError(message: error ?? "") : goToMenu()
     }
     
+    private func goToMenu() {
+        self.view?.startLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) { [weak self] in
+            self?.view?.stopLoading()
+            self?.view?.goToMenu()
+        }
+    }
 }
