@@ -12,5 +12,6 @@ public enum StoryboardId: String {
     
     case main = "Main"
     case menu = "Menu"
+    case home = "Home"
     
 }
