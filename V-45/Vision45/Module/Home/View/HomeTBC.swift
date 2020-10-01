@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeTBC: BaseViewController {
+final class HomeTBC: UITabBarController {
     
     
     
