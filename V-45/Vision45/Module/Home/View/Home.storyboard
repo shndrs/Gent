@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="236" y="-467"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--HomeTBC-->
         <scene sceneID="dqZ-Mf-kik">
             <objects>
-                <tabBarController id="EWI-JK-Oko" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTBC" id="EWI-JK-Oko" customClass="HomeTBC" customModule="Vision45" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="B8r-EN-uBL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="duk-cO-b1x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -57,7 +57,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OG-dP-xAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-683" y="-143"/>
+            <point key="canvasLocation" x="-677" y="-257"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="cnz-yE-2SQ">
@@ -73,7 +73,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljE-I8-lzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1642" y="-143"/>
+            <point key="canvasLocation" x="-1607" y="-257"/>
         </scene>
         <!--Item-->
         <scene sceneID="6HM-Kf-kYM">
