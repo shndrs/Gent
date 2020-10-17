@@ -1,12 +1,18 @@
 PODS:
   - EZProgressHUD (1.5.3)
   - IQKeyboardManager (6.5.5)
+  - Realm (3.19.0):
+    - Realm/Headers (= 3.19.0)
+  - Realm/Headers (3.19.0)
+  - RealmSwift (3.19.0):
+    - Realm (= 3.19.0)
   - SwiftyTabBarTransition (1.5.3)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - EZProgressHUD
   - IQKeyboardManager
+  - RealmSwift (= 3.19.0)
   - SwiftyTabBarTransition
   - Toast-Swift (~> 5.0.1)
 
@@ -14,15 +20,19 @@ SPEC REPOS:
   trunk:
     - EZProgressHUD
     - IQKeyboardManager
+    - Realm
+    - RealmSwift
     - SwiftyTabBarTransition
     - Toast-Swift
 
 SPEC CHECKSUMS:
   EZProgressHUD: ac65959b7a1f7eb3ccb9e4b176a77e27628e4174
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  Realm: 995d585bcf699aaff226715886c849a29dd3d07f
+  RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
   SwiftyTabBarTransition: 92a59df486be930c10d6c9303fcc35a2dd5fbf96
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 5d668a0db15e995613d233eb1ba8aaa205761322
+PODFILE CHECKSUM: 07158f3fe80b7f31e440b2f54a8230564c3ed537
 
 COCOAPODS: 1.9.3
