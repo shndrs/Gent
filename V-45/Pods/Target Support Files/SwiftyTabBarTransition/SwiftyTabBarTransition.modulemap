@@ -1,0 +1,6 @@
+framework module SwiftyTabBarTransition {
+  umbrella header "SwiftyTabBarTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}
