@@ -11,6 +11,7 @@
 		7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7236322624AB18BF00BD4375 /* SceneDelegate.swift */; };
 		7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7236322D24AB18C100BD4375 /* Assets.xcassets */; };
 		7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */; };
+		72585A8F25422E0000A2C271 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72585A8E25422E0000A2C271 /* MessageManager.swift */; };
 		72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */; };
 		72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1D24DC657300F2A045 /* PhoneTextField.swift */; };
 		72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1F24DC658F00F2A045 /* BaseTextField.swift */; };
@@ -96,6 +97,7 @@
 		7236322D24AB18C100BD4375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7236323024AB18C100BD4375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7236323224AB18C100BD4375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72585A8E25422E0000A2C271 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterVC.swift; sourceTree = "<group>"; };
 		72728C1D24DC657300F2A045 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		72728C1F24DC658F00F2A045 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 				72ACC56224DDF21C00A36932 /* ReuseIds.swift */,
 				F495B98B24F3BF1500610DEA /* Images.swift */,
 				F4976064250F6A3A00AAA0C6 /* NotificationManager.swift */,
+				72585A8E25422E0000A2C271 /* MessageManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				72D1F24C24DC48B5001BC78D /* BaseNavigationController.swift in Sources */,
 				72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */,
 				72AA571724DBE5E10025C5EB /* DBKeys.swift in Sources */,
+				72585A8F25422E0000A2C271 /* MessageManager.swift in Sources */,
 				A970F2C624AB201E00A8FD77 /* KeyboardManager.swift in Sources */,
 				72ACC55024DDDF6A00A36932 /* TableBaseViewController.swift in Sources */,
 				F43ACE8125074E4A007702B8 /* TimerVC.swift in Sources */,
