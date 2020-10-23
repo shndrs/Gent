@@ -32,6 +32,7 @@ final class MessageManager: NSObject {
 // MARK: - MFMessageCompose ViewController Delegate
 
 extension MessageManager: MFMessageComposeViewControllerDelegate {
+    
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         switch (result) {
         case .cancelled:
