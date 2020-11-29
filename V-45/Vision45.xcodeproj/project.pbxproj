@@ -12,9 +12,9 @@
 		7236322E24AB18C100BD4375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7236322D24AB18C100BD4375 /* Assets.xcassets */; };
 		7236323124AB18C100BD4375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7236322F24AB18C100BD4375 /* LaunchScreen.storyboard */; };
 		72585A8F25422E0000A2C271 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72585A8E25422E0000A2C271 /* MessageManager.swift */; };
-		726B1A3F2542E4D8001BF802 /* GlobalMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726B1A3E2542E4D8001BF802 /* GlobalMenuVC.swift */; };
-		726B1A432542E585001BF802 /* GlobalMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726B1A412542E585001BF802 /* GlobalMenuTVC.swift */; };
-		726B1A442542E585001BF802 /* GlobalMenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726B1A422542E585001BF802 /* GlobalMenuTVC.xib */; };
+		726B1A462542FAC8001BF802 /* GlobalSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726B1A452542FAC8001BF802 /* GlobalSettingVC.swift */; };
+		726B1A492542FB08001BF802 /* GlobalSettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726B1A472542FB08001BF802 /* GlobalSettingTVC.swift */; };
+		726B1A4A2542FB08001BF802 /* GlobalSettingTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726B1A482542FB08001BF802 /* GlobalSettingTVC.xib */; };
 		72728C1B24DC635A00F2A045 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */; };
 		72728C1E24DC657300F2A045 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1D24DC657300F2A045 /* PhoneTextField.swift */; };
 		72728C2024DC658F00F2A045 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72728C1F24DC658F00F2A045 /* BaseTextField.swift */; };
@@ -101,9 +101,9 @@
 		7236323024AB18C100BD4375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7236323224AB18C100BD4375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72585A8E25422E0000A2C271 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
-		726B1A3E2542E4D8001BF802 /* GlobalMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMenuVC.swift; sourceTree = "<group>"; };
-		726B1A412542E585001BF802 /* GlobalMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMenuTVC.swift; sourceTree = "<group>"; };
-		726B1A422542E585001BF802 /* GlobalMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GlobalMenuTVC.xib; sourceTree = "<group>"; };
+		726B1A452542FAC8001BF802 /* GlobalSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettingVC.swift; sourceTree = "<group>"; };
+		726B1A472542FB08001BF802 /* GlobalSettingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettingTVC.swift; sourceTree = "<group>"; };
+		726B1A482542FB08001BF802 /* GlobalSettingTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GlobalSettingTVC.xib; sourceTree = "<group>"; };
 		72728C1A24DC635A00F2A045 /* PhoneRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterVC.swift; sourceTree = "<group>"; };
 		72728C1D24DC657300F2A045 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		72728C1F24DC658F00F2A045 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
@@ -244,8 +244,8 @@
 		726B1A402542E564001BF802 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				726B1A412542E585001BF802 /* GlobalMenuTVC.swift */,
-				726B1A422542E585001BF802 /* GlobalMenuTVC.xib */,
+				726B1A472542FB08001BF802 /* GlobalSettingTVC.swift */,
+				726B1A482542FB08001BF802 /* GlobalSettingTVC.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -404,7 +404,7 @@
 				726B1A402542E564001BF802 /* Cell */,
 				72B4CECF252632220010C0AC /* HomeTBC.swift */,
 				72B4CED3252632F80010C0AC /* Home.storyboard */,
-				726B1A3E2542E4D8001BF802 /* GlobalMenuVC.swift */,
+				726B1A452542FAC8001BF802 /* GlobalSettingVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,11 +646,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F416CAB62504A68500FAF05E /* Timer.storyboard in Resources */,
-				726B1A442542E585001BF802 /* GlobalMenuTVC.xib in Resources */,
 				7287933324DC441A0064230A /* Main.storyboard in Resources */,
 				72B4CED4252632F80010C0AC /* Home.storyboard in Resources */,
 				A970F2B124AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Light.ttf in Resources */,
 				F42074D824E3C07D00425093 /* MenuTVCRight.xib in Resources */,
+				726B1A4A2542FB08001BF802 /* GlobalSettingTVC.xib in Resources */,
 				F42074DC24E3C0CA00425093 /* MenuTVCLeft.xib in Resources */,
 				A970F2B024AB1F3F00A8FD77 /* IRANSansMonoSpacedNum_Bold.ttf in Resources */,
 				72ACC54E24DDDDF800A36932 /* Menu.storyboard in Resources */,
@@ -743,6 +743,7 @@
 				F4976069250F6C2600AAA0C6 /* CancelButton.swift in Sources */,
 				7236322524AB18BF00BD4375 /* AppDelegate.swift in Sources */,
 				72ACC56324DDF21C00A36932 /* ReuseIds.swift in Sources */,
+				726B1A462542FAC8001BF802 /* GlobalSettingVC.swift in Sources */,
 				F495B98C24F3BF1500610DEA /* Images.swift in Sources */,
 				F4976067250F6C1B00AAA0C6 /* SetButton.swift in Sources */,
 				72AA571524DBE5A60025C5EB /* Database.swift in Sources */,
@@ -753,12 +754,12 @@
 				72ACC56124DDEFE500A36932 /* ReusableView.swift in Sources */,
 				F4ADC545250F81D800399769 /* TimerPresenter.swift in Sources */,
 				A970F2D224AB201E00A8FD77 /* BackView.swift in Sources */,
+				726B1A492542FB08001BF802 /* GlobalSettingTVC.swift in Sources */,
 				A970F2CE24AB201E00A8FD77 /* LabelLight.swift in Sources */,
 				A970F2C824AB201E00A8FD77 /* SubmitButton.swift in Sources */,
 				A970F2D524AB216100A8FD77 /* Colors.swift in Sources */,
 				F43ACE8425074F71007702B8 /* BaseDatePicker.swift in Sources */,
 				A970F2C724AB201E00A8FD77 /* EmptyView.swift in Sources */,
-				726B1A432542E585001BF802 /* GlobalMenuTVC.swift in Sources */,
 				7236322724AB18BF00BD4375 /* SceneDelegate.swift in Sources */,
 				72ACC55624DDE1F500A36932 /* BaseView.swift in Sources */,
 				A970F2D324AB201E00A8FD77 /* CurvedImages.swift in Sources */,
@@ -772,7 +773,6 @@
 				A970F2CD24AB201E00A8FD77 /* LabelBold.swift in Sources */,
 				F495B98E24F3DEFE00610DEA /* LoadView.swift in Sources */,
 				F42074D724E3C07D00425093 /* MenuTVCRight.swift in Sources */,
-				726B1A3F2542E4D8001BF802 /* GlobalMenuVC.swift in Sources */,
 				72728C2224DC69CD00F2A045 /* String.swift in Sources */,
 				72D1F24E24DC4C22001BC78D /* LanguageSelectionPresenter.swift in Sources */,
 				72ACC53B24DDB92400A36932 /* PhoneRegisterPresenter.swift in Sources */,

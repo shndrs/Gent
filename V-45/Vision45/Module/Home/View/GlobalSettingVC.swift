@@ -1,5 +1,5 @@
 //
-//  GlobalMenuVC.swift
+//  GlobalSettingVC.swift
 //  Vision45
 //
 //  Created by Sahand Raeisi on 10/23/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class GlobalMenuVC: TableBaseViewController {
+final class GlobalSettingVC: TableBaseViewController {
 
     override func tableSetup() {
         super.tableSetup()
@@ -18,10 +18,11 @@ final class GlobalMenuVC: TableBaseViewController {
 
 // MARK: - Life Cycle
 
-extension GlobalMenuVC {
+extension GlobalSettingVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
 }
+

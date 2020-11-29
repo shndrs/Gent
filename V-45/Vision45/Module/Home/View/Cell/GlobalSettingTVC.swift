@@ -1,5 +1,5 @@
 //
-//  GlobalMenuTVC.swift
+//  GlobalSettingTVC.swift
 //  Vision45
 //
 //  Created by Sahand Raeisi on 10/23/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class GlobalMenuTVC: UITableViewCell {
+final class GlobalSettingTVC: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
