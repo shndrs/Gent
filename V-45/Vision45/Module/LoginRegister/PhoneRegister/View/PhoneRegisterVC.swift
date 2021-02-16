@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 final class PhoneRegisterVC: ErrorViewController {
     
@@ -30,7 +31,20 @@ fileprivate extension PhoneRegisterVC {
     
     @IBAction func submitButtonPressed(_ sender: SubmitButton) {
         self.view.endEditing(true)
+//        let messageVC = MFMessageComposeViewController()
+//        messageVC.body = "Enter a message details here";
+//        messageVC.recipients = ["09360909897"]
+//        messageVC.messageComposeDelegate = self
+//        self.present(messageVC, animated: true, completion: nil)
         presenter.validate(phoneNumber: phoneNumberTextField.text ?? "")
+    }
+    
+    @IBAction func message(_ sender: UIButton) {
+        let messageVC = MFMessageComposeViewController()
+        messageVC.body = "Enter a message details here";
+        messageVC.recipients = ["recipients_number_here"]
+        messageVC.messageComposeDelegate = self
+        self.present(messageVC, animated: true, completion: nil)
     }
     
 }
@@ -65,6 +79,26 @@ extension PhoneRegisterVC: PhoneRegisterView {
     func goToMenu() {
         let viewController = MenuVC.instantiate(storyboard: .menu)
         self.show(viewController, sender: nil)
+    }
+    
+}
+
+// MARK: - MFMessageCompose ViewController Delegate
+
+extension PhoneRegisterVC: MFMessageComposeViewControllerDelegate {
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        switch (result) {
+        case .cancelled:
+            print("Message was cancelled")
+        case .failed:
+            print("Message failed")
+        case .sent:
+            print("Message was sent")
+        default:
+            return
+        }
+        dismiss(animated: true, completion: nil)
     }
     
 }

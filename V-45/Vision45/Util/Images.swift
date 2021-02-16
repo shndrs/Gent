@@ -16,4 +16,5 @@ struct Images {
     static let instantOutput = UIImage(named: "exit-1")!
     static let timer = UIImage(named: "timer-1")!
     static let setting = UIImage(named: "setting")!
+    
 }

@@ -1,4 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-Vision45/Pods-Vision45-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/EZProgressHUD/EZProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/SwiftyTabBarTransition/SwiftyTabBarTransition.framework
 ${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework
