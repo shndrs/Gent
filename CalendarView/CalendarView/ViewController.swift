@@ -6,14 +6,14 @@
 //
 
 import UIKit
+import JTAppleCalendar
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
 }
 

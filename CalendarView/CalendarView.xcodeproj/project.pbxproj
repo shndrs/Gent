@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68659EC1E67B038477EF18A9 /* Pods_CalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */; };
 		F4CAEE3325DBA93D005233AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3225DBA93D005233AA /* AppDelegate.swift */; };
 		F4CAEE3525DBA93D005233AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */; };
 		F4CAEE3725DBA93D005233AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3625DBA93D005233AA /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E518D6E3FC4A886B5663154 /* Pods-CalendarView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarView.debug.xcconfig"; path = "Target Support Files/Pods-CalendarView/Pods-CalendarView.debug.xcconfig"; sourceTree = "<group>"; };
+		A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAEE2F25DBA93D005233AA /* CalendarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAEE3225DBA93D005233AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		F4CAEE3B25DBA93F005233AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4CAEE3E25DBA93F005233AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4CAEE4025DBA93F005233AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93D7552A0A51E4240DBAA9E /* Pods-CalendarView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarView.release.xcconfig"; path = "Target Support Files/Pods-CalendarView/Pods-CalendarView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68659EC1E67B038477EF18A9 /* Pods_CalendarView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7982F9ED6AA787FBE7C0646E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDB5C5E6DB9592E8631D8D52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E518D6E3FC4A886B5663154 /* Pods-CalendarView.debug.xcconfig */,
+				F93D7552A0A51E4240DBAA9E /* Pods-CalendarView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F4CAEE2625DBA93D005233AA = {
 			isa = PBXGroup;
 			children = (
 				F4CAEE3125DBA93D005233AA /* CalendarView */,
 				F4CAEE3025DBA93D005233AA /* Products */,
+				EDB5C5E6DB9592E8631D8D52 /* Pods */,
+				7982F9ED6AA787FBE7C0646E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4CAEE4325DBA93F005233AA /* Build configuration list for PBXNativeTarget "CalendarView" */;
 			buildPhases = (
+				CE352A0BCA982D28EBDE6F8E /* [CP] Check Pods Manifest.lock */,
 				F4CAEE2B25DBA93D005233AA /* Sources */,
 				F4CAEE2C25DBA93D005233AA /* Frameworks */,
 				F4CAEE2D25DBA93D005233AA /* Resources */,
+				89AEE80B15CF11731AEF0DAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89AEE80B15CF11731AEF0DAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalendarView/Pods-CalendarView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalendarView/Pods-CalendarView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CalendarView/Pods-CalendarView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE352A0BCA982D28EBDE6F8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalendarView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4CAEE2B25DBA93D005233AA /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		F4CAEE4425DBA93F005233AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E518D6E3FC4A886B5663154 /* Pods-CalendarView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		F4CAEE4525DBA93F005233AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93D7552A0A51E4240DBAA9E /* Pods-CalendarView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
