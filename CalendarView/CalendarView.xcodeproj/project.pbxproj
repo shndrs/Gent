@@ -17,6 +17,7 @@
 		F4CAEE4E25DBAB5E005233AA /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE4C25DBAB5E005233AA /* CalendarDayCell.swift */; };
 		F4CAEE4F25DBAB5E005233AA /* CalendarDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4CAEE4D25DBAB5E005233AA /* CalendarDayCell.xib */; };
 		F4CAEE5325DBAC43005233AA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE5225DBAC43005233AA /* CalendarCell.swift */; };
+		F4CAEE5A25DBB01A005233AA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE5925DBB01A005233AA /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		F4CAEE4C25DBAB5E005233AA /* CalendarDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayCell.swift; sourceTree = "<group>"; };
 		F4CAEE4D25DBAB5E005233AA /* CalendarDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDayCell.xib; sourceTree = "<group>"; };
 		F4CAEE5225DBAC43005233AA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		F4CAEE5925DBB01A005233AA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		F93D7552A0A51E4240DBAA9E /* Pods-CalendarView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarView.release.xcconfig"; path = "Target Support Files/Pods-CalendarView/Pods-CalendarView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		F4CAEE3125DBA93D005233AA /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				F4CAEE5825DBB009005233AA /* Utill */,
 				F4CAEE4B25DBAB19005233AA /* Cell */,
 				F4CAEE3225DBA93D005233AA /* AppDelegate.swift */,
 				F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */,
@@ -106,6 +109,14 @@
 				F4CAEE5225DBAC43005233AA /* CalendarCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F4CAEE5825DBB009005233AA /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAEE5925DBB01A005233AA /* Register.swift */,
+			);
+			path = Utill;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CAEE5A25DBB01A005233AA /* Register.swift in Sources */,
 				F4CAEE4E25DBAB5E005233AA /* CalendarDayCell.swift in Sources */,
 				F4CAEE3725DBA93D005233AA /* ViewController.swift in Sources */,
 				F4CAEE3325DBA93D005233AA /* AppDelegate.swift in Sources */,
