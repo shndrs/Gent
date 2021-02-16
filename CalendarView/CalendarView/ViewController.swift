@@ -16,6 +16,8 @@ final class ViewController: UIViewController {
             calendarView.calendarDelegate = self
             calendarView.minimumLineSpacing = 0
             calendarView.minimumInteritemSpacing = 0
+            Register.in(component: calendarView,
+                        id: CalendarDayCell.reuseIdentifier)
         }
     }
     
@@ -133,6 +135,5 @@ extension ViewController: JTACMonthViewDelegate {
         handleCellSelected(cell: cell, cellState: cellState)
         handleCellTextColor(cell: cell, cellState: cellState)
     }
-    
     
 }

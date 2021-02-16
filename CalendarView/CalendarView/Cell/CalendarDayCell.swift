@@ -8,7 +8,7 @@
 import UIKit
 import JTAppleCalendar
 
-final class CalendarDayCell: JTACDayCell {
+final class CalendarDayCell: JTACDayCell, ReusableView {
 
     @IBOutlet var selectedView: UIView!
     @IBOutlet var dayLabel: UILabel!
