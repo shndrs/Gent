@@ -9,11 +9,13 @@ import UIKit
 import JTAppleCalendar
 
 final class ViewController: UIViewController {
-
+    
     @IBOutlet weak var calendarView: JTACMonthView! {
         didSet {
             calendarView.calendarDataSource = self
             calendarView.calendarDelegate = self
+            calendarView.scrollDirection = .vertical
+            calendarView.isPagingEnabled = true
             calendarView.minimumLineSpacing = 0
             calendarView.minimumInteritemSpacing = 0
             Register.in(component: calendarView,
@@ -103,6 +105,8 @@ extension ViewController: JTACMonthViewDataSource {
     
 }
 
+// MARK: - JTAC Month View Delegate
+
 extension ViewController: JTACMonthViewDelegate {
     
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
@@ -123,7 +127,6 @@ extension ViewController: JTACMonthViewDelegate {
         
         return cell
     }
-    
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
         print(cellState.dateBelongsTo)
