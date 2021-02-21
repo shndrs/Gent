@@ -11,6 +11,7 @@ import EventKit
 
 final class KDCalendarVC: UIViewController {
 
+    public var selectedDates: [Date] = []
     @IBOutlet private weak var calendarView: CalendarView!
     
 }
@@ -22,16 +23,16 @@ fileprivate extension KDCalendarVC {
     func calendarSetup() {
         let style = CalendarView.Style()
         style.cellShape = .round//.bevel(8.0)
-        style.cellColorDefault = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        style.cellColorDefault = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+        style.cellSelectedColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         style.cellColorToday = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         style.cellSelectedBorderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         style.cellEventColor = UIColor(red:1.00, green: 0.63, blue: 0.24, alpha: 1.00)
-        style.cellSelectedColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         style.cellTextColorDefault = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         style.cellTextColorWeekend = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         style.headerTextColor = .black
         style.cellSelectedTextColor = .white
-        style.cellColorOutOfRange = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        style.cellColorOutOfRange = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         style.headerBackgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
         style.weekdaysBackgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
         style.firstWeekday = .monday

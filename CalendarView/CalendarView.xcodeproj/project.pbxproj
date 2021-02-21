@@ -10,6 +10,7 @@
 		68659EC1E67B038477EF18A9 /* Pods_CalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */; };
 		F492CC4125DBC7CA0094EA94 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */; };
 		F4AF0A4E25E21CD2005D7DBD /* KDCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */; };
+		F4AF0AA925E247C7005D7DBD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0AA825E247C7005D7DBD /* Date.swift */; };
 		F4CAEE3325DBA93D005233AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3225DBA93D005233AA /* AppDelegate.swift */; };
 		F4CAEE3525DBA93D005233AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */; };
 		F4CAEE3725DBA93D005233AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3625DBA93D005233AA /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDCalendarVC.swift; sourceTree = "<group>"; };
+		F4AF0AA825E247C7005D7DBD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F4CAEE2F25DBA93D005233AA /* CalendarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAEE3225DBA93D005233AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */,
+				F4AF0AA825E247C7005D7DBD /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CAEE5A25DBB01A005233AA /* Register.swift in Sources */,
+				F4AF0AA925E247C7005D7DBD /* Date.swift in Sources */,
 				F4CAEE4E25DBAB5E005233AA /* CalendarDayCell.swift in Sources */,
 				F4CAEE3725DBA93D005233AA /* ViewController.swift in Sources */,
 				F4CAEE3325DBA93D005233AA /* AppDelegate.swift in Sources */,
