@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zmY-wd-EBr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzC-lL-OYW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="118.52678571428571"/>
         </scene>
-        <!--CalendarVC-->
+        <!--KDCalendar-->
         <scene sceneID="EbM-Xv-cOg">
             <objects>
                 <viewController id="bbB-Y7-CD3" customClass="KDCalendarVC" customModule="CalendarView" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,21 +106,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-vf-UTW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-vf-UTW" customClass="CalendarView" customModule="KDCalendar">
+                                <rect key="frame" x="8" y="88" width="398" height="808"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7hz-0g-WD7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="v8c-vf-UTW" firstAttribute="leading" secondItem="7hz-0g-WD7" secondAttribute="leading" id="49t-BK-iQ7"/>
                             <constraint firstAttribute="bottom" secondItem="v8c-vf-UTW" secondAttribute="bottom" id="4cg-Zt-9Gz"/>
+                            <constraint firstAttribute="trailing" secondItem="v8c-vf-UTW" secondAttribute="trailing" constant="8" id="Idr-SC-zde"/>
+                            <constraint firstItem="v8c-vf-UTW" firstAttribute="leading" secondItem="7hz-0g-WD7" secondAttribute="leading" constant="8" id="V2x-6c-1Ay"/>
                             <constraint firstItem="v8c-vf-UTW" firstAttribute="top" secondItem="7hz-0g-WD7" secondAttribute="top" id="Xnx-Zm-Oaf"/>
-                            <constraint firstItem="v8c-vf-UTW" firstAttribute="trailing" secondItem="7hz-0g-WD7" secondAttribute="trailing" id="xyh-po-GpH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nl7-vP-paH"/>
+                    <navigationItem key="navigationItem" title="KDCalendar" id="Nl7-vP-paH"/>
+                    <connections>
+                        <outlet property="calendarView" destination="v8c-vf-UTW" id="hLO-TD-p3j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrA-xN-uqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +169,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
