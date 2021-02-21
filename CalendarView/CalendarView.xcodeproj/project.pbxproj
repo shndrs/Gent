@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		68659EC1E67B038477EF18A9 /* Pods_CalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */; };
 		F492CC4125DBC7CA0094EA94 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */; };
+		F4AF0A4E25E21CD2005D7DBD /* KDCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */; };
 		F4CAEE3325DBA93D005233AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3225DBA93D005233AA /* AppDelegate.swift */; };
 		F4CAEE3525DBA93D005233AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */; };
 		F4CAEE3725DBA93D005233AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE3625DBA93D005233AA /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		4E518D6E3FC4A886B5663154 /* Pods-CalendarView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarView.debug.xcconfig"; path = "Target Support Files/Pods-CalendarView/Pods-CalendarView.debug.xcconfig"; sourceTree = "<group>"; };
 		A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDCalendarVC.swift; sourceTree = "<group>"; };
 		F4CAEE2F25DBA93D005233AA /* CalendarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAEE3225DBA93D005233AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,31 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		F4AF0A4525E21C68005D7DBD /* KDCalendarModule */ = {
+			isa = PBXGroup;
+			children = (
+				F4AF0A4B25E21CA6005D7DBD /* View */,
+			);
+			path = KDCalendarModule;
+			sourceTree = "<group>";
+		};
+		F4AF0A4625E21C71005D7DBD /* JTAppleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAEE3625DBA93D005233AA /* ViewController.swift */,
+				F4CAEE4B25DBAB19005233AA /* Cell */,
+			);
+			path = JTAppleCalendar;
+			sourceTree = "<group>";
+		};
+		F4AF0A4B25E21CA6005D7DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F4CAEE2625DBA93D005233AA = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				F4CAEE5825DBB009005233AA /* Utill */,
-				F4CAEE4B25DBAB19005233AA /* Cell */,
+				F4AF0A4625E21C71005D7DBD /* JTAppleCalendar */,
+				F4AF0A4525E21C68005D7DBD /* KDCalendarModule */,
 				F4CAEE3225DBA93D005233AA /* AppDelegate.swift */,
 				F4CAEE3425DBA93D005233AA /* SceneDelegate.swift */,
-				F4CAEE3625DBA93D005233AA /* ViewController.swift */,
 				F4CAEE3825DBA93D005233AA /* Main.storyboard */,
 				F4CAEE3B25DBA93F005233AA /* Assets.xcassets */,
 				F4CAEE3D25DBA93F005233AA /* LaunchScreen.storyboard */,
@@ -255,6 +282,7 @@
 				F4CAEE3525DBA93D005233AA /* SceneDelegate.swift in Sources */,
 				F4CAEE5D25DBB0C5005233AA /* ReusableView.swift in Sources */,
 				F492CC4125DBC7CA0094EA94 /* UICollectionView.swift in Sources */,
+				F4AF0A4E25E21CD2005D7DBD /* KDCalendarVC.swift in Sources */,
 				F4CAEE5325DBAC43005233AA /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

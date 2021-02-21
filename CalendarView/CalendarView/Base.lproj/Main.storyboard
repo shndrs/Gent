@@ -98,6 +98,34 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="118.52678571428571"/>
         </scene>
+        <!--CalendarVC-->
+        <scene sceneID="EbM-Xv-cOg">
+            <objects>
+                <viewController id="bbB-Y7-CD3" customClass="KDCalendarVC" customModule="CalendarView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5JG-Ba-Fu8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-vf-UTW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7hz-0g-WD7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8c-vf-UTW" firstAttribute="leading" secondItem="7hz-0g-WD7" secondAttribute="leading" id="49t-BK-iQ7"/>
+                            <constraint firstAttribute="bottom" secondItem="v8c-vf-UTW" secondAttribute="bottom" id="4cg-Zt-9Gz"/>
+                            <constraint firstItem="v8c-vf-UTW" firstAttribute="top" secondItem="7hz-0g-WD7" secondAttribute="top" id="Xnx-Zm-Oaf"/>
+                            <constraint firstItem="v8c-vf-UTW" firstAttribute="trailing" secondItem="7hz-0g-WD7" secondAttribute="trailing" id="xyh-po-GpH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nl7-vP-paH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OrA-xN-uqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="787.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tTR-Tm-vcw">
             <objects>
@@ -115,6 +143,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uq-tY-cLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C1X-sz-QGH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xzC-lL-OYW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sjG-WW-gmv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bbB-Y7-CD3" kind="relationship" relationship="rootViewController" id="kO8-yl-MUr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99W-AJ-iPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="788"/>
         </scene>
     </scenes>
     <resources>
