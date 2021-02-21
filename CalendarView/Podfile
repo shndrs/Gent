@@ -5,5 +5,6 @@ target 'CalendarView' do
   
   use_frameworks!
   pod 'JTAppleCalendar'
+  pod 'KDCalendar', '~> 1.8.9'
 
 end

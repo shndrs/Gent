@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-CalendarView/Pods-CalendarView-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework
+${BUILT_PRODUCTS_DIR}/KDCalendar/KDCalendar.framework

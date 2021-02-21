@@ -1,16 +1,22 @@
 PODS:
   - JTAppleCalendar (8.0.3)
+  - KDCalendar (1.8.9):
+    - KDCalendar/EventManager (= 1.8.9)
+  - KDCalendar/EventManager (1.8.9)
 
 DEPENDENCIES:
   - JTAppleCalendar
+  - KDCalendar (~> 1.8.9)
 
 SPEC REPOS:
   trunk:
     - JTAppleCalendar
+    - KDCalendar
 
 SPEC CHECKSUMS:
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  KDCalendar: a587bc486b992d82ef94bd04001fce9baf45e518
 
-PODFILE CHECKSUM: 498ba82711c3623ed8dbb9721d13759612a64104
+PODFILE CHECKSUM: 0db6147be4efd5cead55fdff6886ddd72bd48da6
 
 COCOAPODS: 1.10.0
