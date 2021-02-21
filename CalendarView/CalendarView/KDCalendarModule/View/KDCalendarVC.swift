@@ -7,21 +7,11 @@
 
 import UIKit
 import KDCalendar
+import EventKit
 
 final class KDCalendarVC: UIViewController {
 
-    @IBOutlet private weak var calendarView: CalendarView! {
-        didSet {
-            calendarSetup()
-            calendarView.dataSource = self
-            calendarView.delegate = self
-            calendarView.direction = .horizontal
-            calendarView.multipleSelectionEnable = false
-            calendarView.marksWeekends = true
-            calendarView.backgroundColor = UIColor(red: 252/255, green: 252/255,
-                                                   blue: 252/255, alpha: 1.0)
-        }
-    }
+    @IBOutlet private weak var calendarView: CalendarView!
     
 }
 
@@ -31,24 +21,33 @@ fileprivate extension KDCalendarVC {
     
     func calendarSetup() {
         let style = CalendarView.Style()
-        style.cellShape = .bevel(8.0)
-        style.cellColorDefault = UIColor.clear
-        style.cellColorToday = UIColor(red:1.00, green:0.84, blue:0.64, alpha:1.00)
-        style.cellSelectedBorderColor = UIColor(red:1.00, green:0.63, blue:0.24, alpha:1.00)
-        style.cellEventColor = UIColor(red:1.00, green:0.63, blue:0.24, alpha:1.00)
-        style.headerTextColor = UIColor.gray
-        style.cellTextColorDefault = UIColor(red: 249/255, green: 180/255, blue: 139/255, alpha: 1.0)
-        style.cellTextColorToday = UIColor.orange
-        style.cellTextColorWeekend = UIColor(red: 237/255, green: 103/255, blue: 73/255, alpha: 1.0)
-        style.cellColorOutOfRange = UIColor(red: 249/255, green: 226/255, blue: 212/255, alpha: 1.0)
-        style.headerBackgroundColor = UIColor.white
-        style.weekdaysBackgroundColor = UIColor.white
+        style.cellShape = .round//.bevel(8.0)
+        style.cellColorDefault = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        style.cellColorToday = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        style.cellSelectedBorderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        style.cellEventColor = UIColor(red:1.00, green: 0.63, blue: 0.24, alpha: 1.00)
+        style.cellSelectedColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        style.cellTextColorDefault = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        style.cellTextColorWeekend = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        style.headerTextColor = .black
+        style.cellSelectedTextColor = .white
+        style.cellColorOutOfRange = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        style.headerBackgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
+        style.weekdaysBackgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
         style.firstWeekday = .monday
-        style.locale = Locale(identifier: "fa_IR")
-        style.cellFont = UIFont(name: "Helvetica", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
+        style.calendar = Calendar(identifier: .persian)
+        
         style.headerFont = UIFont(name: "Helvetica", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
-        style.weekdaysFont = UIFont(name: "Helvetica", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
+        style.cellFont = UIFont(name: "AvenirNext-Medium", size: 17.0) ?? UIFont.systemFont(ofSize: 14.0)
+        style.weekdaysFont = UIFont(name: "AvenirNext-Regular", size: 14) ?? UIFont.systemFont(ofSize: 20.0)
+        
         calendarView.style = style
+        calendarView.dataSource = self
+        calendarView.delegate = self
+        calendarView.direction = .vertical
+        calendarView.multipleSelectionEnable = false
+        calendarView.marksWeekends = true
+        calendarView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
     }
     
 }
@@ -59,6 +58,11 @@ extension KDCalendarVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calendarSetup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
 }
@@ -68,11 +72,7 @@ extension KDCalendarVC {
 extension KDCalendarVC: CalendarViewDataSource, CalendarViewDelegate {
     
     func startDate() -> Date {
-        var dateComponents = DateComponents()
-        dateComponents.month = -1
-        let today = Date()
-        let threeMonthsAgo = self.calendarView.calendar.date(byAdding: dateComponents, to: today)!
-        return threeMonthsAgo
+        return Date()
     }
     
     func endDate() -> Date {
@@ -84,7 +84,14 @@ extension KDCalendarVC: CalendarViewDataSource, CalendarViewDelegate {
     }
     
     func headerString(_ date: Date) -> String? {
-        return "SHNDRS"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.locale = Locale(identifier: "fa_IR")
+        let myString = formatter.string(from: date) // string purpose I add here
+        let yourDate = formatter.date(from: myString)
+        formatter.dateFormat = "MMM - yyyy"
+        let dateString = formatter.string(from: yourDate!)
+        return dateString
     }
     
     func calendar(_ calendar: CalendarView, didScrollToMonth date: Date) {

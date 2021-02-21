@@ -106,6 +106,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F4AF0A5725E22E4F005D7DBD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		F4CAEE2625DBA93D005233AA = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +134,7 @@
 		F4CAEE3125DBA93D005233AA /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				F4AF0A5725E22E4F005D7DBD /* Resource */,
 				F4CAEE5825DBB009005233AA /* Utill */,
 				F4AF0A4625E21C71005D7DBD /* JTAppleCalendar */,
 				F4AF0A4525E21C68005D7DBD /* KDCalendarModule */,
