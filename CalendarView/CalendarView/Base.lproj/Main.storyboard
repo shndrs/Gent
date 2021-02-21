@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="118.52678571428571"/>
         </scene>
-        <!--KDCalendar-->
+        <!--Calendar-->
         <scene sceneID="EbM-Xv-cOg">
             <objects>
                 <viewController id="bbB-Y7-CD3" customClass="KDCalendarVC" customModule="CalendarView" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +120,7 @@
                             <constraint firstItem="v8c-vf-UTW" firstAttribute="top" secondItem="7hz-0g-WD7" secondAttribute="top" id="Xnx-Zm-Oaf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="KDCalendar" id="Nl7-vP-paH"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="Nl7-vP-paH"/>
                     <connections>
                         <outlet property="calendarView" destination="v8c-vf-UTW" id="hLO-TD-p3j"/>
                     </connections>

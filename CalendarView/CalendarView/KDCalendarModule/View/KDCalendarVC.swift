@@ -30,16 +30,9 @@ fileprivate extension KDCalendarVC {
         calendarView.dataSource = self
         calendarView.delegate = self
         calendarView.direction = .vertical
-        calendarView.multipleSelectionEnable = false
+        calendarView.multipleSelectionEnable = true
         calendarView.marksWeekends = true
         calendarView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
-        calendarView.selectDate(Date.randomDate(range: 70))
-        calendarView.selectDate(Date.randomDate(range: 70))
-        calendarView.selectDate(Date.randomDate(range: 70))
-        calendarView.selectDate(Date.randomDate(range: 70))
-        calendarView.selectDate(Date.randomDate(range: 70))
-        calendarView.selectDate(Date.randomDate(range: 70))
-        calendarView.selectDate(Date.randomDate(range: 70))
     }
     
 }
@@ -51,6 +44,14 @@ extension KDCalendarVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarSetup()
+        
+        calendarView.selectDate(Date.randomDate(range: 180))
+        calendarView.selectDate(Date.randomDate(range: 180))
+        calendarView.selectDate(Date.randomDate(range: 180))
+        calendarView.selectDate(Date.randomDate(range: 180))
+        calendarView.selectDate(Date.randomDate(range: 180))
+        calendarView.selectDate(Date.randomDate(range: 180))
+        calendarView.selectDate(Date.randomDate(range: 180))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +65,7 @@ extension KDCalendarVC {
 extension KDCalendarVC: CalendarViewDataSource, CalendarViewDelegate {
     
     func startDate() -> Date {
-        return Date()
+        return calendarHandler.startDate
     }
     
     func endDate() -> Date {
@@ -77,23 +78,20 @@ extension KDCalendarVC: CalendarViewDataSource, CalendarViewDelegate {
     
     func calendar(_ calendar: CalendarView, didScrollToMonth date: Date) {
         print(self.calendarView.selectedDates)
-//        self.datePicker.setDate(date, animated: true)
     }
     
-    func calendar(_ calendar: CalendarView, didSelectDate date: Date, withEvents events: [CalendarEvent]) {
-//        calendarView.selectDate(date)
-    }
+    func calendar(_ calendar: CalendarView, didSelectDate date: Date,
+                  withEvents events: [CalendarEvent]) {}
     
     func calendar(_ calendar: CalendarView, canSelectDate date: Date) -> Bool {
         return true
     }
     
     func calendar(_ calendar: CalendarView, didDeselectDate date: Date) {
-//        calendarView.deselectDate(date)
+        selectedDates = calendar.selectedDates
     }
     
-    func calendar(_ calendar: CalendarView, didLongPressDate date: Date, withEvents events: [CalendarEvent]?) {
-        
-    }
+    func calendar(_ calendar: CalendarView, didLongPressDate date: Date,
+                  withEvents events: [CalendarEvent]?) {}
     
 }
