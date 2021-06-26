@@ -11,12 +11,62 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
-
+    private lazy var center: UNUserNotificationCenter = {
+        let temp = UNUserNotificationCenter.current()
+        temp.delegate = self
+        return temp
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        BILL_REMINDER
-        
+        notificationsAuth()
         return true
+    }
+    
+    private func notificationsAuth() {
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, _) in
+            if granted {
+                print("Granted")
+                let content = UNMutableNotificationContent()
+                content.title = "Sahand Raeisi Title"
+                content.body = "Sahand Raeisi Content"
+                content.categoryIdentifier = "BILL_REMINDER"
+                content.sound = .default
+                let dateComponents = Calendar.current
+                    .dateComponents(Set(arrayLiteral:
+                                            .year, .month, .day,
+                                            .hour, .minute, .second),
+                                    from: Date(timeIntervalSinceNow: 30))
+                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+                let request = UNNotificationRequest(identifier: "\(arc4random())",
+                                                    content: content,
+                                                    trigger: trigger)
+                self.center.add(request) { (error) in
+                    print(error as Any)
+                }
+                self.center.getPendingNotificationRequests { (notifs) in
+                    print(notifs.count)
+                    print(notifs.debugDescription)
+                }
+            } else {
+                print("Denied")
+            }
+        }
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (notifs) in
+            print(notifs.count)
+            print(notifs)
+        }
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler( [.list, .badge, .sound])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
     }
 
     // MARK: UISceneSession Lifecycle
