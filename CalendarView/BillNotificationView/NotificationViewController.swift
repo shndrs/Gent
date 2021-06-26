@@ -9,24 +9,22 @@ import UIKit
 import UserNotifications
 import UserNotificationsUI
 
-class NotificationViewController: UIViewController, UNNotificationContentExtension {
+final class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-    @IBOutlet private var lblTitle: UILabel!
-    @IBOutlet private var lblContent: UILabel!
-    @IBOutlet private var imgBill: UIImageView! {
+    @IBOutlet private var lblTitle: UILabel?
+    @IBOutlet private var lblContent: UILabel?
+    @IBOutlet private var imgBill: UIImageView? {
         didSet {
-            imgBill.image = #imageLiteral(resourceName: "credit-card-suggest")
+            imgBill?.image = #imageLiteral(resourceName: "credit-card-suggest")
         }
     }
-    @IBOutlet var label: UILabel?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any required interface initialization here.
     }
     
     func didReceive(_ notification: UNNotification) {
-        self.label?.text = notification.request.content.body
+        self.lblContent?.text = notification.request.content.body
+        self.lblTitle?.text = notification.request.content.title
     }
 
 }

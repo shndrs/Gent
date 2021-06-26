@@ -26,8 +26,10 @@
 		<dict>
 			<key>UNNotificationExtensionCategory</key>
 			<string>myNotificationCategory</string>
+			<key>Item 0</key>
+			<string>BILL_REMINDER</string>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>1</real>
+			<integer>1</integer>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
