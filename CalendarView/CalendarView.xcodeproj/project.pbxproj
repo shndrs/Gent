@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		68659EC1E67B038477EF18A9 /* Pods_CalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */; };
+		F419BE2F2686F53300B3161B /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419BE2E2686F53300B3161B /* UserNotifications.framework */; };
+		F419BE312686F53300B3161B /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419BE302686F53300B3161B /* UserNotificationsUI.framework */; };
+		F419BE342686F53300B3161B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F419BE332686F53300B3161B /* NotificationViewController.swift */; };
+		F419BE372686F53300B3161B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F419BE352686F53300B3161B /* MainInterface.storyboard */; };
+		F419BE3B2686F53300B3161B /* BillNotificationView.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F419BE2D2686F53300B3161B /* BillNotificationView.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F492CC4125DBC7CA0094EA94 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */; };
 		F4AF0A4E25E21CD2005D7DBD /* KDCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */; };
 		F4AF0AA925E247C7005D7DBD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0AA825E247C7005D7DBD /* Date.swift */; };
@@ -25,9 +30,39 @@
 		F4CAEE5D25DBB0C5005233AA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAEE5C25DBB0C5005233AA /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F419BE392686F53300B3161B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4CAEE2725DBA93D005233AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F419BE2C2686F53300B3161B;
+			remoteInfo = BillNotificationView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F419BE3C2686F53300B3161B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F419BE3B2686F53300B3161B /* BillNotificationView.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4E518D6E3FC4A886B5663154 /* Pods-CalendarView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarView.debug.xcconfig"; path = "Target Support Files/Pods-CalendarView/Pods-CalendarView.debug.xcconfig"; sourceTree = "<group>"; };
 		A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F419BE2D2686F53300B3161B /* BillNotificationView.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BillNotificationView.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F419BE2E2686F53300B3161B /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		F419BE302686F53300B3161B /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		F419BE332686F53300B3161B /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F419BE362686F53300B3161B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F419BE382686F53300B3161B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F492CC4025DBC7CA0094EA94 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		F4AF0A4D25E21CD2005D7DBD /* KDCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDCalendarVC.swift; sourceTree = "<group>"; };
 		F4AF0AA825E247C7005D7DBD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -49,6 +84,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F419BE2A2686F53300B3161B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F419BE312686F53300B3161B /* UserNotificationsUI.framework in Frameworks */,
+				F419BE2F2686F53300B3161B /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4CAEE2C25DBA93D005233AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				A0FB3E569971E64381BBFD28 /* Pods_CalendarView.framework */,
+				F419BE2E2686F53300B3161B /* UserNotifications.framework */,
+				F419BE302686F53300B3161B /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +121,16 @@
 				F93D7552A0A51E4240DBAA9E /* Pods-CalendarView.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F419BE322686F53300B3161B /* BillNotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				F419BE332686F53300B3161B /* NotificationViewController.swift */,
+				F419BE352686F53300B3161B /* MainInterface.storyboard */,
+				F419BE382686F53300B3161B /* Info.plist */,
+			);
+			path = BillNotificationView;
 			sourceTree = "<group>";
 		};
 		F492CC3F25DBC7BC0094EA94 /* Extension */ = {
@@ -122,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CAEE3125DBA93D005233AA /* CalendarView */,
+				F419BE322686F53300B3161B /* BillNotificationView */,
 				F4CAEE3025DBA93D005233AA /* Products */,
 				EDB5C5E6DB9592E8631D8D52 /* Pods */,
 				7982F9ED6AA787FBE7C0646E /* Frameworks */,
@@ -132,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CAEE2F25DBA93D005233AA /* CalendarView.app */,
+				F419BE2D2686F53300B3161B /* BillNotificationView.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +235,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F419BE2C2686F53300B3161B /* BillNotificationView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F419BE3F2686F53300B3161B /* Build configuration list for PBXNativeTarget "BillNotificationView" */;
+			buildPhases = (
+				F419BE292686F53300B3161B /* Sources */,
+				F419BE2A2686F53300B3161B /* Frameworks */,
+				F419BE2B2686F53300B3161B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BillNotificationView;
+			productName = BillNotificationView;
+			productReference = F419BE2D2686F53300B3161B /* BillNotificationView.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F4CAEE2E25DBA93D005233AA /* CalendarView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4CAEE4325DBA93F005233AA /* Build configuration list for PBXNativeTarget "CalendarView" */;
@@ -186,10 +261,12 @@
 				F4CAEE2C25DBA93D005233AA /* Frameworks */,
 				F4CAEE2D25DBA93D005233AA /* Resources */,
 				89AEE80B15CF11731AEF0DAE /* [CP] Embed Pods Frameworks */,
+				F419BE3C2686F53300B3161B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F419BE3A2686F53300B3161B /* PBXTargetDependency */,
 			);
 			name = CalendarView;
 			productName = CalendarView;
@@ -205,6 +282,9 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					F419BE2C2686F53300B3161B = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					F4CAEE2E25DBA93D005233AA = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -224,11 +304,20 @@
 			projectRoot = "";
 			targets = (
 				F4CAEE2E25DBA93D005233AA /* CalendarView */,
+				F419BE2C2686F53300B3161B /* BillNotificationView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F419BE2B2686F53300B3161B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F419BE372686F53300B3161B /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4CAEE2D25DBA93D005233AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +374,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F419BE292686F53300B3161B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F419BE342686F53300B3161B /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4CAEE2B25DBA93D005233AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,7 +402,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F419BE3A2686F53300B3161B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F419BE2C2686F53300B3161B /* BillNotificationView */;
+			targetProxy = F419BE392686F53300B3161B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		F419BE352686F53300B3161B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F419BE362686F53300B3161B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		F4CAEE3825DBA93D005233AA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -325,6 +438,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F419BE3D2686F53300B3161B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRGCDU34JU;
+				INFOPLIST_FILE = BillNotificationView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CalendarView.CalendarView.BillNotificationView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F419BE3E2686F53300B3161B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRGCDU34JU;
+				INFOPLIST_FILE = BillNotificationView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CalendarView.CalendarView.BillNotificationView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F4CAEE4125DBA93F005233AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -445,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E518D6E3FC4A886B5663154 /* Pods-CalendarView.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F93D7552A0A51E4240DBAA9E /* Pods-CalendarView.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +637,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F419BE3F2686F53300B3161B /* Build configuration list for PBXNativeTarget "BillNotificationView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F419BE3D2686F53300B3161B /* Debug */,
+				F419BE3E2686F53300B3161B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F4CAEE2A25DBA93D005233AA /* Build configuration list for PBXProject "CalendarView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
